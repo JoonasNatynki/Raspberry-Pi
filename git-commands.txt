@@ -1,0 +1,2 @@
+Commits all changes: git add --all && git commit -m "comment"
+Pushes all changes: git push --all
