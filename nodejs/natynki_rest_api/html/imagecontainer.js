@@ -34,7 +34,7 @@ function previousClick (value)
     listItem.eq(index).fadeOut(300, function()
                                             {
                                                 index--;
-                                                if (index === listLenght)
+                                                if (index < 0)
                                                 {
                                                     index = 0;
                                                 }
