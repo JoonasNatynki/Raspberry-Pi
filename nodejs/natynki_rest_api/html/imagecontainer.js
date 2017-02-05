@@ -42,9 +42,8 @@ function previousClick (value)
                                             });
 }
 
-addImage("1.png");
+addImage("2.gif");
 addImage("2.jpg");
-addImage("1.png");
 
 function addImage(urli)
 {
