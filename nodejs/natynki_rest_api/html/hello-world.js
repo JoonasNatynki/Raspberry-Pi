@@ -64,6 +64,12 @@ function onResponse(request, response)
 		closeGPIOs();
 	}
 
+	else if(request.url == "/opengpios")
+	{
+		console.log("went to opengpios");
+		openGPIOs();
+	}
+
     else if(request.method == "GET")
     {
 		console.log("Check if file exists");
