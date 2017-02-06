@@ -1,5 +1,5 @@
 let openbutton = document.getElementById("opengpios").addEventListener("click", openGPIOs);
-let closebutton = document.getElementById("closebutton").addEventListener("click", closeGPIOs);
+let closebutton = document.getElementById("closegpios").addEventListener("click", closeGPIOs);
 
 function openGPIOs()
 {
