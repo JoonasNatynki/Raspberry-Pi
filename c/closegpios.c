@@ -29,5 +29,7 @@ int main()
 	fwrite(gpio27, 1, sizeof(gpio27), file);
 	fclose(file);
 
+	printf("GPIOs closed!");
+	
 	return (0);
 }

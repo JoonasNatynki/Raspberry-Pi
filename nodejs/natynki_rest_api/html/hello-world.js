@@ -9,10 +9,23 @@ var http = require("http");
 console.log("Creating server...");
 var server = http.createServer(onResponse);
 
+console.log("OPENING GPIO pins...");
+
+cp.execFile("./opengpios", function(err, stdout, stderr)
+	    {		
+		if(err)
+		  {
+		      throw err;
+		      return;
+		  }
+		    
+		console.log(stdout);
+	    });
+
 function openGPIOs(response)
 {
-	console.log("Opening GPIOs!");
-    cp.execFile("./opengpios", function(err, stdout, stderr)
+    console.log("Setting pin 21 to high!");
+    cp.execFile("./pin21high", function(err, stdout, stderr)
 		{
 		    if(err)
 		    {
@@ -27,12 +40,11 @@ function openGPIOs(response)
 
 function closeGPIOs(response)
 {
-	console.log("Closing GPIOs!");
-    cp.execFile("./closegpios", function(err, stdout, stderr)
+	console.log("Setting pin 21 to low!");
+    cp.execFile("./pin21low", function(err, stdout, stderr)
 		{
 		    if(err)
 		    {
-				throw err;
 				return;
 		    }
 		    
