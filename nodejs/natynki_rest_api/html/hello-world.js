@@ -25,6 +25,7 @@ function openGPIOs()
 
 function closeGPIOs()
 {
+	console.log("HERE2");
     cp.execFile("./closegpios", function(err, stdout, stderr)
 		{
 		    if(err)
@@ -71,6 +72,7 @@ function onResponse(request, response)
     }
 	else if(request.method == "GET" && request.url == "/closegpios")
 	{
+		console.log("HERE");
 		closeGPIOs();
 	}
     else
