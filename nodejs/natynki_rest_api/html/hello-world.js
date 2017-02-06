@@ -53,7 +53,7 @@ function onResponse(request, response)
     // If default homepage, send index.html
     if(request.method == "GET" && request.url == "/")
     {
-		console.log("joojoj");
+		console.log("Front page");
 		// create a readable stream of html text, then pipe it into the reponse
 		fs.createReadStream("./Front_Page.html").pipe(response);
     }
@@ -66,7 +66,7 @@ function onResponse(request, response)
 
     else if(request.method == "GET")
     {
-		console.log("TMTM");
+		console.log("Check if file exists");
 		fs.readFile("./" + request.url, function(err, data)
 		{
 		    if(err)
@@ -84,7 +84,7 @@ function onResponse(request, response)
 		send404Response(response, request);
 		return;
     }    
-	console.log("Hmmmm");
+	console.log("Nothing was triggered");
 };
 
 // Handle 404 error
