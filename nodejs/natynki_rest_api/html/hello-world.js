@@ -11,6 +11,7 @@ var server = http.createServer(onResponse);
 
 console.log("OPENING GPIO pins...");
 
+// initializing pins
 cp.execFile("./opengpios", function(err, stdout, stderr)
 	    {		
 		if(err)
@@ -22,7 +23,7 @@ cp.execFile("./opengpios", function(err, stdout, stderr)
 		console.log(stdout);
 	    });
 
-function openGPIOs(response)
+function pin21High(response)
 {
     console.log("Setting pin 21 to high!");
     cp.execFile("./pin21high", function(err, stdout, stderr)
@@ -38,7 +39,7 @@ function openGPIOs(response)
 		response.end();
 }
 
-function closeGPIOs(response)
+function pin21Low(response)
 {
 	console.log("Setting pin 21 to low!");
     cp.execFile("./pin21low", function(err, stdout, stderr)
@@ -52,6 +53,42 @@ function closeGPIOs(response)
 		});
 		response.writeHead(200);
 		response.end();
+}
+
+function pin21Toggle(response)
+{
+	console.log("Toggling pin 21");
+	var value;
+	fs.read("/sys/class/gpio/gpio21/value", value, 0, 1, null, function()
+	{
+
+	});
+	if(value == "1"){
+		cp.execFile("./pin21low", function(err, stdout, stderr)
+			{
+				if(err)
+				{
+					return;
+				}
+				
+				console.log(stdout);
+			});
+	}
+	else
+	{
+		cp.execFile("./pin21high", function(err, stdout, stderr)
+			{
+				if(err)
+				{
+					return;
+				}
+				
+				console.log(stdout);
+			});
+	}
+
+	response.writeHead(200);
+	response.end();
 }
 
 function initServer()
@@ -74,17 +111,25 @@ function onResponse(request, response)
 		return;
     }
 
-	else if(request.url == "/closegpios")
+	else if(request.url == "/pin21low")
 	{
-		console.log("went to closegpios");
-		closeGPIOs(response);
+		console.log("Setting pin 21 to low");
+		pin21Low(response);
 		return;
 	}
 
-	else if(request.url == "/opengpios")
+	else if(request.url == "/pin21high")
 	{
-		console.log("went to opengpios");
-		openGPIOs(response);
+		console.log("Setting pin 21 to high");
+		pin21High(response);
+		return;
+	}
+
+	
+	else if(request.url == "/pin21toggle")
+	{
+		console.log("Toggling pin 21");
+		pin21Toggle(response);
 		return;
 	}
 
