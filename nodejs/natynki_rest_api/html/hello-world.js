@@ -21,7 +21,7 @@ function openGPIOs(response)
 		    
 		    console.log(stdout);
 		});
-		response.status(200).send();
+		response.send({status: 200});
 }
 
 function closeGPIOs(response)
@@ -37,7 +37,7 @@ function closeGPIOs(response)
 		    
 		    console.log(stdout);
 		});
-		response.status(200).send();
+		response.send({status: 200});
 }
 
 function initServer()
@@ -51,7 +51,6 @@ function initServer()
 function onResponse(request, response)
 {
     console.log("Setting up the response to: ", request.url);
-
     // If default homepage, send index.html
     if(request.method == "GET" && request.url == "/")
     {
