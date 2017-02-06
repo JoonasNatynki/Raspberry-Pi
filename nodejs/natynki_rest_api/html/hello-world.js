@@ -58,9 +58,9 @@ function onResponse(request, response)
 		fs.createReadStream("./Front_Page.html").pipe(response);
     }
 
-	else if(request.url == "closegpios")
+	else if(request.url == "/closegpios")
 	{
-		console.log("HERE");
+		console.log("went to closegpios");
 		closeGPIOs();
 	}
 
