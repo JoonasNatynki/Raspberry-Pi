@@ -1,6 +1,6 @@
-let openbutton = document.getElementById("pin21high").addEventListener("click", pin21High);
-let closebutton = document.getElementById("pin21low").addEventListener("click", pin21Low);
-let closebutton = document.getElementById("pin21toggle").addEventListener("click", pin21Toggle);
+let pin21high = document.getElementById("pin21high").addEventListener("click", pin21High);
+let pin21low = document.getElementById("pin21low").addEventListener("click", pin21Low);
+let pin21toggle = document.getElementById("pin21toggle").addEventListener("click", pin21Toggle);
 
 function pin21High()
 {
