@@ -6,8 +6,9 @@ function openGPIOs()
 {
     var options = 
     {
-        host: 'natynki.net',
-        path: 'opengpios'
+        type: "GET",
+        dataType: "JSON",
+        url: "opengpios"
     };
     $.ajax(options);
 }
