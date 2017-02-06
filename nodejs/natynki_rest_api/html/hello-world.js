@@ -11,12 +11,13 @@ var server = http.createServer(onResponse);
 
 function openGPIOs()
 {
+	console.log("Opening GPIOs!");
     cp.execFile("./opengpios", function(err, stdout, stderr)
 		{
 		    if(err)
 		    {
-			throw error;
-			return;
+				throw err;
+				return;
 		    }
 		    
 		    console.log(stdout);
@@ -25,13 +26,13 @@ function openGPIOs()
 
 function closeGPIOs()
 {
-	console.log("HERE2");
+	console.log("Closing GPIOs!");
     cp.execFile("./closegpios", function(err, stdout, stderr)
 		{
 		    if(err)
 		    {
-			throw error;
-			return;
+				throw err;
+				return;
 		    }
 		    
 		    console.log(stdout);
@@ -72,7 +73,6 @@ function onResponse(request, response)
 
     else if(request.method == "GET")
     {
-		console.log("Check if file exists");
 		fs.readFile("./" + request.url, function(err, data)
 		{
 		    if(err)
