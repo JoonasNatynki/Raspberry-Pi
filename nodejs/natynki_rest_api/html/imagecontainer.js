@@ -42,8 +42,8 @@ function previousClick (value)
                                             });
 }
 
-addImage("2.gif");
-addImage("2.jpg");
+addImage("/pictures/2.gif");
+addImage("/pictures/2.jpg");
 
 function addImage(urli)
 {
