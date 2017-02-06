@@ -16,7 +16,7 @@ function closeGPIOs()
 {
     $.ajax(
     {
-        url: 'http://natynki.net/closegpios',
+        url: 'natynki.net/closegpios',
         datatype: 'json'
     });
 }
