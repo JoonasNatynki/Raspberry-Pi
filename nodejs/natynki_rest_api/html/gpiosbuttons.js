@@ -16,7 +16,7 @@ function closeGPIOs()
 {
     $.ajax(
     {
-        url: '/closegpios',
+        url: 'closegpios',
         datatype: 'json'
     });
 }
