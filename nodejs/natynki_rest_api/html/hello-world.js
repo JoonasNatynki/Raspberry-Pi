@@ -9,10 +9,23 @@ var http = require("http");
 console.log("Creating server...");
 var server = http.createServer(onResponse);
 
-function opengpios()
+function openGPIOs()
 {
-    //cp.spawn("./opengpios");
     cp.execFile("./opengpios", function(err, stdout, stderr)
+		{
+		    if(err)
+		    {
+			throw error;
+			return;
+		    }
+		    
+		    console.log(stdout);
+		});
+}
+
+function closeGPIOs()
+{
+    cp.execFile("./closegpios", function(err, stdout, stderr)
 		{
 		    if(err)
 		    {
@@ -56,6 +69,10 @@ function onResponse(request, response)
 		    streamOfData.pipe(response);
 		});		
     }
+	else if(request.method == "GET" && request.url == "/closegpios")
+	{
+		closeGPIOs();
+	}
     else
     {
 	send404Response(response, request);
