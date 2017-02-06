@@ -4,10 +4,10 @@ let closebutton = document.getElementById("closegpios").addEventListener("click"
 
 function openGPIOs()
 {
-    window.location.href = "opengpios";
+    window.location = "opengpios";
 }
 
 function closeGPIOs()
 {
-        window.location.href = "closegpios";
+        window.location = "closegpios";
 }
