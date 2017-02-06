@@ -21,7 +21,7 @@ function openGPIOs(response)
 		    
 		    console.log(stdout);
 		});
-		response.sendStatus(200);
+		response.status(200).send();
 }
 
 function closeGPIOs(response)
@@ -37,7 +37,7 @@ function closeGPIOs(response)
 		    
 		    console.log(stdout);
 		});
-		response.sendStatus(200);
+		response.status(200).send();
 }
 
 function initServer()
