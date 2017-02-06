@@ -81,9 +81,10 @@ function onResponse(request, response)
     }
     else
     {
-	send404Response(response, request);
-    }
-    
+		send404Response(response, request);
+		return;
+    }    
+	console.log("Hmmmm");
 };
 
 // Handle 404 error
