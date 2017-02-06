@@ -16,7 +16,6 @@ function openGPIOs()
 		{
 		    if(err)
 		    {
-				throw err;
 				return;
 		    }
 		    
@@ -57,18 +56,21 @@ function onResponse(request, response)
 		console.log("Front page");
 		// create a readable stream of html text, then pipe it into the reponse
 		fs.createReadStream("./Front_Page.html").pipe(response);
+		return;
     }
 
 	else if(request.url == "/closegpios")
 	{
 		console.log("went to closegpios");
 		closeGPIOs();
+		return;
 	}
 
 	else if(request.url == "/opengpios")
 	{
 		console.log("went to opengpios");
 		openGPIOs();
+		return;
 	}
 
     else if(request.method == "GET")
@@ -83,7 +85,8 @@ function onResponse(request, response)
 
 		    var streamOfData = fs.createReadStream("./" + request.url);
 		    streamOfData.pipe(response);
-		});		
+		});
+		return;
     }
     else
     {
