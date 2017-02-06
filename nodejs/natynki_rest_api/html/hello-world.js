@@ -113,14 +113,12 @@ function onResponse(request, response)
 
 	else if(request.url == "/pin21low")
 	{
-		console.log("Setting pin 21 to low");
 		pin21Low(response);
 		return;
 	}
 
 	else if(request.url == "/pin21high")
 	{
-		console.log("Setting pin 21 to high");
 		pin21High(response);
 		return;
 	}
@@ -128,7 +126,6 @@ function onResponse(request, response)
 	
 	else if(request.url == "/pin21toggle")
 	{
-		console.log("Toggling pin 21");
 		pin21Toggle(response);
 		return;
 	}
