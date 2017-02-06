@@ -9,7 +9,7 @@ var http = require("http");
 console.log("Creating server...");
 var server = http.createServer(onResponse);
 
-function openGPIOs()
+function openGPIOs(response)
 {
 	console.log("Opening GPIOs!");
     cp.execFile("./opengpios", function(err, stdout, stderr)
@@ -21,9 +21,10 @@ function openGPIOs()
 		    
 		    console.log(stdout);
 		});
+		response.sendStatus(200);
 }
 
-function closeGPIOs()
+function closeGPIOs(response)
 {
 	console.log("Closing GPIOs!");
     cp.execFile("./closegpios", function(err, stdout, stderr)
@@ -36,6 +37,7 @@ function closeGPIOs()
 		    
 		    console.log(stdout);
 		});
+		response.sendStatus(200);
 }
 
 function initServer()
@@ -62,14 +64,14 @@ function onResponse(request, response)
 	else if(request.url == "/closegpios")
 	{
 		console.log("went to closegpios");
-		closeGPIOs();
+		closeGPIOs(response);
 		return;
 	}
 
 	else if(request.url == "/opengpios")
 	{
 		console.log("went to opengpios");
-		openGPIOs();
+		openGPIOs(response);
 		return;
 	}
 
