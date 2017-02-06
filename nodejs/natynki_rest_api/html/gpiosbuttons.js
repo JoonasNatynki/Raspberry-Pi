@@ -1,5 +1,3 @@
-var http = require('http');
-
 let openbutton = document.getElementById("opengpios").addEventListener("click", openGPIOs);
 let closebutton = document.getElementById("closegpios").addEventListener("click", closeGPIOs);
 
@@ -16,10 +14,9 @@ function openGPIOs()
 
 function closeGPIOs()
 {
-    var options = 
+    $.ajax(
     {
-        host: 'natynki.net',
-        path: '/closegpios'
-    };
-    http.request(options).end();
+        url: 'http://natynki.net/closegpios',
+        datatype: 'json'
+    });
 }
