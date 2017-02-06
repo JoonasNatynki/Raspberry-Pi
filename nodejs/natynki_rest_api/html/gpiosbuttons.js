@@ -14,9 +14,5 @@ function openGPIOs()
 
 function closeGPIOs()
 {
-    $.ajax(
-    {
-        url: 'closegpios',
-        datatype: 'json'
-    });
+    $.get("closegpios");
 }
