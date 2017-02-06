@@ -12,7 +12,7 @@ var server = http.createServer(onResponse);
 console.log("OPENING GPIO pins...");
 
 // initializing pins
-cp.execFile("./opengpios", function(err, stdout, stderr)
+cp.execFile("./c_programs/opengpios", function(err, stdout, stderr)
 	    {		
 		if(err)
 		  {
@@ -26,7 +26,7 @@ cp.execFile("./opengpios", function(err, stdout, stderr)
 function pin21High(response)
 {
     console.log("Setting pin 21 to high!");
-    cp.execFile("./pin21high", function(err, stdout, stderr)
+    cp.execFile("./c_programs/pin21high", function(err, stdout, stderr)
 		{
 		    if(err)
 		    {
@@ -42,7 +42,7 @@ function pin21High(response)
 function pin21Low(response)
 {
 	console.log("Setting pin 21 to low!");
-    cp.execFile("./pin21low", function(err, stdout, stderr)
+    cp.execFile("./c_programs/pin21low", function(err, stdout, stderr)
 		{
 		    if(err)
 		    {
@@ -62,7 +62,7 @@ function pin21Toggle(response)
 		{
 			if(data.toString("utf8") == 1)
 			{
-				cp.execFile("./pin21low", function(err, stdout, stderr)
+				cp.execFile("./c_programs/pin21low", function(err, stdout, stderr)
 													{
 														if(err)
 														{
@@ -74,7 +74,7 @@ function pin21Toggle(response)
 			}
 			else
 			{
-				cp.execFile("./pin21high", function(err, stdout, stderr)
+				cp.execFile("./c_programs/pin21high", function(err, stdout, stderr)
 													{
 														if(err)
 														{
