@@ -53,8 +53,9 @@ function onResponse(request, response)
     // If default homepage, send index.html
     if(request.method == "GET" && request.url == "/")
     {
-	// create a readable stream of html text, then pipe it into the reponse
-	fs.createReadStream("./Front_Page.html").pipe(response);
+		console.log("joojoj");
+		// create a readable stream of html text, then pipe it into the reponse
+		fs.createReadStream("./Front_Page.html").pipe(response);
     }
 
 	else if(request.method == "GET" && request.url == "/closegpios")
