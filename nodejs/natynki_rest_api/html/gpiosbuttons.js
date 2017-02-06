@@ -7,9 +7,9 @@ function openGPIOs()
     var options = 
     {
         host: 'natynki.net',
-        path: '/opengpios'
+        path: 'opengpios'
     };
-
+    $.ajax(options);
 }
 
 function closeGPIOs()
