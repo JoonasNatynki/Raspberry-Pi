@@ -16,8 +16,8 @@
       #map
       {
         position: absolute;
-        height: 95%;
-        width: 70%;
+        height: 73%;
+        width: 69.3%;
         background-color: hotpink;
         border: 2px solid gray;
        }
@@ -29,8 +29,20 @@
       }
       #Search_Wikipedia
       {
-        margin: 30px;
+        margin: 15px;
         padding: 10px;
+      }
+      
+      #opengpios
+      {
+        margin-bottom: 10px;
+        padding: 3px;
+      }
+
+      #closegpios
+      {
+        margin-bottom: 10px;
+        padding: 3px;
       }
 
       #imageparentcontainer
@@ -54,6 +66,8 @@
         <input id = "submit" type = "submit">
         <input id = "clearmarkers" type = "button" value = "Clear markers"><br>
         <input id = "Search_Wikipedia" type = "button" value = "Search Wikipedia"> <br>
+        <input id = "closegpios" type = "button" value = "Close GPIOs">
+        <input id = "opengpios" type = "button" value = "Open GPIOs"> <br>
       </form>
 
    </div>
@@ -80,6 +94,7 @@
       <script defer src="WikipediaButton.js"></script>
       <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
       <script defer src="imagecontainer.js"></script>
+      <script defer src="gpiosbuttons.js"></script>
 
   </body>
 </html>
