@@ -56,6 +56,13 @@ function onResponse(request, response)
 	// create a readable stream of html text, then pipe it into the reponse
 	fs.createReadStream("./Front_Page.html").pipe(response);
     }
+	
+	else if(request.method == "GET" && request.url == "/closegpios")
+	{
+		console.log("HERE");
+		closeGPIOs();
+	}
+
     else if(request.method == "GET")
     {
 	fs.readFile("./" + request.url, function(err, data)
@@ -70,11 +77,6 @@ function onResponse(request, response)
 		    streamOfData.pipe(response);
 		});		
     }
-	else if(request.method == "GET" && request.url == "/closegpios")
-	{
-		console.log("HERE");
-		closeGPIOs();
-	}
     else
     {
 	send404Response(response, request);
