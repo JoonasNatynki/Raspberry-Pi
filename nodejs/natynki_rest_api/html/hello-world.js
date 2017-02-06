@@ -16,7 +16,6 @@ cp.execFile("./c_programs/opengpios", function(err, stdout, stderr)
 	    {		
 		if(err)
 		  {
-			  throw err;
 		      return;
 		  }
 		    
