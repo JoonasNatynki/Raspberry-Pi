@@ -1,4 +1,4 @@
-let http = request("http");
+let http = require("http");
 
 let openbutton = document.getElementById("opengpios").addEventListener("click", openGPIOs);
 let closebutton = document.getElementById("closegpios").addEventListener("click", closeGPIOs);
