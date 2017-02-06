@@ -1,16 +1,13 @@
 let openbutton = document.getElementById("opengpios").addEventListener("click", openGPIOs);
 let closebutton = document.getElementById("closegpios").addEventListener("click", closeGPIOs);
 
-var xhttp = new XMLHttpRequest();
 
 function openGPIOs()
 {
-    xhttp.open("GET", "opengpios", true);
-    xhttp.send();
+    window.location.href = "opengpios";
 }
 
 function closeGPIOs()
 {
-    xhttp.open("GET", "closegpios", true);
-    xhttp.send();
+        window.location.href = "closegpios";
 }
