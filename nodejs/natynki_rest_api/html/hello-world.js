@@ -58,12 +58,10 @@ function pin21Low(response)
 function pin21Toggle(response)
 {
 	console.log("Toggling pin 21");
-	var value;
-	fs.read("/sys/class/gpio/gpio21/value", value, 0, 1, null, function()
-	{
-
-	});
-	if(value == "1"){
+    fs.readFile("/sys/class/gpio/gpio21/value",  function(err, data)
+		{
+		    console.log(data.toString("utf8"));
+		    if(data.toString("utf8") == 1){
 		cp.execFile("./pin21low", function(err, stdout, stderr)
 			{
 				if(err)
@@ -73,7 +71,7 @@ function pin21Toggle(response)
 				
 				console.log(stdout);
 			});
-	}
+}
 	else
 	{
 		cp.execFile("./pin21high", function(err, stdout, stderr)
@@ -86,6 +84,8 @@ function pin21Toggle(response)
 				console.log(stdout);
 			});
 	}
+	});
+	
 
 	response.writeHead(200);
 	response.end();
