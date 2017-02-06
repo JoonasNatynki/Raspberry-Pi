@@ -1,26 +1,7 @@
+const cp = require('child_process'); 	// For executing files and programs
+const fs = require("fs");				// For accessing files on the Raspberry Pi
+var http = require("http");				// For sending requests
 console.log("Starting up...");
-
-const cp = require('child_process');
-const fs = require("fs");
-
-
-var http = require("http");
-
-console.log("Creating server...");
-var server = http.createServer(onResponse);
-
-console.log("OPENING GPIO pins...");
-
-// initializing pins
-cp.execFile("sudo ./c_programs/opengpios", function(err, stdout, stderr)
-	    {		
-		if(err)
-		  {
-		      return;
-		  }
-		    
-		console.log(stdout);
-	    });
 
 function pin21High(response)
 {
@@ -92,16 +73,33 @@ function pin21Toggle(response)
 
 function initServer()
 {
+	console.log("Creating server...");
+	// Creates the server and assings onResponse as the callback function. OnResponse will be called everytime the server
+	// gets a request
+	var server = http.createServer(onRequest);	
+
+	console.log("Initializing GPIO pins...");
+	// initializing and setting up pins for using
+	cp.execFile("sudo ./c_programs/opengpios", function(err, stdout, stderr)
+		{		
+			if(err)
+			{
+				return;
+			}		    
+			console.log(stdout);
+		});
+
     console.log("Setting up ports to listen to...");
     server.listen(8000);
-    console.log("Server running at http://88.112.159.13:999/");
+    console.log("Server initialized at http://natynki.net");
 };
 
 // Handle response(s)
-function onResponse(request, response)
+function onRequest(request, response)
 {
-    console.log("Setting up the response to: ", request.url);
-    // If default homepage, send index.html
+    console.log("Handling response to: ", request.url);
+    // #######################################################################################################################
+	// Default web page, the front page
     if(request.method == "GET" && request.url == "/")
     {
 		console.log("Front page");
@@ -122,25 +120,28 @@ function onResponse(request, response)
 		return;
 	}
 
-	
 	else if(request.url == "/pin21toggle")
 	{
 		pin21Toggle(response);
 		return;
 	}
 
+	// General requests for a file of the same name as the request
     else if(request.method == "GET")
     {
+		// Checks if that kind of a file exists, if not, then goes into error handling
 		fs.readFile("./" + request.url, function(err, data)
 		{
 		    if(err)
 		    {
-			console.log("No such file as " + request.url);
-			return;
+				console.log("No such file as (" + request.url + ") in the working directory.");
+				return;
 		    }
-
-		    var streamOfData = fs.createReadStream("./" + request.url);
-		    streamOfData.pipe(response);
+			else
+			{
+				// Read a file of the same name and pipe its content back into the client
+				fs.createReadStream("./" + request.url).pipe(response);
+			}
 		});
 		return;
     }
@@ -148,7 +149,8 @@ function onResponse(request, response)
     {
 		send404Response(response, request);
 		return;
-    }    
+    }
+    // #######################################################################################################################
 	console.log("Nothing was triggered");
 };
 
