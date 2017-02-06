@@ -56,7 +56,7 @@ function onResponse(request, response)
 	// create a readable stream of html text, then pipe it into the reponse
 	fs.createReadStream("./Front_Page.html").pipe(response);
     }
-	
+
 	else if(request.method == "GET" && request.url == "/closegpios")
 	{
 		console.log("HERE");
@@ -65,7 +65,8 @@ function onResponse(request, response)
 
     else if(request.method == "GET")
     {
-	fs.readFile("./" + request.url, function(err, data)
+		console.log("TMTM");
+		fs.readFile("./" + request.url, function(err, data)
 		{
 		    if(err)
 		    {
