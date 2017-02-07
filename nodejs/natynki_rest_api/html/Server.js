@@ -54,7 +54,7 @@ function pin21Toggle(response)
 			}
 			else
 			{
-				 cp.execFile("./c_programs/setPinToLow", ["21"], function(err, stdout, stderr)
+				 cp.execFile("./c_programs/setPinToHigh", ["21"] function(err, stdout, stderr)
 													{
 														if(err)
 														{
