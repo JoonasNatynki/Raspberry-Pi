@@ -8,9 +8,9 @@ int main(int argc, char * argv[])
   char path[] = "/sys/class/gpio/gpio";
   char end[] = "/value";
 
-  char * endPath;
+  char * endPath = memcpy(path, end, 30);
 
-  asprintf(&endPath, "%s%s", path, end);
+  printf(endPath);
 
   file = fopen(endPath, "w+");
   fwrite("1", 1, sizeof("1"), file);
