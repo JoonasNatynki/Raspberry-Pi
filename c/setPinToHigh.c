@@ -5,14 +5,13 @@ int main(int argc, char * argv[])
 {
   FILE * file;
   
-  char path[] = "/sys/class/gpio/gpio";
-  char end[] = "/value";
+  char buffer[40];
 
-  char * endPath = memcpy(path, end, 30);
+  sprintf(buffer, "/sys/class/gpio/gpio%s/value", argv[1]);
 
-  printf(endPath);
+  printf(buffer);
 
-  file = fopen(endPath, "w+");
+  file = fopen(buffer, "w+");
   fwrite("1", 1, sizeof("1"), file);
   fclose(file);
   return 0;
