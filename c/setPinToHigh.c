@@ -7,7 +7,7 @@ int main(int argc, char * argv[])
   
   char buffer[40];
 
-  sprintf(buffer, "/sys/class/gpio/gpio%s/value", atoi(argv[1]));
+  sprintf(buffer, "/sys/class/gpio/gpio%s/value", argv[1]);
 
   file = fopen(buffer, "w+");
   fwrite("1", 1, sizeof("1"), file);
