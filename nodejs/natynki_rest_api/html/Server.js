@@ -97,7 +97,7 @@ function initServer()
 // Handle response(s)
 function onRequest(request, response)
 {
-    console.log("Handling response to: ", request.url);
+    console.log("Handling request to: ", request.url);
     // #######################################################################################################################
 	// Default web page, the front page
     if(request.method == "GET" && request.url == "/")
@@ -151,7 +151,7 @@ function onRequest(request, response)
 		return;
     }
     // #######################################################################################################################
-	console.log("Nothing was triggered");
+	console.log("No handling for request found!");
 };
 
 // Handle 404 error
