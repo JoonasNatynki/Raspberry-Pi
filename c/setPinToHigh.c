@@ -10,7 +10,7 @@ int main(int argc, char * argv[])
 
   char * endPath;
 
-  asprintf(&endpath, "%s%s", path, end);
+  asprintf(&endPath, "%s%s", path, end);
 
   file = fopen(endPath, "w+");
   fwrite("1", 1, sizeof("1"), file);
