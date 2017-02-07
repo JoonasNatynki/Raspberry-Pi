@@ -8,7 +8,7 @@ int main(int argc, char * argv[])
   char path[] = "/sys/class/gpio/gpio";
   char end[] = "/value";
 
-  char * endPath
+  char * endPath;
 
   asprintf(&endpath, "%s%s", path, end);
 
