@@ -7,11 +7,7 @@ int main(int argc, char * argv[])
   
   char buffer[40];
 
-  sprintf(buffer, "/sys/class/gpio/gpio%s/value", argv[1]);
-
-  int num = atoi(argv[1]);
-
-  // TARKASTA ETTÄ NUMEROT ON 1-9 ja 10-99 EIKÄ 01, 02, 03 jne....
+  sprintf(buffer, "/sys/class/gpio/gpio%s/value", atoi(argv[1]);
 
   file = fopen(buffer, "w+");
   fwrite("1", 1, sizeof("1"), file);
