@@ -6,7 +6,7 @@ console.log("Starting up...");
 function pin21High(response)
 {
     console.log("Setting pin 21 to high!");
-    cp.execFile("./c_programs/setPinToHigh 21", function(err, stdout, stderr)
+    cp.execFile("./c_programs/setPinToHigh", ["21"], function(err, stdout, stderr)
 		{
 		    if(err)
 		    {
