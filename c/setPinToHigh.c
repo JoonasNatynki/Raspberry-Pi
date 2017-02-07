@@ -9,7 +9,9 @@ int main(int argc, char * argv[])
 
   sprintf(buffer, "/sys/class/gpio/gpio%s/value", argv[1]);
 
-  printf(buffer);
+  int num = atoi(argv[1]);
+
+  // TARKASTA ETTÄ NUMEROT ON 1-9 ja 10-99 EIKÄ 01, 02, 03 jne....
 
   file = fopen(buffer, "w+");
   fwrite("1", 1, sizeof("1"), file);
