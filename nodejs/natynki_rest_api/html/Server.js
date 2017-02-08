@@ -6,7 +6,7 @@ console.log("Starting up...");
 function pin21High(response)
 {
     console.log("Setting pin 21 to high!");
-    cp.execFile("./c_programs/pinControl", ["21 1"], function(err, stdout, stderr)
+    cp.execFile("./c_programs/pinControl", ["21", "1"], function(err, stdout, stderr)
 		{
 		    if(err)
 		    {
@@ -22,7 +22,7 @@ function pin21High(response)
 function pin21Low(response)
 {
 	console.log("Setting pin 21 to low!");
-    cp.execFile("./c_programs/setPinToLow", ["21"], function(err, stdout, stderr)
+    cp.execFile("./c_programs/pinControl", ["21", "0"], function(err, stdout, stderr)
 		{
 		    if(err)
 		    {
@@ -42,7 +42,7 @@ function pin21Toggle(response)
 		{
 			if(data.toString("utf8") == 1)
 			{
-				 cp.execFile("./c_programs/setPinToLow", ["21"], function(err, stdout, stderr)
+			    cp.execFile("./c_programs/pinControl", ["21","0"], function(err, stdout, stderr)
 													{
 														if(err)
 														{
@@ -54,7 +54,7 @@ function pin21Toggle(response)
 			}
 			else
 			{
-				 cp.execFile("./c_programs/setPinToHigh", ["21"], function(err, stdout, stderr)
+			    cp.execFile("./c_programs/pinControl", ["21","1"], function(err, stdout, stderr)
 													{
 														if(err)
 														{
