@@ -1,0 +1,497 @@
+GOOD PRACTICE GUIDE
+
+Creditworthiness
+
+C40 Cities Climate Leadership Group 
+
+The C40 Cities Climate Leadership  
+Group, now in its 10th year, connects  
+more than 80 of the world’s greatest  
+cities, representing 600+ million people 
+and one quarter of the global economy. 
+Created and led by cities, C40 is focused 
+on tackling climate change and driving 
+urban action that reduces greenhouse   
+gas emissions and climate risks, while  
+increasing the health, well-being and  
+economic opportunities of urban  
+ citizens. www.c40.org 
+ 
+ 
+The C40 Cities Climate Leadership Group 
+has developed a series of Good Practice 
+Guides in areas critical for reducing 
+greenhouse gas emissions and climate  
+risk. The Guides provide an overview of  
+the key benefits of a particular climate 
+action and outline successful approaches 
+and strategies cities can employ to 
+implement or effectively scale up these 
+actions. These Guides are based on the 
+experience and lessons learned from 
+ C40 cities and on the findings and 
+recommendations of leading organisations 
+and research institutions engaged in these 
+areas. The good practice approaches   
+are relevant for cities engaged in C40
+Networks as well as for other cities   
+around the world. 
+
+	  
+	  	  	  
+TABLE	  OF	  CONTENTS	  
+	  
+
+EXECUTIVE	  SUMMARY	  .....................................................................................................................	  3	  
+1	   BACKGROUND	  ...........................................................................................................................	  4	  
+1.1	   PURPOSE	  .......................................................................................................................................	  4	  
+1.2	   INTRODUCTION	  ...............................................................................................................................	  4	  
+2	   CREDITWORTHINESS	  AND	  CLIMATE	  CHANGE	  ..............................................................................	  4	  
+2.1	   WHAT	  IS	  CREDITWORTHINESS?	  ...........................................................................................................	  4	  
+2.2	   HOW	  CAN	  CITIES	  BECOME	  CREDITWORTHY?	  ...........................................................................................	  5	  
+2.3	   CREDITWORTHINESS	  PROCESS	  .............................................................................................................	  7	  
+2.4	   MAIN	  CREDIT	  RATING	  INSTITUTIONS	  .....................................................................................................	  8	  
+2.5	   BENEFITS	  OF	  CREDITWORTHINESS	  ........................................................................................................	  9	  
+2.6	   CHALLENGES	  TO	  BECOMING	  CREDITWORTHY	  ..........................................................................................	  9	  
+3	   GOOD	  PRACTICE	  APPROACHES	  FOR	  ACHIEVING	  A	  MUNICIPAL	  CREDIT	  RATING	  ..........................	  10	  
+3.1	   CREDITWORTHINESS	  ACTION	  PLANS	  –	  KEY	  GOOD	  PRACTICE	  COMPONENTS	  .................................................	  11	  
+3.2	   INCREASE	  OWN-­‐SOURCE	  REVENUE	  AND	  MANAGE	  EXPENDITURE	  ...............................................................	  11	  
+Case	  study:	  Kampala,	  Uganda	  -­‐	  Strategic	  Plan	  ..................................................................................	  12	  
+3.3	   INTRODUCE	  BEST	  PRACTICES	  FOR	  FINANCIAL	  MANAGEMENT	  PROCESSES	  .....................................................	  13	  
+Case	  study:	  Kolkata,	  India	  -­‐	  Financial	  management	  best	  practices	  ...................................................	  13	  
+3.4	   DEVELOP	  A	  ‘CLIMATE-­‐SMART’	  CAPITAL	  INVESTMENT	  PLAN	  ......................................................................	  14	  
+Case	  study:	  Kampala,	  Dar	  es	  Salaam	  and	  Durban	  –	  Capital	  investment	  plans	  ..................................	  14	  
+3.5	   BUILD	  A	  PIPELINE	  OF	  PUBLIC	  INFRASTRUCTURE	  PROJECTS	  ........................................................................	  15	  
+Case	  study:	  Lima	  -­‐	  Infrastructure	  investment	  experience	  .................................................................	  15	  
+3.6	   UNDERTAKE	  A	  ‘SHADOW’	  CREDIT	  RATING	  ............................................................................................	  16	  
+4	   FURTHER	  READING	  ...................................................................................................................	  17	  
+
+	  
+
+	  
+
+	  
+EXECUTIVE	  SUMMARY	  	  
+
+	  
+	  
+
+A	   number	   of	   C40	   cities	   do	   not	   have	   a	   credit	   rating	   or	   access	   to	   international	   capital	   and	  
+therefore	  face	  challenges	  in	  making	  climate-­‐related	  and	  other	  investments	  that	  drive	  economic	  
+growth	   and	   sustainable	   development.	   The	   C40	   Creditworthiness	   Network	   helps	   cities	   break	  
+through	  these	  barriers	  and	  realize	  their	  full	  potential	  to	  build	  a	  low-­‐carbon	  and	  climate	  resilient	  
+future.	  
+	  
+The	  creditworthiness	  of	  a	  city	  is	  a	  vital	  component	  of	  its	  ability	  to	  finance	  low-­‐carbon,	  climate-­‐
+resilient	  projects,	  particularly	  in	  terms	  of	  attracting	  investment	  and	  issuing	  bonds.	  Cities	  that	  
+have	  a	  low	  level	  of	  creditworthiness	  will	  struggle	  to	  raise	  the	  funds	  needed	  for	  new	  projects	  or	  
+for	  upgrading	  existing	  ones.	  An	  investment	  grade	  credit	  rating	  can	  help	  a	  city	  unlock	  access	  to	  a	  
+wide	  range	  of	  private	  investors,	  while	  the	  improvements	  in	  financial	  management	  required	  to	  
+achieve	  this	  are	  also	  likely	  to	  increase	  the	  city’s	  revenue.	  
+	  
+This	   Good	   Practice	   Guide	   focuses	   on	   the	   key	   elements	   for	   a	   city	   to	   successfully	   increase	   its	  
+creditworthiness	  with	  a	  goal	  of	  investing	  in	  sustainable	  infrastructure.	  These	  include:	  
+	  
+
+• 
+Increase	  Own-­‐Source	  Revenue	  (OSR)	  and	  manage	  expenditure	  
+• 
+Introduce	  best	  practices	  for	  financial	  management	  processes	  
+•  Develop	  a	  ‘climate	  smart’	  long	  term	  capital	  investment	  plan	  
+•  Build	  a	  pipeline	  of	  public	  infrastructure	  projects	  
+•  Undertake	  a	  ‘shadow’	  credit	  rating	  assessment	  
+
+	  
+
+	  
+
+The	  C40	  Creditworthiness	  Network	  supports	  cities	  to	  overcome	  the	  major	  barrier	  that	  the	  lack	  
+of	   creditworthiness	   presents	   for	   financing	   sustainable	   infrastructure	   and	   delivering	   on	   city	  
+climate	  action	  plans.	  	  
+	  
+The	  purpose	  of	  this	  Good	  Practice	  Guide	  is	  to	  summarise	  the	  key	  elements	  of	  creditworthiness	  
+good	  practice	  for	  global	  dissemination,	  highlighting	  the	  success	  of	  C40	  cities	  in	  improving	  their	  
+creditworthiness.	  
+	  
+	  
+
+	  
+
+	  
+
+3	  
+
+	  
+1  BACKGROUND	  
+
+1.1 Purpose	  
+
+The	   C40	   Cities	   Climate	   Leadership	   Group	   has	   developed	   a	   series	   of	   Good	   Practice	   Guides	   in	  
+areas	   critical	   for	   reducing	   GHG	   emissions	   and	   climate	   risk.	   The	   C40	   Good	   Practice	   Guides	  
+provide	   an	   overview	   of	   the	   key	   benefits	   of	   a	   particular	   climate	   action	   and	   outline	   successful	  
+approaches	  and	  strategies	  cities	  can	  employ	  to	  effectively	  scale	  up	  these	  actions.	  These	  Guides	  
+are	   based	   on	   the	   experience	   and	   lessons	   learned	   from	   C40	   cities	   and	   on	   the	   findings	   and	  
+recommendations	   of	   leading	   organisations	   and	   research	   institutions	   engaged	   in	   these	   areas.	  
+The	  following	  Good	  Practice	  Guide	  focuses	  on	  the	  key	  elements	  necessary	  to	  improve	  a	  city’s	  
+creditworthiness	   in	   order	   to	   increase	   access	   to	   finance	   for	   low-­‐carbon	   and	   climate	   resilient	  
+infrastructure.	   These	   approaches	   are	   relevant	   for	   cities	   engaged	   in	   C40’s	   Creditworthiness	  
+Network	  as	  well	  as	  for	  other	  cities	  around	  the	  world.	  	  
+
+1.2 Introduction	  
+
+The	  creditworthiness	  of	  a	  city	  is	  a	  vital	  component	  of	  its	  ability	  to	  finance	  low-­‐carbon,	  climate-­‐
+resilient	  projects,	  particularly	  in	  terms	  of	  attracting	  investment	  and	  issuing	  bonds.	  Cities	  that	  
+have	  a	  low	  level	  of	  creditworthiness	  will	  struggle	  to	  raise	  the	  funds	  needed	  for	  new	  projects	  or	  
+for	  upgrading	  existing	  ones.	  An	  investment	  grade	  credit	  rating	  can	  help	  a	  city	  unlock	  access	  to	  a	  
+wide	  range	  of	  private	  investors,	  while	  the	  improvements	  in	  financial	  management	  required	  to	  
+achieve	  this	  are	  also	  likely	  to	  increase	  the	  city’s	  revenue.	  
+
+2  CREDITWORTHINESS	  AND	  CLIMATE	  CHANGE	  
+
+2.1 	  What	  is	  creditworthiness?	  
+
+Cities	   across	   the	   world	   are	   growing	   at	   an	   increasing	   rate,	   putting	   existing	   infrastructure	   and	  
+services	   such	   as	   transport,	   solid	   waste	   management	   and	   sanitation	   under	   extreme	   pressure.	  
+Many	  cities	  already	  require	  substantial	  investment	  to	  maintain	  current	  levels	  of	  services	  into	  
+the	  future,	  let	  alone	  expand	  to	  support	  the	  growing	  population.	  Investment	  needs	  are	  immense	  
+and	  traditional	  sources	  of	  financing	  from	  central	  governments	  and	  aid	  organisations	  will	  not	  be	  
+sufficient	  to	  meet	  them.	  
+	  
+To	   attract	   additional	   investment	   from	   private	   sources,	   cities	   need	   to	   be	   creditworthy.	  
+Creditworthiness	  is	  essentially	  an	  assessment	  of	  the	  likelihood	  that	  a	  borrower	  (the	  city)	  will	  
+default	  on	  its	  debt	  obligations.i	  The	  assessment	  is	  carried	  out	  by	  an	  independent	  credit	  rating	  
+agency	  that	  will	  study	  a	  range	  of	  aspects	  of	  a	  city’s	  financial	  management	  as	  well	  as	  the	  wider	  
+socio-­‐economic-­‐political	   environment	   and	   assign	   a	   score	   based	   upon	   the	   results.	   The	   score,	  
+
+	  
+
+4	  
+
+	  
+known	   as	   the	   credit	   rating,	   will	   be	   used	   by	   investors	   to	   determine	   whether	   or	   not	   they	   are	  
+interested	  in	  providing	  finance	  to	  a	  city	  and	  at	  what	  level	  of	  interest	  rate:	  the	  higher	  the	  rating,	  
+the	  more	  finance	  will	  be	  available	  at	  a	  lower	  interest	  rate.	  
+	  
+The	  World	  Bank	  estimates	  that	  currently	  less	  than	  20%	  of	  the	  largest	  500	  cities	  in	  developing	  
+countries	   are	   deemed	   creditworthy	   nationally,	   with	   just	   4%	   having	   access	   to	   international	  
+markets.ii	  The	   lack	   of	   a	   credit	   rating	   severely	   constrains	   these	   cities’	   ability	   to	   provide	   basic	  
+services,	  let	  alone	  invest	  in	  low-­‐carbon,	  climate	  resilient	  urban	  development.iii	  This	  is	  because	  
+the	  revenues	  cities	  generate	  through	  taxation	  and	  other	  sources	  are	  usually	  only	  sufficient	  to	  
+cover	  operating	  expenditure	  (and	  in	  many	  cases	  not	  even	  that,	  with	  cities	  depending	  instead	  on	  
+national	  government	  or	  donor	  support),	  but	  not	  investments	  in	  new	  infrastructure	  and	  services.	  
+	  
+However,	  cities	  that	  have	  been	  able	  to	  improve	  their	  creditworthiness	  significantly	  increased	  
+their	  access	  to	  finance	  and	  saw	  a	  general	  improvement	  in	  their	  own	  financial	  resources	  through	  
+better	   management	   processesiv.	   Estimates	   from	   the	   World	   Bank	   indicate	   that	   “every	   dollar	  
+invested	  in	  the	  creditworthiness	  of	  a	  developing	  country	  city	  is	  likely	  to	  mobilize	  more	  than	  US	  
+$100	  in	  private	  sector	  financing	  for	  low-­‐carbon	  and	  climate-­‐resilient	  infrastructure”v.	  
+
+2.2 How	  can	  cities	  become	  creditworthy?	  
+
+A	  city’s	  creditworthiness	  is	  assessed	  by	  a	  credit	  rating	  agency	  against	  a	  wide	  range	  of	  criteria,	  
+which	  typically	  include:	  
+
+Institutional	  Frameworks	  
+
+• 
+•  Economy	  
+•  Financial	  Management	  
+•  Budgetary	  Flexibility	  
+•  Budgetary	  Performance	  
+•  Liquidity	  
+•  Debt	  Burden	  
+•  Contingent	  Liabilities	  	  
+
+	  
+Each	  rating	  agency	  will	  have	  its	  own	  rating	  levels	  which	  will	  ultimately	  determine	  the	  availability	  
+of	   and	   cost	   of	   finance	   to	   a	   city	   from	   private	   investors.vi	  These	   rating	   levels	   fall	   into	   two	  
+categories:	   Investment	   Grade,	   where	   a	   city	   is	   seen	   to	   have	   strong	   creditworthiness	   and	  
+therefore	   is	   attractive	   to	   investors	   and	   Speculative	   Grade,	   where	   a	   city	   is	   seen	   to	   be	   less	  
+creditworthy	  and	  therefore	  less	  attractive	  to	  investors,	  pushing	  up	  the	  cost	  of	  capital.	  	  
+	  
+
+	  
+
+	  
+
+5	  
+
+	  
+The	  rating	  categories	  of	  Standard&	  Poor’s,	  one	  of	  the	  main	  global	  international	  rating	  agencies,	  
+are	  shown	  below:	  
+	  
+
+	  
+
+	  
+Cities	   can	   opt	   to	   apply	   for	   either	   a	   national	   credit	   rating	   or	   an	   international	   credit	   rating.	  
+National	  ratings	  are	  given	  by	  local	  rating	  agencies	  and	  provide	  information	  tailored	  for	  domestic	  
+investors.	  National	  ratings	  are	  generally	  easier	  for	  a	  city	  to	  achieve	  for	  a	  number	  of	  reasons	  and	  
+will	   allow	   cities	   to	   borrow	   from	   local	   investors,	   but	   may	   not	   be	   recognized	   by	   international	  
+investors.	  Although	  a	  national	  rating	  may	  limit	  cities	  to	  borrowing	  only	  in	  their	  local	  currency	  
+from	  domestic	  investors,	  it	  does	  remove	  the	  risks	  associated	  with	  fluctuating	  foreign	  currency	  
+exchange	  rates.	  It	  can	  also	  provide	  a	  useful	  assessment	  of	  a	  city’s	  creditworthiness	  in	  the	  local	  
+context.	  
+	  
+International	  credit	  ratings	  are	  recognized	  globally,	  providing	  a	  city	  with	  access	  to	  investment	  
+from	  the	  international	  capital	  markets,	  increasing	  the	  city’s	  options	  and	  reducing	  the	  cost	  of	  
+capital.	   International	   credit	   ratings	   will	   depend	   on	   the	   ability	   of	   the	   city	   to	   service	   debt	   in	  
+foreign	   hard	   currencies	   (US	   dollar,	   British	   pound	   or	   euro),	   as	   well	   as	   on	   the	   sovereign	  
+government’s	   creditworthiness	   and	   a	   range	   of	   other	   factors.	   As	   such,	   while	   an	   international	  
+credit	  rating	  may	  be	  more	  desirable,	  it	  is	  also	  significantly	  more	  difficult	  for	  a	  city	  to	  achieve.	  
+Additionally,	   borrowing	   in	   foreign	   currencies	   increases	   the	   risks	   associated	   with	   fluctuating	  
+foreign	  currency	  exchange	  rates.	  
+
+	  
+
+6	  
+
+	  
+2.3 Creditworthiness	  process	  
+
+The	  first	  step	  is	  for	  a	  city	  on	  the	  path	  to	  becoming	  creditworthy	  is	  an	  assessment	  to	  evaluate	  its	  
+current	   level	   of	   creditworthinessvii.	   A	   city	   can	   undertake	   an	   assessment	   either	   on	   its	   own	   or	  
+with	   an	   external	   agency	   (including	   a	   ratings	   agency)	   to	   identify	   where	   it	   may	   need	   to	   make	  
+improvements.	  If	  the	  city	  feels	  it	  performs	  well	  against	  all	  these	  criteria,	  it	  can	  then	  apply	  for	  
+credit	  rating	  from	  a	  credit	  rating	  agency.	  	  
+	  
+The	  World	  Bank	  provides	  a	  helpful	  city	  creditworthiness	  self-­‐assessment	  toolviii	  that	  can	  be	  used	  
+by	  cities	  to	  develop	  a	  creditworthiness	  action	  plan:	  http://www.citycred.org.	  The	  tool	  has	  been	  
+used	  by	  cities	  such	  as	  Kampala	  in	  Uganda	  to	  achieve	  a	  credit	  rating	  in	  a	  relatively	  short	  amount	  
+of	  time	  (less	  than	  3	  years).	  The	  World	  Bank	  assessment	  tool	  has	  identified	  19	  key	  areas	  in	  which	  
+cities	   may	   need	   to	   make	   improvements	   to	   obtain	   an	   investment-­‐grade	   rating.	   Below	   is	   an	  
+example	   of	   the	   assessment	   tool	   highlighting	   two	   key	   areas	   for	   a	   city	   to	   start	   focusing	   on	   to	  
+improve	  their	  overall	  creditworthiness.ix	  
+
+	  
+
+7	  
+
+	  
+Most	   cities	   will	   only	   need	   to	   take	   action	   in	   two	   to	   five	   areas	   listed	   above,	   and	   many	   of	   the	  
+required	  actions	  will	  address	  challenges	  in	  multiple	  areas.	  
+	  
+The	   C40	   Creditworthiness	   Network x 	  has	   been	   supporting	   several	   cities	   to	   improve	   their	  
+performance	  in	  these	  areas.	  A	  number	  of	  C40	  cities	  in	  East	  Africa	  and	  South	  Asia	  have	  been	  
+undertaking	   assessments	   of	   their	   own-­‐source	   revenue	   (OSR)	   to	   identify	   opportunities	   for	  
+improvement,	   while	   two	   other	   cities	   in	   Africa	   have	   started	   to	   develop	   climate-­‐smart	   capital	  
+investment	   plans.	   Two	   cities	   in	   Latin	   America	   and	   West	   Asia	   have	   been	   undertaking	   these	  
+activities	  as	  well	  as	  creating	  a	  pipeline	  of	  public	  infrastructure	  projects,	  such	  as	  BRT	  systems.	  
+One	  city	  is	  currently	  developing	  an	  Islamic	  ‘Sukuk’	  bond	  to	  finance	  several	  public	  infrastructure	  
+projects,	  while	  another	  is	  currently	  applying	  for	  a	  ‘shadow’	  credit	  rating	  assessment.	  
+
+2.4 Main	  credit	  rating	  institutions	  
+
+The	  majority	  of	  the	  world’s	  credit	  ratings	  are	  issued	  by	  three	  main	  companies:	  
+
+•  Standard	  &	  Poor’s	  (S&P)	  
+•  Moody’s	  Investor	  Services	  
+•  Fitch	  Group	  
+
+	  
+However	  there	  are	  a	  number	  of	  regional	  and	  local	  agencies	  that	  work	  with	  municipalities.	  The	  
+ratings	   issued	   by	   these	   agencies	   are	   only	   recognized	   at	   the	   local	   or	   regional	   level,	   but	   often	  
+reflect	   a	   better	   understanding	   of	   the	   municipality	   than	   those	   provided	   by	   a	   global	   rating	  
+agency.	  Examples	  of	  regional	  and	  local	  agencies	  include:	  
+
+South	  Africa	  /	  Africa	  Region:	  
+
+•  Global	  Credit	  Ratings	  Co.	  (GCR)	  
+
+Brazil:	  
+
+•  SR	  Rating,	  Ltda	  
+
+China:	  
+
+•  China	  Chengxin	  International	  Credit	  Rating	  Co.	  Ltd	  (CCXI)	  
+•  Dagong	  Global	  Credit	  Rating	  Co.	  Ltd	  (Dagong)	  
+•  Shanghai	  Far	  East	  Credit	  Rating	  Co.	  Ltd	  (SFECR)	  
+
+India:	  
+
+•  CRISIL	  Limited	  
+•  ICRA	  Limited	  
+•  Credit	  Analysis	  and	  Research	  Limited	  (CARE)	  
+•  Brickwork	  Ratings	  India	  Pvt	  Ltd	  
+
+Pakistan:	  
+
+JCR-­‐VIS	  Credit	  Rating	  Co.	  Limited	  
+
+• 
+•  Pakistan	  Credit	  Rating	  Agency	  Limited	  
+
+	  
+
+8	  
+
+	  
+2.5 Benefits	  of	  creditworthiness	  
+
+Credit	  ratings	  provide	  a	  wide	  range	  of	  benefits	  to	  municipalities.	  A	  regular	  formal	  assessment	  
+by	   an	   external	   agency	   will	   inspire	   confidence	   in	   municipalities	   from	   outside	   investors	   and	  
+provides	  them	  with	  an	  on-­‐going	  report	  on	  a	  city’s	  financial	  performance.	  This	  not	  only	  increases	  
+the	   pool	   of	   investors	   available	   to	   cities,	   but	   also	   allows	   cities	   better	   access	   to	   infrastructure	  
+finance	  at	  a	  lower	  cost.	  A	  good	  credit	  rating	  will	  also	  increase	  the	  speed	  at	  which	  a	  lender	  is	  
+prepared	  to	  come	  to	  a	  decision	  about	  whether	  or	  not	  to	  lend	  to	  a	  city.	  
+	  
+Donors	   and	   national	   governments	   also	   value	   a	   municipal	   credit	   rating,	   as	   it	   indicates	   a	   well-­‐
+managed	  municipality	  that	  can	  be	  relied	  upon	  to	  manage	  grants	  and	  other	  forms	  of	  support	  
+appropriately.	  The	  credit	  rating	  may	  also	  highlight	  any	  areas	  where	  a	  city	  might	  have	  issues	  and	  
+provide	  an	  indication	  as	  to	  where	  support	  should	  be	  targeted.	  
+	  
+Having	   a	   credit	   rating	   allows	   municipalities	   to	   borrow	   to	   finance	   their	   infrastructure.	   This	  
+provides	  a	  number	  of	  advantages	  for	  cities:	  
+
+Acceleration	   of	   infrastructure	   delivery	  -­‐	  by	  borrowing,	  a	  city	  can	  deliver	  infrastructure	  much	  
+more	  quickly	  than	  it	  would	  be	  able	  to	  by	  building	  savings	  first.	  	  
+
+Sharing	   costs	   with	   future	   beneficiaries	   -­‐	   borrowing	   allows	   infrastructure	   costs	   to	   be	   shared	  
+with	  future	  users,	  rather	  than	  having	  current	  and	  past	  tax	  payers	  incur	  the	  total	  cost	  of	  long-­‐
+lasting	  infrastructure.	  
+
+Savings	  on	  infrastructure	  costs	  -­‐	  in	  many	  regions,	  particularly	  Africa,	  building	  inflation	  (the	  rate	  
+of	  increase	  in	  building	  cost)	  can	  exceed	  the	  interest	  paid	  by	  municipalities	  on	  loans.	  	  
+
+Improving	  the	  city’s	  focus	  on	  financial	  sustainability	  -­‐	  the	  process	  of	  borrowing	  and	  repaying	  
+loans	  (including	  meeting	  the	  lenders	  requirements	  and	  regular	  reporting)	  will	  help	  encourage	  
+cities	  to	  follow	  best	  practices	  and	  improve	  management	  practices.	  	  
+
+The	  process	  of	  borrowing	  and	  repaying	  loans	  for	  infrastructure	  projects	  will	  also	  help	  further	  
+strengthen	  a	  city’s	  creditworthiness,	  continuing	  to	  decrease	  the	  cost	  of	  capital	  and	  attracting	  
+outside	  investment	  to	  a	  municipality.	  	  
+
+2.6 Challenges	  to	  becoming	  creditworthy	  
+
+There	  are	  a	  number	  of	  challenges	  that	  local	  governments	  might	  face	  when	  seeking	  to	  increase	  
+their	  creditworthiness,	  including:	  	  
+
+Cost	  -­‐	  A	  municipality	  may	  feel	  the	  cost	  of	  a	  achieving	  a	  credit	  rating	  is	  too	  high,	  particularly	  if	  
+the	  rating	  is	  likely	  to	  be	  a	  non-­‐investment	  grade.	  However,	  the	  benefits	  a	  rating	  provides	  are	  
+
+	  
+
+9	  
+
+	  
+likely	  to	  outweigh	  the	  cost,	  and	  in	  some	  cases	  the	  national	  government	  or	  donors	  may	  cover	  
+the	  cost	  for	  the	  city.	  
+
+Limited	  expertise	  and	  resources	  -­‐	  Many	  cities,	  particularly	  those	  in	  developing	  countries,	  may	  
+be	  limited	  in	  the	  amount	  of	  time	  their	  staff	  have	  available	  to	  pursue	  a	  credit	  rating.	  They	  may	  
+also	  lack	  the	  knowledge	  and	  experience	  required.	  	  External	  support	  may	  be	  required	  in	  such	  a	  
+case.	  
+
+Weak	   finances	   and	   financial	   management	   -­‐	   The	   financial	   challenges,	   such	   as	   low	   revenue	  
+collection	  and	  poor	  management	  practices,	  faced	  by	  some	  cities	  may	  be	  significant.	  They	  may	  
+therefore	  feel	  it	  is	  unlikely	  they	  will	  be	  able	  to	  obtain	  an	  investment	  grade	  credit	  rating	  in	  the	  
+foreseeable	  future.	  Despite	  this,	  there	  is	  value	  in	  a	  city	  pursuing	  a	  credit	  rating,	  as	  the	  process	  
+itself	  will	  help	  address	  many	  of	  these	  challenges.	  
+
+External	  factors	  and	  uncertainty	  (economic,	  social	  and	  political)	  -­‐	  There	  may	  be	  a	  wide	  range	  
+of	  external	  factors	  beyond	  a	  city’s	  control	  that	  limit	  its	  ability	  to	  pursue	  a	  credit	  rating.	  These	  
+could	   include	   an	   unstable	   wider	   economy,	   poor	   creditworthiness	   of	   the	   country,	   regulatory	  
+barriers	   and	   hurdles,	   regional	   conflict	   or	   political	   turmoil.	   In	   these	   cases,	   it	   may	   be	   more	  
+suitable	  for	  a	  city	  to	  pursue	  a	  national	  credit	  rating,	  as	  it	  assesses	  relative	  creditworthiness	  of	  
+cities	  within	  one	  country	  and	  subject	  to	  similar	  external	  factors,	  thus	  decreasing	  their	  relative	  
+effect.	  	  
+
+Risk	   of	   decreased	   government	   and	   donor	   support	   -­‐	   Many	   cities	   fear	   that	   with	   stronger	  
+finances	   and	   improved	   ability	   to	   borrow,	   national	   governments	   and	   donors	   will	   start	   to	  
+decrease	  the	  amount	  of	  support	  they	  provide	  to	  the	  municipality.	  This	  is	  unlikely,	  however,	  as	  
+well-­‐run	  entities	  provide	  better	  value	  for	  money	  in	  the	  eyes	  of	  governments	  and	  donors.	  
+
+Unfavourable	   peer	   comparison	   -­‐	   A	  city’s	  credit	  rating	  is	  public	  and	  so	  a	  weak	  rating	  may	  be	  
+perceived	  as	  reflecting	  badly	  on	  a	  city	  in	  comparison	  with	  its	  peers.	  Although	  this	  is	  a	  risk,	  it	  will	  
+also	  serve	  to	  highlight	  areas	  for	  improvement	  in	  a	  city’s	  financial	  management	  and	  encourage	  
+improvements.	  To	  mitigate	  this	  risk,	  a	  credit	  rating	  assessment	  (or	  a	  ‘shadow	  rating’)	  can	  be	  
+conducted	   by	   a	   city	   in	   advance	   of	   applying	   for	   a	   formal	   rating,	   with	   the	   results	   being	   kept	  
+confidential	  by	  the	  city.	  	  
+
+However,	   these	   challenges	   can	   often	   be	   overcome	   through	   inventive	   solutions,	   cooperation,	  
+coordination,	  and	  best	  practices	  listed	  in	  Section	  3	  below.	  
+
+3  GOOD	  PRACTICE	  APPROACHES	  FOR	  ACHIEVING	  A	  MUNICIPAL	  CREDIT	  RATING	  
+
+The	  steps	  a	  city	  will	  need	  to	  take	  to	  increase	  its	  creditworthiness	  will	  depend	  to	  a	  large	  extent	  
+on	  where	  it	  is	  starting	  from.	  It	  is	  important	  that	  cities	  initially	  concentrate	  on	  simple,	  achievable	  
+steps,	  such	  as	  identifying	  opportunities	  for	  increasing	  municipal	  revenues,	  before	  moving	  on	  to	  
+more	  complex	  steps,	  such	  as	  making	  changes	  in	  the	  regulatory	  or	  legislative	  environment.	  
+
+	  
+
+10	  
+
+	  
+	  
+For	   those	   cities	   with	   weak	   finances	   and	   management	   systems,	   their	   initial	   focus	   will	   be	   on	  
+general	   and	   wide	   ranging	   improvements	   to	   financial	   management	   practices	   and	   capacity	  
+building.	  For	  more	  advanced	  cities,	  it	  may	  be	  more	  appropriate	  to	  focus	  on	  building	  a	  pipeline	  
+of	  public	  infrastructure	  projects	  and	  establishing	  a	  track	  record	  of	  successfully	  managing	  such	  
+projects.	  For	  the	  most	  advanced	  cities	  with	  strong	  finances	  and	  track	  record	  of	  repaying	  debts,	  
+applying	   for	   a	   ‘shadow’	   credit	   rating	   (a	   credit	   rating	   assessment)	   may	   be	   helpful	   in	   order	   to	  
+highlight	  any	  issues	  they	  may	  need	  to	  address	  before	  applying	  for	  a	  formal	  rating.	  
+	  
+The	  main	  steps	  for	  a	  city	  to	  follow	  are:	  
+
+•  Understand	  its	  starting	  point	  by	  conducting	  an	  internal	  assessment;	  
+•  Set	  clear,	  realistic	  and	  ambitious	  objectives;	  
+•  Develop	   initiatives	   to	   address	   problem	   areas,	   particularly	   enhancing	   revenues	   and	  
+
+reducing	  costs;	  
+
+•  Create	  an	  action	  plan	  of	  initiatives;	  
+•  Allocate	  resources	  and	  implement	  the	  plan.	  
+
+3.1 Creditworthiness	  Action	  Plans	  –	  key	  good	  practice	  components	  
+
+Each	  city’s	  action	  plan	  will	  need	  to	  be	  tailored	  to	  their	  specific	  challenges.	  The	  cities	  in	  the	  C40	  
+Creditworthiness	  Network	  have	  identified	  a	  number	  of	  key	  areas	  of	  focus	  common	  to	  most	  of	  
+their	  plans:	  
+
+• 
+Increase	  Own-­‐Source	  Revenue	  (OSR)	  and	  manage	  expenditure	  
+• 
+Introduce	  best	  practices	  for	  financial	  management	  processes	  
+•  Develop	  a	  ‘climate	  smart’	  long	  term	  capital	  investment	  plan	  
+•  Build	  a	  pipeline	  of	  public	  infrastructure	  projects	  
+•  Undertake	  a	  ‘shadow’	  credit	  rating	  assessment	  
+
+	  
+We	  have	  identified	  case	  studies	  for	  each	  of	  these	  categories,	  which	  demonstrate	  good	  practices	  
+from	  C40	  cities	  in	  the	  Creditworthiness	  Network	  and	  other	  cities	  around	  the	  world.	  
+
+3.2 Increase	  own-­‐source	  revenue	  and	  manage	  expenditure	  
+
+For	   almost	   all	   cities	   seeking	   to	   increase	   their	   creditworthiness,	   improving	   their	   fiscal	   and	  
+financial	  performance	  as	  well	  as	  cash	  and	  debt	  management	  is	  essential.	  In	  practice,	  this	  can	  
+cover	  a	  wide	  range	  of	  activities	  that	  include	  improving	  the	  collection	  of	  revenues,	  cash	  flow	  and	  
+reserves,	   and	   reducing	   unnecessary	   expenditure.	   These	   actions	   alone	   can	   make	   a	   major	  
+difference	  to	  a	  city’s	  budget,	  particularly	  in	  cities	  where	  revenue	  collection	  rates	  are	  extremely	  
+low.	  
+
+	  
+
+11	  
+
+	  
+Case	  study:	  Kampala,	  Ugandaxi	  -­‐	  Strategic	  Plan	  
+
+including	  
+
+improving	  
+
+improve	  
+
+its	   services	   and	  
+
+infrastructure.	   These	  
+
+restore	   good	   governance	   and	   service	   delivery,	  
+
+Summary:	jooooonas     	
+totooooommmmm
+
+	
+ 	 
