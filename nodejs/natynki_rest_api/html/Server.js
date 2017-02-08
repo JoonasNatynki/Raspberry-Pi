@@ -122,7 +122,7 @@ function onRequest(request, response)
 
 	else if(request.url == "/pin21toggle")
 	{
-		pin21Toggle(response);
+		setInterval(pin21Toggle(response), 100);
 		return;
 	}
 
