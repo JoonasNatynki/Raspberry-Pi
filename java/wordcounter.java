@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-public class helloworld {
+public class wordcounter {
 
     public static void main (String args[]) throws Exception {
 
