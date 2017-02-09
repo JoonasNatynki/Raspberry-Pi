@@ -29,10 +29,15 @@ function sukses(data)
 
 function handleArticle(article)
 {
+    createMarker(article.lat, article.lng);
+}
+
+function createMarker(latt, lngg)
+{
     let marker = new google.maps.Marker(
     {
-    position: {lat: article.lat, lng: article.lng},
-    map: googleMap,
+        position: {lat: parseFloat(latt), lng: parseFloat(lngg)},
+        map: googleMap,
     });
-    wikipediaMarkers.push(marker);
+    markers.push(marker);
 }

@@ -4,7 +4,7 @@ let pin21toggle = document.getElementById("pin21toggle").addEventListener("click
 
 function pin21High()
 {
-    var options = 
+    let options = 
     {
         type: "GET",
         dataType: "JSON",

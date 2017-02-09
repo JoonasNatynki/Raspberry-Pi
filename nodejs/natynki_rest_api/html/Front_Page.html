@@ -51,7 +51,7 @@
         position: relative;
         float: right;
         width: 28%;
-        height: 300px;
+        height: 600px;
         border: 2px solid gray;
       }
     </style>
@@ -69,6 +69,7 @@
         <input id = "pin21low" type = "button" value = "Pin 21 low">
         <input id = "pin21high" type = "button" value = "Pin 21 high">
         <input id = "pin21toggle" type = "button" value = "Toggle pin 21"><br>
+        <input id = "flickrbutton" type = "button" value = "Flickr button"><br>
       </form>
 
    </div>
@@ -77,9 +78,8 @@
 
       <div id="imageparentcontainer">
         <div id="imagecontainer">
-            Images go here!
 
-
+          
         </div>
         <input id="previousbutton" type="button" value="PREVIOUS"></input>
         <input id="nextbutton" type="button" value="NEXT"></input>
@@ -96,6 +96,7 @@
       <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
       <script defer src="/scripts/imagecontainer.js"></script>
       <script defer src="/scripts/gpiosbuttons.js"></script>
+      <script defer src="/scripts/flickrbutton.js"></script>
 
   </body>
 </html>
