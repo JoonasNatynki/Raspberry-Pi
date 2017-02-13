@@ -6,37 +6,34 @@
   .threadfield
   {
     border-radius: 25px;
-    border: 2px solid darkslategrey;
     padding: 20px; 
     width: 70%;
     height: 90%;
     background-color:#585858;
-    box-shadow: 10px 10px 30px #424242;
   }
   @keyframes example {
-    0%   {left:0px; top:0px;}
-    25%  {left:200px; top:0px;}
-    50%  {left:200px; top:200px;}
-    75%  {left:0px; top:200px;}
+    0%   {left:-500px; top:-500px;}
     100% {left:0px; top:0px;}
   }
   .thread
   {
     border-radius: 25px;
-    border: 2px solid darkslategrey;
+    border: 2px solid #2E2E2E;
     position: relative;
+    margin: 10px;
     padding: 20px; 
     width: 200px;
     height: 150px;
     background-color:#A4A4A4;
-    box-shadow: 10px 10px 30px #2E2E2E;
+    box-shadow: 10px 10px 30px #424242;
     animation-name: example;
-    animation-duration: 4s;
+    animation-play-state: paused;
+    animation-duration: 0.18s;
   }
 
   </style>
   </head>
-  <body style = "background-color: lightslategrey">
+  <body style = "background-color: #2E2E2E">
 
     <div class = "threadfield">
       <div class = "thread">
@@ -49,6 +46,8 @@
         Moi oon Kalle!
       </div>
     </div>
+
+    <script src = "thread.js"></script>
 
   </body>
   </html>
