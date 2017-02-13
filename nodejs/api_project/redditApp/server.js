@@ -1,3 +1,4 @@
+var path = require("path");
 var express = require("express");
 //var fileSystem = require("fs");
 var app = express();
@@ -8,9 +9,23 @@ console.log("Initialization done.");
 
 app.listen(portnumber);
 
+console.log("Server running at natynki.net.");
+
 // Default front page
 app.get("/", function(request, response)
 	{
 	    response.sendFile(__dirname + "/frontPage.html");
 	});
 
+app.get("/*", function(request, response)
+	{
+	    console.log("Handling request to: " + request.url);
+	    if(path.extname(request.url) == ".js")
+	    {
+		console.log("hei!");
+		response.sendFile(__dirname + "/scripts/" + request.url);
+	    }else
+	    {
+		response.sendFile(__dirname + request.url);
+	    }
+	});
