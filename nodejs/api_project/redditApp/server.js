@@ -22,10 +22,11 @@ app.get("/*", function(request, response)
 	    console.log("Handling request to: " + request.url);
 	    if(path.extname(request.url) == ".js")
 	    {
-		console.log("hei!");
-		response.sendFile(__dirname + "/scripts/" + request.url);
-	    }else
+			console.log("hei!");
+			response.sendFile(__dirname + "/scripts/" + request.url);
+	    }
+		else
 	    {
-		response.sendFile(__dirname + request.url);
+			response.sendFile(__dirname + request.url);
 	    }
 	});
