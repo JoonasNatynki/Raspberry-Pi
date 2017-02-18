@@ -15,7 +15,7 @@
     0%   {left:-500px; top:-500px;}
     100% {left:0px; top:0px;}
   }
-  .thread
+  .threadghost
   {
     border-radius: 25px;
     border: 2px solid #2E2E2E;
@@ -26,8 +26,20 @@
 
     background-color:#A4A4A4;
     box-shadow: 10px 10px 30px #424242;
-    animation-name: example;
-    animation-play-state: paused;
+  }
+
+  .thread
+  {
+    border-radius: 25px;
+    border: 2px solid red;
+    position: fixed;
+    float: left;
+    margin: 10px;
+    padding: 20px; 
+
+    background-color:#A4A4A4;
+    box-shadow: 10px 10px 30px #424242;
+    animation-play-state: running;
     animation-duration: 0.18s;
   }
 
@@ -37,47 +49,10 @@
 
     <div class = "threadfield" id = "threadfield">
 
-      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>      <div class = "thread">
-        Moi oon Kalle!
-      </div>
-
     </div>
 
     <script src = "scripts/thread.js"></script>
+    <script src = "scripts/morf.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
   </body>
