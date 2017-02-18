@@ -23,7 +23,7 @@ app.get("/*", function(request, response)
 	    if(path.extname(request.url) == ".js")
 	    {
 			console.log("hei!");
-			response.sendFile(__dirname + "/scripts/" + request.url);
+			response.sendFile(__dirname + request.url);
 	    }
 		else
 	    {
