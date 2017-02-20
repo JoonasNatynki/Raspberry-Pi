@@ -5,39 +5,40 @@ var threadsMoving = 0;
 
 
 
-function rearrangeThreads(threadsArray, index)
+function rearrangeThreads()
 {
-     setTimeout(function()
-        {
-            var elem = threadsArray[index]; // Element to animate
-            var rect = document.getElementById("threadghost " + index).getBoundingClientRect(); // Current position of said element
-            var bodyRect = document.body.getBoundingClientRect();
-            var threadfield = document.getElementById("threadfield").getBoundingClientRect();
-            var coordx = rect.left - bodyRect.left - threadfield.left;
-            var coordy = rect.top - bodyRect.top - threadfield.top;
+    var threadlen = threadsArray.length;
 
-            var trans = Morf.transition(elem, {
-                    // New CSS state
-                    '-webkit-transform': 'translate3d(' + coordx + 'px, ' + coordy + 'px, 0)',
-                }, {
-                    duration: '500ms',
-                    timingFunction: 'swingFromTo',
-                    callback: function (elem) {
-                        // You can optionally add a callback option for when the animation completes.
-                    }
-                });
+    for(index = 0; index < threadlen; index++)
+    {
+        var text = getOffsetLeft(threadsArray[index]);
+        console.log(text);
+        console.log(threadsArray.length);
+        console.log(index);
+        
+        var elem = threadsArray[index]; // Element to animate
+        var rect = document.getElementById("threadghost " + index).getBoundingClientRect(); // Current position of said element
+        var bodyRect = document.body.getBoundingClientRect();
+        var threadfield = document.getElementById("threadfield").getBoundingClientRect();
+        var coordx = rect.left - bodyRect.left - threadfield.left;
+        var coordy = rect.top - bodyRect.top - threadfield.top;
 
-    }, iterationTime * (Math.random() * (5 - 1) + 1));
-}
-
-function threadAnimationStart()
-{
-    threadsMoving++;
-    this.style.WebkitAnimationPlayState  = "running";
+        var trans = Morf.transition(elem, {
+                // New CSS state
+                                            '-webkit-transform': 'translate3d(' + coordx + 'px, ' + coordy + 'px, 0)',
+                                        }, {
+                                            duration: '500ms',
+                                            timingFunction: 'swingFromTo',
+                                            callback: function (elem) {
+                                                // You can optionally add a callback option for when the animation completes.
+                                            }
+                                        });
+    }
 }
 
 function fetchthreads()
 {
+    // TODO
     var newthreadghost = document.createElement("div");
     var newthread = document.createElement("div");
     var threadfield = document.getElementById("threadfield");
@@ -72,22 +73,27 @@ function makeNewThread()
 
     threadfield.insertBefore(newthreadghost, threadfield.firstChild);
     threadfield.insertBefore(newthread, threadfield.firstChild);
-    test();
+    rearrangeThreads();
 }
 
-function test()
+function getOffsetLeft( elem )
 {
-    for(i = 0; i < threadsArray.length; i++)
-    {
-        rearrangeThreads(threadsArray, i);
-    }
+    var offsetLeft = 0;
+    do {
+      if ( !isNaN( elem.offsetLeft ) )
+      {
+          offsetLeft += elem.offsetLeft;
+      }
+    } while( elem = elem.offsetParent );
+    return offsetLeft;
 }
+
 
 // Already existing threads...""
-for(i = 0; i < 5; i++)
+for(i = 0; i < 3; i++)
 {
     fetchthreads();
-    test();
 }
 
-setInterval(makeNewThread, 2000);
+//setInterval(makeNewThread, 8000);
+rearrangeThreads();
