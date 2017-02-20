@@ -26,7 +26,7 @@ function rearrangeThread(element, index)
                                             '-webkit-transform': 'translate3d(' + coordx + 'px, ' + coordy + 'px, 0)',
                                         }, {
                                             duration: '500ms',
-                                            timingFunction: 'easeInOutQuad',
+                                            timingFunction: 'easeFromTo',
                                             increment: 0.2,
                                             callback: function (elem) {
                                                 // You can optionally add a callback option for when the animation completes.
