@@ -5,34 +5,35 @@ var threadsMoving = 0;
 
 
 
-function rearrangeThreads(threadsArray, index)
+function rearrangeThread(element, index)
 {
     var threadlen = threadsArray.length;
 
-        console.log(iterationTime * (Math.random() * 5) + 1);
-        setTimeout(function ()
-        {
-            var offsetcoords = getCoords(threadghostsArray[index]);
-            threadsArray[index].style.top = 0;
-            
-            var elem = threadsArray[index]; // Element to animate
-            var rect = document.getElementById("threadghost " + index).getBoundingClientRect(); // Current position of said element
-            var bodyRect = document.body.getBoundingClientRect();
-            var threadfield = document.getElementById("threadfield").getBoundingClientRect();
-            var coordx = rect.left - bodyRect.left - threadfield.left;
-            var coordy = offsetcoords.top;
+    setTimeout(function ()
+    {
+        var offsetcoords = getCoords(threadghostsArray[index]);
+        element.style.top = 0;
+        
+        var elem = element; // Element to animate
+        var rect = document.getElementById("threadghost " + index).getBoundingClientRect(); // Current position of said element
+        var bodyRect = document.body.getBoundingClientRect();
+        var threadfield = document.getElementById("threadfield").getBoundingClientRect();
+        var coordx = rect.left - bodyRect.left - threadfield.left;
+        var coordy = offsetcoords.top;
 
-            var trans = Morf.transition(elem, {
-                    // New CSS state
-                                                '-webkit-transform': 'translate3d(' + coordx + 'px, ' + coordy + 'px, 0)',
-                                            }, {
-                                                duration: '500ms',
-                                                timingFunction: 'swingFromTo',
-                                                callback: function (elem) {
-                                                    // You can optionally add a callback option for when the animation completes.
-                                                }
-                                            });
-        }, iterationTime * (Math.random() * 3) + 1);
+        var trans = Morf.transition(elem, {
+                // New CSS state
+                                            '-webkit-transform': 'translate3d(' + coordx + 'px, ' + coordy + 'px, 0)',
+                                        }, {
+                                            duration: '500ms',
+                                            timingFunction: 'easeInOutQuad',
+                                            increment: 0.3,
+                                            decimalPlaces: 5,
+                                            callback: function (elem) {
+                                                // You can optionally add a callback option for when the animation completes.
+                                            }
+                                        });
+    }, iterationTime * (Math.random() * 3) + 1);
 }
 
 
@@ -62,18 +63,23 @@ function makeNewThread()
     var newthreadghost = document.createElement("div");
     var newthread = document.createElement("div");
     var threadfield = document.getElementById("threadfield");
+    var text = "This is the text that goes into the thread view...";
 
     newthread.id = "thread " + threadsArray.length;
     newthreadghost.id = "threadghost " + threadghostsArray.length;
+
     threadsArray.push(newthread);
     threadghostsArray.push(newthreadghost);
-    newthreadghost.appendChild(document.createTextNode("Thread ghost "+ threadghostsArray.length));
-    newthread.appendChild(document.createTextNode("Thread " + threadsArray.length));
+
+    newthreadghost.appendChild(document.createTextNode(text + threadghostsArray.length));
+    newthread.appendChild(document.createTextNode(text + threadsArray.length));
+
     newthreadghost.className = "threadghost";
     newthread.className = "thread";
 
     threadfield.insertBefore(newthreadghost, threadfield.firstChild);
     threadfield.insertBefore(newthread, threadfield.firstChild);
+
     rearrangeThreadsInit();
 }
 
@@ -97,17 +103,24 @@ function getCoords(elem) { // crossbrowser version
 
 function rearrangeThreadsInit()
 {
-    for(var index = 0; index < threadsArray.length; index++)
+    //threadsArray.forEach(rearrangeThread);
+    // Slightly faster loop
+    var i = 0;
+    var e = threadsArray.length;
+    while(e--)
     {
-        rearrangeThreads(threadsArray, index);
+        rearrangeThread(threadsArray[i], i);
+        i++;
     }
 }
 
 // Already existing threads...""
-for(i = 0; i < 10; i++)
+for(i = 0; i < 100; i++)
 {
     fetchthreads();
 }
 
+rearrangeThreadsInit();
+
 //setInterval(makeNewThread, 8000);
-setInterval(makeNewThread, 1000);
+setInterval(makeNewThread, 5000);
