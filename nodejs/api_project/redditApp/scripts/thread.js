@@ -27,8 +27,7 @@ function rearrangeThread(element, index)
                                         }, {
                                             duration: '500ms',
                                             timingFunction: 'easeInOutQuad',
-                                            increment: 0.3,
-                                            decimalPlaces: 5,
+                                            increment: 0.2,
                                             callback: function (elem) {
                                                 // You can optionally add a callback option for when the animation completes.
                                             }
@@ -56,6 +55,7 @@ function fetchthreads()
 
     threadfield.insertBefore(newthreadghost, threadfield.firstChild);
     threadfield.insertBefore(newthread, threadfield.firstChild);
+    $(newthread).fadeIn(1000);
 }
 
 function makeNewThread()
@@ -79,8 +79,10 @@ function makeNewThread()
 
     threadfield.insertBefore(newthreadghost, threadfield.firstChild);
     threadfield.insertBefore(newthread, threadfield.firstChild);
-
     rearrangeThreadsInit();
+
+    $(newthread).fadeIn(1000);
+
 }
 
 function getCoords(elem) { // crossbrowser version
