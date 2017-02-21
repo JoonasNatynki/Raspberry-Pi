@@ -8,6 +8,9 @@ var threadsMoving = 0;
 function rearrangeThread(element, index)
 {
     var threadlen = threadsArray.length;
+    var itertime = iterationTime;
+
+    if(index == threadlen - 1){itertime = 0;}
 
     setTimeout(function ()
     {
@@ -32,7 +35,8 @@ function rearrangeThread(element, index)
                                                 // You can optionally add a callback option for when the animation completes.
                                             }
                                         });
-    }, iterationTime * (Math.random() * 3) + 1);
+    }, itertime * (Math.random() * 3) + 1);
+    itertime = iterationTime;
 }
 
 
@@ -55,7 +59,7 @@ function fetchthreads()
 
     threadfield.insertBefore(newthreadghost, threadfield.firstChild);
     threadfield.insertBefore(newthread, threadfield.firstChild);
-    $(newthread).fadeIn(1000);
+    $(newthread).fadeIn(10);
 }
 
 function makeNewThread()
@@ -82,7 +86,6 @@ function makeNewThread()
     rearrangeThreadsInit();
 
     $(newthread).fadeIn();
-
 }
 
 function getCoords(elem) { // crossbrowser version
@@ -117,7 +120,7 @@ function rearrangeThreadsInit()
 }
 
 // Already existing threads...""
-for(i = 0; i < 100; i++)
+for(i = 0; i < 120; i++)
 {
     fetchthreads();
 }
