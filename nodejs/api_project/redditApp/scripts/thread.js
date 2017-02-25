@@ -62,12 +62,12 @@ function fetchthreads()
     $(newthread).fadeIn(10);
 }
 
-function makeNewThread()
+function makeNewThread(threadtext)
 {
     var newthreadghost = document.createElement("div");
     var newthread = document.createElement("div");
     var threadfield = document.getElementById("threadfield");
-    var text = "This is the text that goes into the thread view...";
+    var text = threadtext;
 
     newthread.id = "thread " + threadsArray.length;
     newthreadghost.id = "threadghost " + threadghostsArray.length;
@@ -75,8 +75,8 @@ function makeNewThread()
     threadsArray.push(newthread);
     threadghostsArray.push(newthreadghost);
 
-    newthreadghost.appendChild(document.createTextNode(text + threadghostsArray.length));
-    newthread.appendChild(document.createTextNode(text + threadsArray.length));
+    newthreadghost.appendChild(document.createTextNode(text));
+    newthread.appendChild(document.createTextNode(text));
 
     newthreadghost.className = "threadghost";
     newthread.className = "thread";
@@ -119,13 +119,38 @@ function rearrangeThreadsInit()
     }
 }
 
-// Already existing threads...""
-for(i = 0; i < 120; i++)
+function submitMessage()
 {
-    fetchthreads();
+    console.log("MOI");
 }
 
-rearrangeThreadsInit();
+function initPage()
+{
+
+    // Already existing threads...""
+    for(i = 0; i < 10; i++)
+    {
+        fetchthreads();
+    }
+
+    $("#threadsubmitfield").keypress(function(event)
+    {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == "13")
+        {
+            event.preventDefault();
+            var message = $("#inputmessage").val();
+            makeNewThread(message);
+            $("#inputmessage").val("");
+        }
+    });
+
+    rearrangeThreadsInit();
+}
+
+
+
+initPage();
 
 //setInterval(makeNewThread, 8000);
-setInterval(makeNewThread, 5000);
+//setInterval(makeNewThread, 5000);
