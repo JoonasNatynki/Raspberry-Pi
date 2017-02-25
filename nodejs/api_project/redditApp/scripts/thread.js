@@ -130,7 +130,7 @@ function initPage()
     // Already existing threads...""
     for(i = 0; i < 10; i++)
     {
-        fetchthreads();
+        //fetchthreads();
     }
 
     $("#threadsubmitfield").keypress(function(event)

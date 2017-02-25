@@ -22,7 +22,6 @@ app.get("/*", function(request, response)
 	    console.log("Handling request to: " + request.url);
 	    if(path.extname(request.url) == ".js")
 	    {
-			console.log("hei!");
 			response.sendFile(__dirname + request.url);
 	    }
 		else
