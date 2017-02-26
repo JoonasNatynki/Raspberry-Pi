@@ -67,7 +67,7 @@ function initSockets() {
             io.sockets.in(jsonMsg.app_id).emit('message', jsonMsg);
 
             // Write into message log
-            fs.appendFile('messages.txt', jsonMsg.text, function (err)
+            fs.appendFile('messages.txt', jsonMsg.text + "\n", function (err)
             {
 
             });
