@@ -40,6 +40,7 @@ function initSockets() {
             console.log('user disconnected');
         });
 
+        // #######################################################################
         // We use this to read the messages log text file
         var lineReader = require('readline').createInterface({
         input: require('fs').createReadStream('messages.txt')
@@ -49,9 +50,9 @@ function initSockets() {
         {
             var msg = {};
             msg.text = line;
-            io.sockets.connected[socketid].emit("message", msg);
+            io.sockets.connected[socketid].emit("message", msg); // Send the messages line by line to just the connecting client
         });
-        
+        // #######################################################################
 
         // dynamic room, from https://gist.github.com/crtr0/2896891
         socket.on('app_id', function(app_id) {
