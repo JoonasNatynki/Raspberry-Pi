@@ -3,6 +3,9 @@ var threadsArray = [];
 var iterationTime = 85;
 var threadsMoving = 0;
 
+const socket = io('http://88.112.159.13:3000');
+var appid = "696969";
+
 // Updates thread positions
 function rearrangeThread(element, index)
 {
@@ -85,6 +88,12 @@ function makeNewThread(threadtext)
     rearrangeThreadsInit();
 
     $(newthread).fadeIn();
+
+    var msg = {};
+    msg.app_id = appid;
+    msg.str = text;
+
+    socket.json.emit("messages", msg);
 }
 
 // Get element coordinates in relation to the page
@@ -123,12 +132,14 @@ function rearrangeThreadsInit()
 
 function initSocket()
 {
-    const socket = io('http://88.112.159.13:3000');
-
     socket.on('connect', function() 
     {
-        socket.emit('app_id', '696969');
+        socket.emit('app_id', appid);
     });
+    socket.on("message", function(data)
+    {
+        console.log(data.str);
+    })
 }
 
 // Start the page here
