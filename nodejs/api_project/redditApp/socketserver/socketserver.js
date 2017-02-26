@@ -7,10 +7,7 @@ const io = require('socket.io').listen(http);
 const moment = require('moment');
 var fs = require("fs");
 
-// We use this to read the messages log text file
-var lineReader = require('readline').createInterface({
-  input: require('fs').createReadStream('messages.txt')
-});
+
 
 app.use(express.static('static'));
 app.use(bodyParser.json()); // to support JSON-encoded bodies
@@ -43,6 +40,10 @@ function initSockets() {
             console.log('user disconnected');
         });
 
+        // We use this to read the messages log text file
+        var lineReader = require('readline').createInterface({
+        input: require('fs').createReadStream('messages.txt')
+        });
         // When a user connects, read the messages and send them to
         lineReader.on('line', function (line)
         {
@@ -50,8 +51,6 @@ function initSockets() {
             msg.text = line;
             io.sockets.connected[socketid].emit("message", msg);
         });
-
-        lineReader();
         
 
         // dynamic room, from https://gist.github.com/crtr0/2896891
