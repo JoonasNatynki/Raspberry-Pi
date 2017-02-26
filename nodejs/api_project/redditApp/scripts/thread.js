@@ -93,7 +93,7 @@ function makeNewThread(threadtext)
     msg.app_id = appid;
     msg.str = text;
 
-    socket.json.emit("messages", msg);
+    socket.json.emit("message", msg);
 }
 
 // Get element coordinates in relation to the page
