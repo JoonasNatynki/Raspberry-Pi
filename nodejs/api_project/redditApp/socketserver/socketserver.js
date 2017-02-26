@@ -50,11 +50,13 @@ function initSockets() {
             msg.text = line;
             io.sockets.connected[socketid].emit("message", msg);
         });
+
+        lineReader();
         
 
         // dynamic room, from https://gist.github.com/crtr0/2896891
         socket.on('app_id', function(app_id) {
-            console.log('joining room "'+app_id+'"');
+            console.log('joining room "' + app_id + '"');
             // app_id = room
             socket.join(app_id);
         });
