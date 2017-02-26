@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const http = require('http').createServer(app);
 const io = require('socket.io').listen(http);
 const moment = require('moment');
+var fileSystem = require("fs");
 
 app.use(express.static('static'));
 app.use(bodyParser.json()); // to support JSON-encoded bodies
@@ -44,10 +45,16 @@ function initSockets() {
         });
 
         socket.on('message', function(jsonMsg) {
-            console.log('msg : '+jsonMsg.str);
+            console.log('msg : '+jsonMsg.text);
             console.log('room: '+jsonMsg.app_id);
             jsonMsg.socketid = socketid; // pad client id to response
             io.sockets.in(jsonMsg.app_id).emit('message', jsonMsg);
+
+            // Write into message log
+            fs.appendFile('messages.txt', jsonMsg.text, function (err)
+            {
+
+            });
         });
     });
 }
