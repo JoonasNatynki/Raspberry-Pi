@@ -91,7 +91,7 @@ function makeNewThread(threadtext)
 
     var msg = {};
     msg.app_id = appid;
-    msg.str = text;
+    msg.text = text;
 
     socket.json.emit("message", msg);
 }
@@ -138,7 +138,8 @@ function initSocket()
     });
     socket.on("message", function(data)
     {
-        console.log(data.str);
+        // When someone makes a new thread, do this on your client
+        makeNewThread(data.text);
     })
 }
 
