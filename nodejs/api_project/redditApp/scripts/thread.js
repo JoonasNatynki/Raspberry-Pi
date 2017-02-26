@@ -3,7 +3,6 @@ var threadsArray = [];
 var iterationTime = 85;
 var threadsMoving = 0;
 
-
 // Updates thread positions
 function rearrangeThread(element, index)
 {
