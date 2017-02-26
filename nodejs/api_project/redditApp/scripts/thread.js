@@ -162,7 +162,7 @@ function initPage()
             event.preventDefault();
             var message = $("#inputmessage").val();
             //makeNewThread(message);
-            socket.json.emit("message", msg);
+            socket.json.emit("message", message);
             $("#inputmessage").val("");
         }
     });
