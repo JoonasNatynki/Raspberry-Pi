@@ -43,27 +43,6 @@ function rearrangeThread(element, index)
     itertime = iterationTime;
 }
 
-function fetchthreads()
-{
-    // TODO
-    var newthreadghost = document.createElement("div");
-    var newthread = document.createElement("div");
-    var threadfield = document.getElementById("threadfield");
-
-    newthread.id = "thread " + threadsArray.length;
-    newthreadghost.id = "threadghost " + threadghostsArray.length;
-    threadsArray.push(newthread);
-    threadghostsArray.push(newthreadghost);
-    newthreadghost.appendChild(document.createTextNode("Thread ghost "+ threadghostsArray.length));
-    newthread.appendChild(document.createTextNode("Thread " + threadsArray.length));
-    newthreadghost.className = "threadghost";
-    newthread.className = "thread";
-
-    threadfield.insertBefore(newthreadghost, threadfield.firstChild);
-    threadfield.insertBefore(newthread, threadfield.firstChild);
-    $(newthread).fadeIn(10);
-}
-
 function makeNewThread(threadtext)
 {
     var newthreadghost = document.createElement("div");
@@ -140,16 +119,8 @@ function initSocket()
 // Start the page here
 function initPage()
 {
-
-    // Already existing threads...""############
-    for(i = 0; i < 10; i++)
-    {
-        //fetchthreads();
-    }
-    //##########################################
-
-
     //##############################################################
+    // When new comment is submitted and you press ENTER
     $("#threadsubmitfield").keypress(function(event)
     {
         var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -160,7 +131,7 @@ function initPage()
             var msg = {};
             msg.app_id = appid;
             msg.text = $("#inputmessage").val();
-            socket.json.emit("message", msg);
+            socket.json.emit("message", msg);   // Send message to all connected clients
             $("#inputmessage").val("");
         }
     });
