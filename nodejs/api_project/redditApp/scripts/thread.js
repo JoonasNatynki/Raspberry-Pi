@@ -121,6 +121,16 @@ function rearrangeThreadsInit()
     }
 }
 
+function initSocket()
+{
+    const socket = io('http://88.112.159.13:3000');
+
+    socket.on('connect', function() 
+    {
+        socket.emit('app_id', '696969');
+    });
+}
+
 // Start the page here
 function initPage()
 {
@@ -148,6 +158,7 @@ function initPage()
     //##############################################################
 
     rearrangeThreadsInit();
+    initSocket();
 }
 
 initPage();
