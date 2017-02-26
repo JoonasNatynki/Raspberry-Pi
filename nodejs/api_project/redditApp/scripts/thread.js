@@ -88,10 +88,6 @@ function makeNewThread(threadtext)
     rearrangeThreadsInit();
 
     $(newthread).fadeIn();
-
-    var msg = {};
-    msg.app_id = appid;
-    msg.text = text;
 }
 
 // Get element coordinates in relation to the page
@@ -160,9 +156,11 @@ function initPage()
         if(keycode == "13")
         {
             event.preventDefault();
-            var message = $("#inputmessage").val();
             //makeNewThread(message);
-            socket.json.emit("message", message);
+            var msg = {};
+            msg.app_id = appid;
+            msg.text = $("#inputmessage").val();
+            socket.json.emit("message", msg);
             $("#inputmessage").val("");
         }
     });
