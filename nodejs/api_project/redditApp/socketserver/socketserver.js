@@ -49,7 +49,9 @@ function initSockets() {
         lineReader.on('line', function (line)
         {
             var msg = {};
-            msg.text = line;
+            var splitstr = line.split(":", 2);
+            msg.text = splitstr[1];
+            msg.socketid = splitstr[0];
             io.sockets.connected[socketid].emit("message", msg); // Send the messages line by line to just the connecting client
         });
         // #######################################################################
@@ -68,7 +70,7 @@ function initSockets() {
             io.sockets.in(jsonMsg.app_id).emit('message', jsonMsg);
 
             // Write into message log
-            fs.appendFile('messages.txt', jsonMsg.text + "\n", function (err)
+            fs.appendFile('messages.txt', jsonMsg.socketid + ": " + jsonMsg.text + "\n", function (err)
             {
 
             });
