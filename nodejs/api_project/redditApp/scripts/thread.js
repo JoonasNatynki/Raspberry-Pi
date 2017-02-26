@@ -92,8 +92,6 @@ function makeNewThread(threadtext)
     var msg = {};
     msg.app_id = appid;
     msg.text = text;
-
-    socket.json.emit("message", msg);
 }
 
 // Get element coordinates in relation to the page
@@ -163,7 +161,8 @@ function initPage()
         {
             event.preventDefault();
             var message = $("#inputmessage").val();
-            makeNewThread(message);
+            //makeNewThread(message);
+            socket.json.emit("message", msg);
             $("#inputmessage").val("");
         }
     });
