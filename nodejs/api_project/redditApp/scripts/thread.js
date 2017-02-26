@@ -4,7 +4,7 @@ var iterationTime = 85;
 var threadsMoving = 0;
 
 
-
+// Updates thread positions
 function rearrangeThread(element, index)
 {
     var threadlen = threadsArray.length;
@@ -14,6 +14,7 @@ function rearrangeThread(element, index)
 
     setTimeout(function ()
     {
+        // Offset the thread coordinates based on where they are relative to the page
         var offsetcoords = getCoords(threadghostsArray[index]);
         element.style.top = 0;
         
@@ -36,10 +37,9 @@ function rearrangeThread(element, index)
                                             }
                                         });
     }, itertime * (Math.random() * 3) + 1);
+
     itertime = iterationTime;
 }
-
-
 
 function fetchthreads()
 {
@@ -88,7 +88,10 @@ function makeNewThread(threadtext)
     $(newthread).fadeIn();
 }
 
-function getCoords(elem) { // crossbrowser version
+// Get element coordinates in relation to the page
+function getCoords(elem) 
+{ 
+    // crossbrowser version
     var box = elem.getBoundingClientRect();
 
     var body = document.body;
@@ -106,10 +109,10 @@ function getCoords(elem) { // crossbrowser version
     return { top: Math.round(top), left: Math.round(left) };
 }
 
+// The loopty loop for the thread arranger
 function rearrangeThreadsInit()
 {
-    //threadsArray.forEach(rearrangeThread);
-    // Slightly faster loop
+    // Slightly faster loopty loop than anything else
     var i = 0;
     var e = threadsArray.length;
     while(e--)
@@ -119,20 +122,19 @@ function rearrangeThreadsInit()
     }
 }
 
-function submitMessage()
-{
-    console.log("MOI");
-}
-
+// Start the page here
 function initPage()
 {
 
-    // Already existing threads...""
+    // Already existing threads...""############
     for(i = 0; i < 10; i++)
     {
         //fetchthreads();
     }
+    //##########################################
 
+
+    //##############################################################
     $("#threadsubmitfield").keypress(function(event)
     {
         var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -144,13 +146,9 @@ function initPage()
             $("#inputmessage").val("");
         }
     });
+    //##############################################################
 
     rearrangeThreadsInit();
 }
 
-
-
 initPage();
-
-//setInterval(makeNewThread, 8000);
-//setInterval(makeNewThread, 5000);

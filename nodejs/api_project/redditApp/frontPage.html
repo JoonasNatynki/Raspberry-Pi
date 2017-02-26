@@ -9,7 +9,7 @@
     float: right;
     padding: 20px; 
     width: 70%;
-    height: 750px;
+    height: 70%;
     background-color:#585858;
   }
 
@@ -30,12 +30,13 @@
 
   .threadghost
   {
-    border-radius: 25px;
+    border-radius: 5px;
     border: 2px solid #2E2E2E;
+    max-width: 600px;
     position: relative;
     margin: 10px;
     float: left;
-    padding: 20px;
+    padding: 10px;
     visibility: hidden;
     background-color:#A4A4A4;
     box-shadow: 10px 10px 30px #424242;
@@ -43,11 +44,12 @@
 
   .thread
   {
-    border-radius: 25px;
+    border-radius: 5px;
     border: 2px solid #2E2E2E;
+    max-width: 600px;
     position: absolute;
     float: left;
-    padding: 20px;
+    padding: 10px;
     display:none;
     background-color:#A4A4A4;
     box-shadow: 10px 10px 30px #424242;
@@ -74,7 +76,7 @@
     <div class = "threadsubmitfield" id = "threadsubmitfield">
       <form>
         <div class="input-group">
-          <span class="input-group-addon">Say something</span>
+          <span class="input-group-addon">Comment</span>
           <input id="inputmessage" type="text" class="form-control" name="inputmessage" placeholder="...">
         </div>
       </form>
