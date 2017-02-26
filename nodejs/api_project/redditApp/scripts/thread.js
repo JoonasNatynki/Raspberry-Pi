@@ -43,8 +43,9 @@ function rearrangeThread(element, index)
     itertime = iterationTime;
 }
 
-function makeNewThread(threadtext)
+function makeNewThread(data)
 {
+    /*
     var newthreadghost = document.createElement("div");
     var newthread = document.createElement("div");
     var threadfield = document.getElementById("threadfield");
@@ -64,6 +65,55 @@ function makeNewThread(threadtext)
 
     threadfield.insertBefore(newthreadghost, threadfield.firstChild);
     threadfield.insertBefore(newthread, threadfield.firstChild);
+    rearrangeThreadsInit();
+
+    $(newthread).fadeIn();
+    */
+    
+    // ###################################################################
+    var text = data.text;
+
+    var newthread = document.createElement("div");
+    var newthreadname = document.createElement("div");
+    var newthreadmessage = document.createElement("div");
+
+    var threadfield = document.getElementById("threadfield");
+
+    newthread.className = "thread";
+    newthreadname.className = "threadname";
+    newthreadmessage.className = "threadmessage";
+
+    newthread.id = "thread " + threadsArray.length;
+    
+    newthread.appendChild(newthreadname);
+    newthread.appendChild(newthreadmessage);
+    newthreadname.appendChild(document.createTextNode(data.socketid));
+    newthreadmessage.appendChild(document.createTextNode(text));
+
+    threadsArray.push(newthread);
+
+    threadfield.insertBefore(newthread, threadfield.firstChild);
+    // ###################################################################
+
+    var newthreadghost = document.createElement("div");
+    var newthreadnameghost = document.createElement("div");
+    var newthreadmessageghost = document.createElement("div");
+
+    newthreadghost.className = "threadghost";
+    newthreadnameghost.className = "threadnameghost";
+    newthreadmessageghost.className = "threadmessageghost";
+
+    newthreadghost.id = "threadghost " + threadghostsArray.length;
+
+    newthreadghost.appendChild(newthreadmessageghost);
+    newthreadghost.appendChild(newthreadnameghost);
+    newthreadmessageghost.appendChild(document.createTextNode(text));
+    newthreadnameghost.appendChild(document.createTextNode(data.socketid));
+
+    threadghostsArray.push(newthreadghost);
+
+    threadfield.insertBefore(newthreadghost, threadfield.firstChild);
+
     rearrangeThreadsInit();
 
     $(newthread).fadeIn();
@@ -112,7 +162,7 @@ function initSocket()
     socket.on("message", function(data)
     {
         // When someone makes a new thread, do this on your client
-        makeNewThread(data.text);
+        makeNewThread(data);
     })
 }
 

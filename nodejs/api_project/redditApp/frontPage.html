@@ -32,29 +32,64 @@
   {
     border-radius: 5px;
     border: 2px solid #2E2E2E;
-    max-width: 600px;
+    max-width: 900px;
     position: relative;
-    margin: 10px;
+    margin: 5px;
     float: left;
-    padding: 10px;
+    padding: 5px;
     visibility: hidden;
     background-color:#A4A4A4;
     box-shadow: 10px 10px 30px #424242;
   }
 
+  .threadnameghost
+  {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: relative;
+    float: left;
+    padding: 10px; 
+    max-width: 300px;
+    background-color: #c9c9c9;
+  }
+
+  .threadmessageghost
+  {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      float: right;
+      padding: 10px; 
+      width: 100%;
+      max-width: 600px;
+      background-color:#e5e5e5;
+  }
+
   .thread
   {
-    border-radius: 5px;
-    border: 2px solid #2E2E2E;
-    max-width: 600px;
+    max-width: 900px;
     position: absolute;
-    float: left;
+    display: none;
+  }
+
+  .threadname
+  {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: relative;
     padding: 10px;
-    display:none;
-    background-color:#A4A4A4;
-    box-shadow: 10px 10px 30px #424242;
-    animation-play-state: running;
-    animation-duration: 0.18s;
+    float: left;
+    max-width: 300px;
+    background-color: #c9c9c9;
+  }
+
+  .threadmessage
+  {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      padding: 10px; 
+      float: right;
+      max-width: 600px;
+      background-color:#e5e5e5;
   }
 
   .inputmessage
@@ -71,7 +106,9 @@
   </head>
   <body style = "background-color: #2E2E2E">
 
-    <div class = "container-fluid threadfield" id = "threadfield"></div>
+    <div class = "container-fluid threadfield" id = "threadfield">
+
+    </div>
     
     <div class = "threadsubmitfield" id = "threadsubmitfield">
       <form>
