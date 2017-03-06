@@ -10,7 +10,6 @@ function onButtonClick()
         error: function(){console.log("error");},
         code: "tissit",
         state: "tissit",
-        headers: { 'X-Frame-Options': 'DENY' }
     }
 /*
     var tokendata = 
@@ -32,5 +31,5 @@ function onButtonClick()
     })
 
     console.log(token);*/
-    window.location = "https://www.reddit.com/api/v1/authorize?client_id=oz4I-8h8nyfXcg&response_type=code&state=tissit&redirect_uri=http://natynki.net/authorize_callback&duration=temporary&scope=identity";
+    window.location = "https://www.reddit.com/api/v1/authorize?client_id=oz4I-8h8nyfXcg&response_type=code&state=tissit&redirect_uri=http://natynki.net&duration=temporary&scope=identity";
 }
