@@ -29,3 +29,8 @@ app.get("/*", function(request, response)
 			response.sendFile(__dirname + request.url);
 	    }
 	});
+
+function authorize_callback()
+{
+	console.log("ANAALISEKSIÄ!");
+}
