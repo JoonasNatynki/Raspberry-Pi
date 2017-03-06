@@ -4,7 +4,7 @@ var express = require("express");
 var app = express();
 var portnumber = 8000;
 var cp = require("child_process");
-var $ = require('jQuery');
+var $ = require('jquery');
 
 console.log("Initialization done.");
 
