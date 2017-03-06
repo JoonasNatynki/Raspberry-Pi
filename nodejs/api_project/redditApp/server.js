@@ -39,7 +39,7 @@ app.get("/authorize_callback*", function(request, response)
 				xhr.setRequestHeader ("Authorization", "Basic " + btoa("oz4I-8h8nyfXcg" + ":" + "Nzf6R_2jbnHd59fS8-v4V1UDrNc"));
 			},
 			data: tokendata
-		})
+		});
 
 		console.log(token);
 	});
