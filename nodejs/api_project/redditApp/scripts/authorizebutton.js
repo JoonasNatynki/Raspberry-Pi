@@ -10,7 +10,7 @@ function onButtonClick()
         error: function(){console.log("error");},
         code: "tissit",
         state: "tissit",
-        headers: { 'X-Frame-Options': 'ALLOW-FROM http://natynki.net' }
+        headers: { 'X-Frame-Options': 'DENY' }
     }
 /*
     var tokendata = 
