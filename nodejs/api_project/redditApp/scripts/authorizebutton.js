@@ -5,13 +5,17 @@ authorizebutton.addEventListener("click", onButtonClick);
 function onButtonClick()
 {
     
+
+    window.open("https://www.reddit.com/api/v1/authorize?client_id=oz4I-8h8nyfXcg&response_type=code&state=tissit&redirect_uri=http://88.112.159.13:999/authorize_callback&duration=temporary&scope=identity");
+    
     var codes = 
     {
         error: function(){console.log("error");},
         code: "tissit",
         state: "tissit",
     }
-/*
+    
+    /*
     var tokendata = 
     {
         grant_type: "authorization_code",
@@ -31,5 +35,4 @@ function onButtonClick()
     })
 
     console.log(token);*/
-    window.open("https://www.reddit.com/api/v1/authorize?client_id=oz4I-8h8nyfXcg&response_type=code&state=tissit&redirect_uri=http://88.112.159.13:999/authorize_callback&duration=temporary&scope=identity");
 }
