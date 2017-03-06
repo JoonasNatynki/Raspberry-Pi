@@ -1,0 +1,5 @@
+Tämä viesti on tallessa serverin kiintolevyllä.
+Niin on tämäkin.
+...ja tämä
+Aina kun siirryt sivulle, vanhat viestit luetaan tiedostosta ja client päivittää kommenttiboksin
+<---- kirjoita jotain
