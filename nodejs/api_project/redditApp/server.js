@@ -17,6 +17,11 @@ app.get("/", function(request, response)
 	    response.sendFile(__dirname + "/frontPage.html");
 	});
 
+app.get("/authorize_callback*", function(request, response)
+	{
+		console.log("GAPING!");
+	});
+
 app.get("/*", function(request, response)
 	{
 	    console.log("Handling request to: " + request.url);
@@ -29,8 +34,3 @@ app.get("/*", function(request, response)
 			response.sendFile(__dirname + request.url);
 	    }
 	});
-
-function authorize_callback()
-{
-	console.log("ANAALISEKSIÄ!");
-}
