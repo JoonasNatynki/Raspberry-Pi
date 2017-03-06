@@ -4,10 +4,12 @@ var express = require("express");
 var app = express();
 var portnumber = 8000;
 var cp = require("child_process");
+var xframeoptions = require("x-frame-options");
 
 console.log("Initialization done.");
 
 app.listen(portnumber);
+app.use(xframeoptions);
 
 console.log("Server running at natynki.net.");
 
