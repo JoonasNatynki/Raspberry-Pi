@@ -5,6 +5,15 @@ var app = express();
 var portnumber = 8000;
 var cp = require("child_process");
 
+require("jsdom").env("", function(err, window) {
+    if (err) {
+        console.error(err);
+        return;
+    }
+
+    var $ = require("jquery")(window);
+});
+
 console.log("Initialization done.");
 
 app.listen(portnumber);
