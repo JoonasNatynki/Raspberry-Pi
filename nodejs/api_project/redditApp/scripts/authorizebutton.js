@@ -19,7 +19,7 @@ function onButtonClick()
     var tokendata = 
     {
         grant_type: "authorization_code",
-        code: codes,
+        code: request.query.code,
         redirect_uri: "http://natynki.net/authorize_callback"	
     }
 
@@ -32,7 +32,8 @@ function onButtonClick()
             xhr.setRequestHeader ("Authorization", "Basic " + btoa("oz4I-8h8nyfXcg" + ":" + "Nzf6R_2jbnHd59fS8-v4V1UDrNc"));
         },
         data: tokendata
-    })
+    });
 
-    console.log(token);*/
+    console.log(token);
+    */
 }
