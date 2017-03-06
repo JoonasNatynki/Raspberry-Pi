@@ -19,7 +19,6 @@
     float: left;
     padding: 20px; 
     width: 29%;
-    height: 80px;
     background-color:#969696;
   }
 
@@ -104,10 +103,6 @@
   </style>
   </head>
   <body style = "background-color: #2E2E2E">
-
-    <div class = "container-fluid threadfield" id = "threadfield">
-
-    </div>
     
     <div class = "threadsubmitfield" id = "threadsubmitfield">
       <form>
@@ -116,6 +111,13 @@
           <input id="inputmessage" type="text" class="form-control" name="inputmessage" placeholder="...">
         </div>
       </form>
+
+    <button type="button" id = "authorizebutton">Authorize</button>
+
+    </div>
+
+    <div class = "container-fluid threadfield" id = "threadfield">
+
     </div>
     
     <script defer src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
@@ -125,6 +127,7 @@
     <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script defer src = "scripts/morf.js"></script>
     <script defer src = "scripts/thread.js"></script>
+    <script defer src = "scripts/authorizebutton.js"></script>
 
   </body>
   </html>
