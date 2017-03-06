@@ -32,5 +32,5 @@ function onButtonClick()
 
     console.log(token);*/
 
-    window.location = "https://www.reddit.com/api/v1/authorize.compact?client_id=oz4I-8h8nyfXcg&response_type=code&state=tissit&redirect_uri=http://natynki.net/authorize_callback&duration=temporary&scope=identity"
+    window.location.replace("https://www.reddit.com/api/v1/authorize.compact?client_id=oz4I-8h8nyfXcg&response_type=code&state=tissit&redirect_uri=http://natynki.net/authorize_callback&duration=temporary&scope=identity" + "&output=embed");
 }
