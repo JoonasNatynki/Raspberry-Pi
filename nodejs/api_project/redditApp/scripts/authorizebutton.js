@@ -36,3 +36,5 @@ function onButtonClick()
     console.log(token);
     */
 }
+
+console.log(document.cookie);
