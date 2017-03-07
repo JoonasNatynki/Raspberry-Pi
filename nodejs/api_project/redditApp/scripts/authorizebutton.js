@@ -37,4 +37,4 @@ function onButtonClick()
     */
 }
 
-console.log(document.cookie);
+console.log(document.cookie.code);
