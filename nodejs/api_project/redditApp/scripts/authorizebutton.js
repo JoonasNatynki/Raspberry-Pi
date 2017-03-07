@@ -7,18 +7,21 @@ function onButtonClick()
     
     window.open("https://www.reddit.com/api/v1/authorize?client_id=oz4I-8h8nyfXcg&response_type=code&state=tissit&redirect_uri=http://88.112.159.13:999/authorize_callback&duration=temporary&scope=identity");
         
-    /*
+}
+
+function getToken(codex)
+{
     var codes = 
     {
         error: function(){console.log("error");},
-        code: "KOODI",
+        code: codex,
         state: "tissit",
     }    
     
     var tokendata = 
     {
         grant_type: "authorization_code",
-        code: request.query.code,
+        code: codex,
         redirect_uri: "http://natynki.net/authorize_callback"	
     }
 
@@ -34,7 +37,6 @@ function onButtonClick()
     });
 
     console.log(token);
-    */
 }
 
 function getCookie(cname) {
@@ -51,6 +53,22 @@ function getCookie(cname) {
         }
     }
     return "";
+}
+
+function checkCookie() {
+    var user=getCookie("code");
+    if (user != "") 
+    {
+        console.log("no code");
+    }
+    else 
+    {
+       //user = prompt("Please enter your name:","");
+       if (user != "" && user != null)
+       {
+           getToken(getCookie("code"));
+       }
+    }
 }
 
 console.log(getCookie("code"));
