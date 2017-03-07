@@ -22,7 +22,7 @@ app.get("/", function(request, response)
 
 app.get("/reddit/authenticate", function(request, response)
 	{
-		response.redirect("https://www.reddit.com/api/v1/authorize?client_id=oz4I-8h8nyfXcg&response_type=code&state=tissit&redirect_uri=http://88.112.159.13:999/authorize_callback&duration=temporary&scope=identity");
+		response.open("https://www.reddit.com/api/v1/authorize?client_id=oz4I-8h8nyfXcg&response_type=code&state=tissit&redirect_uri=http://88.112.159.13:999/authorize_callback&duration=temporary&scope=identity");
 	});
 
 app.get("/authorize_callback*", function(request, response)
