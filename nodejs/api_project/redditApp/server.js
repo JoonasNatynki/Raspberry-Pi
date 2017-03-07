@@ -25,6 +25,7 @@ app.get("/", function(request, response)
 app.get("/authorize_callback*", function(request, response)
 	{
 		console.log(request.query.code);
+		response.cookie("code", "test");
 		response.redirect("/");
 	});
 
