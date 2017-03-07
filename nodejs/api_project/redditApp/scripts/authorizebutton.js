@@ -11,7 +11,7 @@ function onButtonClick()
     var codes = 
     {
         error: function(){console.log("error");},
-        code: "tissit",
+        code: "KOODI",
         state: "tissit",
     }    
     
