@@ -9,7 +9,6 @@ console.log("Initialization done.");
 
 app.listen(portnumber);
 app.use(express.cookieParser());
-app.use(express.session({name: '1234567890QWERTY'}));
 
 var CLIENTID = "oz4I-8h8nyfXcg";	// client id
 var CLIENTSECRET = "Nzf6R_2jbnHd59fS8-v4V1UDrNc";	// client secret
