@@ -10,14 +10,7 @@ function onButtonClick()
 }
 
 function getToken(codex)
-{
-    var codes = 
-    {
-        error: function(){console.log("error");},
-        code: codex,
-        state: "tissit",
-    }    
-    
+{    
     var tokendata = 
     {
         grant_type: "authorization_code",
