@@ -4,10 +4,12 @@ var express = require("express");
 var app = express();
 var portnumber = 8000;
 var cp = require("child_process");
+var cookieparser = require("cookie-parser");
 
 console.log("Initialization done.");
 
 app.listen(portnumber);
+app.use(express.cookieparser());
 
 var CLIENTID = "oz4I-8h8nyfXcg";	// client id
 var CLIENTSECRET = "Nzf6R_2jbnHd59fS8-v4V1UDrNc";	// client secret
