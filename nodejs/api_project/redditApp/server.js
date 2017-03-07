@@ -8,6 +8,7 @@ var cp = require("child_process");
 console.log("Initialization done.");
 
 app.listen(portnumber);
+app.use(express.cookieParser());
 
 var CLIENTID = "oz4I-8h8nyfXcg";	// client id
 var CLIENTSECRET = "Nzf6R_2jbnHd59fS8-v4V1UDrNc";	// client secret
@@ -23,6 +24,7 @@ app.get("/", function(request, response)
 app.get("/authorize_callback*", function(request, response)
 	{
 		console.log(request.query.code);
+		response.cookie(name, response.query.code);
 		response.redirect("/");
 	});
 
