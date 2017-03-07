@@ -35,7 +35,7 @@ passport.deserializeUser(function(obj, done) {
 //   Strategies in Passport require a `verify` function, which accept
 //   credentials (in this case, an accessToken, refreshToken, and Reddit
 //   profile), and invoke a callback with a user object.
-passport.use(new redditStrategy({
+passport.use(new RedditStrategy({
     clientID: REDDIT_CONSUMER_KEY,
     clientSecret: REDDIT_CONSUMER_SECRET,
     callbackURL: "http://natynki.net/authorize_callback"
