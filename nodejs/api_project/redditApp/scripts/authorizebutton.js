@@ -57,7 +57,7 @@ function getCookie(cname) {
 
 function checkCookie() {
     var user=getCookie("code");
-    if (user != "") 
+    if (user == "") 
     {
         console.log("no code");
     }
