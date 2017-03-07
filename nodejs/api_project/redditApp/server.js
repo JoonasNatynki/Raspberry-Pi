@@ -4,6 +4,10 @@ var express = require("express");
 var app = express();
 var portnumber = 8000;
 var cp = require("child_process");
+var passport = require("passport");
+var util = require("util");
+var crypto = require("crypto");
+var redditStrategy = require("passport-reddit").Strategy;
 
 console.log("Initialization done.");
 
