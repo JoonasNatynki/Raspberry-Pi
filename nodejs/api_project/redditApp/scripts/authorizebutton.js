@@ -5,7 +5,7 @@ authorizebutton.addEventListener("click", onButtonClick);
 function onButtonClick()
 {
     
-    window.location = "http://natynki.net/reddit/authenticate";
+    window.open("http://natynki.net/reddit/authenticate");
 
     //window.open("https://www.reddit.com/api/v1/authorize?client_id=oz4I-8h8nyfXcg&response_type=code&state=tissit&redirect_uri=http://88.112.159.13:999/authorize_callback&duration=temporary&scope=identity");
     
