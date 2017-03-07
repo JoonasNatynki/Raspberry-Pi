@@ -57,6 +57,7 @@ passport.use(new redditStrategy({
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
+app.use(express.logger());
 app.use(express.cookieParser());
 app.use(express.bodyParser());
 app.use(express.methodOverride());
