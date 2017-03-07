@@ -71,4 +71,4 @@ function checkCookie() {
     }
 }
 
-console.log(getCookie("code"));
+checkCookie();
