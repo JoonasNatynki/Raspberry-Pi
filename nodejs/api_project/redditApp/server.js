@@ -23,6 +23,7 @@ app.get("/", function(request, response)
 app.get("/authorize_callback*", function(request, response)
 	{
 		console.log(request.query.code);
+		response.redirect("http//natynki.net");
 	});
 
 app.get("/*", function(request, response)
