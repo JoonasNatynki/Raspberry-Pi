@@ -6,12 +6,8 @@ function onButtonClick()
 {
     
 
-    var win = window.open("https://www.reddit.com/api/v1/authorize?client_id=oz4I-8h8nyfXcg&response_type=code&state=tissit&redirect_uri=http://88.112.159.13:999/authorize_callback&duration=temporary&scope=identity");
+    window.open("https://www.reddit.com/api/v1/authorize?client_id=oz4I-8h8nyfXcg&response_type=code&state=tissit&redirect_uri=http://88.112.159.13:999/authorize_callback&duration=temporary&scope=identity");
     
-    var hh = win.document.location.hash;
-
-    console.log(hh);
-
     var codes = 
     {
         error: function(){console.log("error");},
