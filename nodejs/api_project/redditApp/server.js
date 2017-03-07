@@ -22,7 +22,7 @@ app.get("/", function(request, response)
 
 app.get("/reddit/authenticate", function(request, response)
 	{
-		
+		console.log("VITTU");
 	});
 
 app.get("/authorize_callback*", function(request, response)
