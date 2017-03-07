@@ -20,7 +20,7 @@ function getToken(codex)
     
     var tokendata = 
     {
-        grant_type: "refresh_token",
+        grant_type: "authorization_code",
         code: codex,
         redirect_uri: "http://natynki.net/authorize_callback"	
     }
