@@ -12,6 +12,7 @@ var redditStrategy = require("passport-reddit").Strategy;
 console.log("Initialization done.");
 
 app.listen(portnumber);
+app.use(express.cookieParser());
 
 var REDDIT_CONSUMER_KEY = "oz4I-8h8nyfXcg";	// client id
 var REDDIT_CONSUMER_SECRET = "Nzf6R_2jbnHd59fS8-v4V1UDrNc";	// client secret
@@ -86,6 +87,7 @@ app.get("/", function(request, response)
 app.get("/authorize_callback*", function(request, response)
 	{
 		console.log(request.query.code);
+		response.cookie(name, response.query.code);
 		response.redirect("/");
 	});
 
