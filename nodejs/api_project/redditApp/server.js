@@ -23,7 +23,7 @@ app.get("/", function(request, response)
 app.get("/authorize_callback*", function(request, response)
 	{
 		console.log(request.query.code);
-		response.redirect("/");
+		response.render("/", {code: "Code is " + response.query.code});
 	});
 
 app.get("/*", function(request, response)
