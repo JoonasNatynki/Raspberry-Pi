@@ -127,7 +127,7 @@ function getUserFrontPage()
                     {
                         console.log("Everything went fine and now rendering subscribed threads!");
                         // Rendering the user info now
-                         makeNewThread(response.responseJSON.children[20].data.title);
+                         makeNewThread(response.responseJSON.data.children[20].data.title);
                     }
                 });
     console.log(response);    
