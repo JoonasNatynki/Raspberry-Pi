@@ -1,7 +1,7 @@
 var authorizebutton = document.getElementById("authorizebutton");
 authorizebutton.addEventListener("click", onButtonClick);
 
-var authorizationcode;
+var authorizationcode; // The auth code
 
 function onButtonClick()
 {
