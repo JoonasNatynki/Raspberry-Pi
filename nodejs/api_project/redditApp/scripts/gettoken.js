@@ -28,7 +28,7 @@ function getAccessToken(codex)
             {
                 document.cookie = "access_token=" + accesstoken;
             }
-            console.log(authorizationtoken);
+            //console.log(authorizationtoken);
             initPage();
         }
     });

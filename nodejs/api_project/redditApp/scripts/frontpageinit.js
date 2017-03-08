@@ -112,13 +112,13 @@ function getCoords(elem)
     return { top: Math.round(top), left: Math.round(left) };
 }
 
-function getUserSubscriptions()
+function getUserFrontPage()
 {
     var response = $.ajax(
                 {
                     type: "GET",
                     dataType: "json",
-                    url: "https://oauth.reddit.com/subreddits/mine/subscriber",
+                    url: "https://oauth.reddit.com/",
                     headers: 
                     {
                         'Authorization': 'bearer ' + getCookie("access_token")                    
@@ -173,6 +173,6 @@ function rearrangeThreadsInit()
 function initPage()
 {
     getUserInfo();
-    getUserSubscriptions();
+    getUserFrontPage();
     rearrangeThreadsInit();
 }
