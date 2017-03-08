@@ -123,7 +123,9 @@ function getFrontPageThreads()
                 'Authorization': 'bearer ' + "moi"
             },
         });
-    console.log(authorizationtoken["responseJSON"]["access_token"]);
+    console.log(authorizationtoken);
+    console.log(authorizationtoken.responseText);
+    console.log(authorizationtoken["responseText"]);
     console.log(threads);
 }
 
