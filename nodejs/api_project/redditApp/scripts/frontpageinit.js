@@ -124,7 +124,7 @@ function renderUserInfo(json)
 
 function getUserInfo()
 {
-    var token = document.cookie.access_token;
+    var token = getCookie("access_token");
 
         var response = $.ajax(
                 {
