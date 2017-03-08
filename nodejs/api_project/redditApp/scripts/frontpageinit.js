@@ -44,10 +44,12 @@ function makeNewThread(data)
 {
     var text = data.text;
     var title = data.title;
+    var imgurl = data.imgurl;
 
     var newthread = document.createElement("div");
     var newthreadname = document.createElement("div");
     var newthreadmessage = document.createElement("div");
+    var newthreadimage = document.createElement("img");
 
     var threadfield = document.getElementById("threadfield");
 
@@ -59,8 +61,10 @@ function makeNewThread(data)
     
     newthread.appendChild(newthreadname);
     newthread.appendChild(newthreadmessage);
+    newthreadmessage.appendChild(newthreadimage);
     newthreadname.appendChild(document.createTextNode(title));
     newthreadmessage.appendChild(document.createTextNode(text));
+    newthreadimage.src = imgurl;
 
     threadsArray.push(newthread);
 
@@ -70,6 +74,7 @@ function makeNewThread(data)
     var newthreadghost = document.createElement("div");
     var newthreadnameghost = document.createElement("div");
     var newthreadmessageghost = document.createElement("div");
+    var newthreadimageghost = document.createElement("img");
 
     newthreadghost.className = "threadghost";
     newthreadnameghost.className = "threadnameghost";
@@ -79,8 +84,10 @@ function makeNewThread(data)
 
     newthreadghost.appendChild(newthreadmessageghost);
     newthreadghost.appendChild(newthreadnameghost);
+    newthreadmessageghost.appendChild(newthreadimageghost);
     newthreadmessageghost.appendChild(document.createTextNode(text));
     newthreadnameghost.appendChild(document.createTextNode(title));
+    newthreadimageghost.src = imgurl;
 
     threadghostsArray.push(newthreadghost);
 
@@ -132,7 +139,8 @@ function getUserFrontPage()
                             var thread = 
                             {
                                 title: value.data.subreddit,
-                                text: value.data.title
+                                text: value.data.title,
+                                imgurl: value.data.thumbnail
                             }
                             makeNewThread(thread);    
                         })
