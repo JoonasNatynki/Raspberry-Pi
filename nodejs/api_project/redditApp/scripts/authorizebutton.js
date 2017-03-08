@@ -59,7 +59,7 @@ function checkCookie() {
        //user = prompt("Please enter your name:","");
        if (user != "" && user != null)
        {
-           console.log(getCookie("code"));
+           console.log("Authorization token: " + getCookie("code"));
            getToken(getCookie("code"));
        }
     }
