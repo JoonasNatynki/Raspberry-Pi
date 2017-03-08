@@ -24,7 +24,7 @@ function getAccessToken(codex)
         success: function(data)
         {
             test = authorizationtoken.responseJSON;
-            console.log(test);
+            initPage();
         }
     });
 }

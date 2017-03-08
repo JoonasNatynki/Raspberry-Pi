@@ -114,8 +114,7 @@ function getCoords(elem)
 
 function getFrontPageThreads()
 {
-    if(test != "" && test != null)
-    {
+
         var threads = $.ajax(
                 {
                     type: "GET",
@@ -123,15 +122,11 @@ function getFrontPageThreads()
                     url: "https://oauth.reddit.com/api/v1/me",
                     headers: 
                     {
-                        'Authorization': 'bearer ' + ""
+                        'Authorization': 'bearer ' + test.access_token                    
                     }
                 });
         //console.log(threads);
-    }
-    else
-    {
-        setTimeout(getFrontPageThreads(), 300);
-    }
+
     
 }
 
@@ -154,5 +149,3 @@ function initPage()
     getFrontPageThreads();
     rearrangeThreadsInit();
 }
-
-initPage();
