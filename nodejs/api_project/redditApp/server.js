@@ -31,7 +31,7 @@ app.get("/frontpage", function(request, response)
 app.get("/authorize_callback*", function(request, response)
 	{
 		console.log("Authorization token: " + request.query.code);
-		response.cookie("code", request.query.code + ";");
+		response.cookie("code", request.query.code);
 		response.redirect("/frontpage");
 	});
 
