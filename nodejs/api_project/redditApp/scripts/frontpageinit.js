@@ -114,17 +114,25 @@ function getCoords(elem)
 
 function getFrontPageThreads()
 {
-    var threads = $.ajax(
-        {
-            type: "GET",
-            dataType: "json",
-            url: "https://oauth.reddit.com/api/v1/me",
-            headers: 
-            {
-                'Authorization': 'bearer ' + ""
-            }
-        });
-    //console.log(threads);
+    if(test != "" && test != null)
+    {
+        var threads = $.ajax(
+                {
+                    type: "GET",
+                    dataType: "json",
+                    url: "https://oauth.reddit.com/api/v1/me",
+                    headers: 
+                    {
+                        'Authorization': 'bearer ' + ""
+                    }
+                });
+        //console.log(threads);
+    }
+    else
+    {
+        setTimeout(getFrontPageThreads(), 300);
+    }
+    
 }
 
 // The loopty loop for the thread arranger (USE THIS TO REARRANGE THE THREADS!!!!!!!)
