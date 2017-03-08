@@ -20,7 +20,11 @@ function getAccessToken(codex)
         {
             xhr.setRequestHeader ("Authorization", "Basic " + btoa("oz4I-8h8nyfXcg" + ":" + "Nzf6R_2jbnHd59fS8-v4V1UDrNc"));
         },
-        data: tokendata
+        data: tokendata,
+        success: function(data)
+        {
+            test = authorizationtoken.responseJSON;
+        }
     });
 }
 
