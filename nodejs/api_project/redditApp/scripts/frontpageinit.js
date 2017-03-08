@@ -123,7 +123,7 @@ function getFrontPageThreads()
                 'Authorization': 'bearer ' + "moi"
             },
         });
-    console.log("This is the object: " + authorizationtoken);
+    console.log(authorizationtoken);
     console.log(threads);
 }
 
