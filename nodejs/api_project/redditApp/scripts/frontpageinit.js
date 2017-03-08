@@ -66,7 +66,7 @@ function makeNewThread(data)
     newthreadmessage.appendChild(newthreadimage);
     newthreadname.appendChild(document.createTextNode(title));
     newthreadmessage.appendChild(document.createTextNode(text));
-    newthread.onclick = "window.location = 'http://natynki.net';";
+    newthread.addEventListener("click", function(){window.location = "http://natynki.net";});
     newthreadimage.src = imgurl;
 
     threadsArray.push(newthread);
