@@ -1,7 +1,7 @@
-var authorizationtoken;
+var authorizationcode;
 var authorizationtoken;
 
-function getToken(codex)
+function getAccessToken(codex)
 {    
     var tokendata = 
     {
@@ -21,7 +21,7 @@ function getToken(codex)
         data: tokendata
     });
 
-    //console.log(token);
+    //console.log(authorizationtoken);
 }
 
 //  Get cookie parameter and output it
@@ -43,19 +43,18 @@ function getCookie(cname) {
 
 // Check if there is an authorization code in the cookie
 function checkCookie() {
-    var user = getCookie("code");
-    if (user == "") 
+    authorizationcode = getCookie("code");
+    if (authorizationcode == "") 
     {
         console.log("no code");
     }
     else 
     {
        //user = prompt("Please enter your name:","");
-       if (user != "" && user != null)
+       if (authorizationcode != "" && authorizationcode != null)
        {
            //console.log("Authorization token: " + getCookie("code"));
-           authorizationtoken = user;
-           getToken(authorizationtoken);
+           getAccessToken(authorizationcode);
        }
     }
 }
