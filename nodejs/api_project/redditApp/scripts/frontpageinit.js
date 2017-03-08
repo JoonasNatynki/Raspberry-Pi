@@ -120,7 +120,7 @@ function getFrontPageThreads()
             url: "https://oauth.reddit.com/api/v1/me",
             headers: 
             {
-                'Authorization': 'bearer ' + "jooo",
+                'Authorization': 'bearer ' + authorizationtoken.responseJSON.access_token
             },
         });
     console.log(authorizationtoken);
