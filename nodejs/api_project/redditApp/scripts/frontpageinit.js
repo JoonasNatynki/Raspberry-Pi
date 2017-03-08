@@ -127,7 +127,12 @@ function getUserFrontPage()
                     {
                         console.log("Everything went fine and now rendering subscribed threads!");
                         // Rendering the user info now
-                         makeNewThread(response.responseJSON.data.children[20].data.title);
+                        var thread = 
+                        {
+                            title: response.responseJSON.data.children[20].data.title,
+                            text: "KURKKUPANEMISTA!!!!"
+                        }
+                         makeNewThread(thread);
                     }
                 });
     console.log(response);    
