@@ -29,7 +29,7 @@ function getToken(codex)
         data: tokendata
     });
 
-    console.log(token);
+    console.log(token.responseText);
 }
 
 function getCookie(cname) {
