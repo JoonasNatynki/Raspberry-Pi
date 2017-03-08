@@ -123,7 +123,7 @@ function renderFirstTime(json)
 function getFrontPageThreads()
 {
 
-        var threads = $.ajax(
+        var response = $.ajax(
                 {
                     type: "GET",
                     dataType: "json",
@@ -135,10 +135,10 @@ function getFrontPageThreads()
                     success: function(data)
                     {
                         console.log("Everything went fine and now rendering page!");
-                        renderFirstTime(data.responseJSON);
+                        renderFirstTime(response.responseJSON);
                     }
                 });
-        console.log(threads);
+        console.log(response);
 
     
 }
