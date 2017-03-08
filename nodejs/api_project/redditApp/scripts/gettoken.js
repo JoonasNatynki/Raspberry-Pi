@@ -24,7 +24,7 @@ function getAccessToken(codex)
         success: function(data)
         {
             accesstoken = authorizationtoken.responseJSON.access_token;
-            document.cookie = "access_token=" + accesstoken;
+            if(getCookie("access_token") == "") {document.cookie = "access_token=" + accesstoken;}
 
             initPage();
         }
