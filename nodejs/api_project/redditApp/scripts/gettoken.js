@@ -1,6 +1,6 @@
 var authorizationcode;
 var authorizationtoken;
-var test;
+var accesstoken;
 
 function getAccessToken(codex)
 {    
@@ -23,7 +23,7 @@ function getAccessToken(codex)
         data: tokendata,
         success: function(data)
         {
-            test = authorizationtoken.responseJSON;
+            accesstoken = authorizationtoken.responseJSON;
             initPage();
         }
     });

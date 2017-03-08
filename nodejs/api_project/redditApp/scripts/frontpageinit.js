@@ -112,6 +112,14 @@ function getCoords(elem)
     return { top: Math.round(top), left: Math.round(left) };
 }
 
+function renderFirstTime(json)
+{
+    var name = document.getElementById("name");
+    var linkkarma = document.getElementById("linkkarma");
+    name.innerHTML = json.name;
+    linkkarma.innerHTML = "Link karma: " + json.link_karma;
+}
+
 function getFrontPageThreads()
 {
 
@@ -122,7 +130,12 @@ function getFrontPageThreads()
                     url: "https://oauth.reddit.com/api/v1/me",
                     headers: 
                     {
-                        'Authorization': 'bearer ' + test.access_token                    
+                        'Authorization': 'bearer ' + accesstoken.access_token                    
+                    },
+                    success: function(data)
+                    {
+                        console.log("Everything went fine and now rendering page!");
+                        renderFirstTime(data.responseJSON);
                     }
                 });
         console.log(threads);
