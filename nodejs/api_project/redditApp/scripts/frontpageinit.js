@@ -56,6 +56,7 @@ function makeNewThread(data)
     newthread.className = "thread";
     newthreadname.className = "threadname";
     newthreadmessage.className = "threadmessage";
+    newthreadimage.className = "threadthumbnail";
 
     newthread.id = "thread " + threadsArray.length;
     
@@ -79,6 +80,7 @@ function makeNewThread(data)
     newthreadghost.className = "threadghost";
     newthreadnameghost.className = "threadnameghost";
     newthreadmessageghost.className = "threadmessageghost";
+    newthreadimageghost.className = "threadthumbnail";
 
     newthreadghost.id = "threadghost " + threadghostsArray.length;
 
