@@ -21,9 +21,8 @@ function rearrangeThreads(element, index)
         var rect = document.getElementById("threadghost " + index).getBoundingClientRect(); // Current position of said element
         var bodyRect = document.body.getBoundingClientRect();
         var threadfield = document.getElementById("threadfield").getBoundingClientRect();
-        var userfield = document.getElementById("userfield").getBoundingClientRect();
         var coordx = rect.left - bodyRect.left - threadfield.left;
-        var coordy = offsetcoords.top - bodyRect.top;
+        var coordy = offsetcoords.top;
 
         var trans = Morf.transition(elem, {
                 // New CSS state
@@ -107,7 +106,7 @@ function getCoords(elem)
     var clientTop = docEl.clientTop || body.clientTop || 0;
     var clientLeft = docEl.clientLeft || body.clientLeft || 0;
 
-    var top  = box.top +  scrollTop - clientTop;
+    var top  = box.top + scrollTop - clientTop - document.getElementById('userfield').clientHeight;
     var left = box.left + scrollLeft - clientLeft;
 
     return { top: Math.round(top), left: Math.round(left) };
@@ -128,12 +127,15 @@ function getUserFrontPage()
                     {
                         console.log("Everything went fine and now rendering subscribed threads!");
                         // Rendering the user info now
-                        var thread = 
+                        $.each(response.responseJSON.data.children, function(index, value)
                         {
-                            title: response.responseJSON.data.children[20].data.subreddit,
-                            text: response.responseJSON.data.children[20].data.title
-                        }
-                         makeNewThread(thread);
+                            var thread = 
+                            {
+                                title: value.data.subreddit,
+                                text: value.data.title
+                            }
+                            makeNewThread(thread);    
+                        })
                     }
                 });
     console.log(response);    
@@ -181,4 +183,10 @@ function initPage()
     getUserInfo();
     getUserFrontPage();
     rearrangeThreadsInit();
+}
+
+var test = 
+{
+    title: "joo",
+    text: "niimpä"
 }
