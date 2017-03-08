@@ -114,7 +114,7 @@ function getCoords(elem)
 
 function getFrontPageThreads()
 {
-    var t = JSON.parse(authorizationtoken);
+    var t = JSON.stringify(authorizationtoken);
     var threads = $.ajax(
         {
             type: "GET",
