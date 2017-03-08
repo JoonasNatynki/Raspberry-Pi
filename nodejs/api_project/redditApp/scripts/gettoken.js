@@ -20,7 +20,7 @@ function getToken(codex)
         data: tokendata
     });
 
-    console.log(token);
+    //console.log(token);
 }
 
 //  Get cookie parameter and output it
