@@ -24,7 +24,7 @@ function getToken(codex)
     {
         grant_type: "authorization_code",
         code: codex,
-        redirect_uri: "http://natynki.net/authorize_callback"	
+        redirect_uri: "http://88.112.159.13:999/authorize_callback"	
     }
 
     var token = $.ajax(
