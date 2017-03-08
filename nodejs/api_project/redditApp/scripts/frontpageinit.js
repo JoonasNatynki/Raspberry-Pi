@@ -45,6 +45,7 @@ function makeNewThread(data)
     var text = data.text;
     var title = data.title;
     var imgurl = data.imgurl;
+    var permalink = data.permalink;
 
     var newthread = document.createElement("div");
     var newthreadname = document.createElement("div");
@@ -65,6 +66,7 @@ function makeNewThread(data)
     newthreadmessage.appendChild(newthreadimage);
     newthreadname.appendChild(document.createTextNode(title));
     newthreadmessage.appendChild(document.createTextNode(text));
+    newthread.onclick = "window.location = 'http://natynki.net';";
     newthreadimage.src = imgurl;
 
     threadsArray.push(newthread);
