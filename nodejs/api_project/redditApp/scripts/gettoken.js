@@ -1,4 +1,4 @@
-var authorizationcode;
+var authorizationtoken;
 var authorizationtoken;
 
 function getToken(codex)
@@ -54,8 +54,8 @@ function checkCookie() {
        if (user != "" && user != null)
        {
            //console.log("Authorization token: " + getCookie("code"));
-           authorizationcode = user;
-           getToken(authorizationcode);
+           authorizationtoken = user;
+           getToken(authorizationtoken);
        }
     }
 }
