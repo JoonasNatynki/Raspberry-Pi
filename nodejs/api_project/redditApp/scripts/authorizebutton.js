@@ -1,15 +1,7 @@
 var authorizebutton = document.getElementById("authorizebutton");
 authorizebutton.addEventListener("click", onButtonClick);
 
-var tokenbutton = document.getElementById("tokenbutton");
-tokenbutton.addEventListener("click", onTokenButtonClick);
-
 var authorizationcode;
-
-function onTokenButtonClick()
-{
-    getToken(authorizationcode);
-}
 
 function onButtonClick()
 {

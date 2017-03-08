@@ -25,7 +25,7 @@ app.get("/", function(request, response)
 	// Default front page
 app.get("/frontpage", function(request, response)
 	{
-	    response.sendFile(__dirname + "/frontpage.html");
+	    response.sendFile(__dirname + "/frontPage.html");
 	});
 
 app.get("/authorize_callback*", function(request, response)
