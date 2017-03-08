@@ -24,7 +24,7 @@ function getToken(codex)
         url: "https://www.reddit.com/api/v1/access_token",
         beforeSend: function (xhr) 
         {
-            xhr.setRequestHeader ("Authorization", "Basic " + btoa("oz4I-8h8nyfXcg" + ":" + "Nzf6R_2jbnHd59fS8-v4V1UDrNc"));
+            xhr.setRequestHeader ("Authorization", "Basic " + "oz4I-8h8nyfXcg" + ":" + "Nzf6R_2jbnHd59fS8-v4V1UDrNc");
         },
         data: tokendata
     });
