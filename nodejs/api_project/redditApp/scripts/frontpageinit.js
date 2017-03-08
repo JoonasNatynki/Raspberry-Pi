@@ -66,7 +66,7 @@ function makeNewThread(data)
     newthreadmessage.appendChild(newthreadimage);
     newthreadname.appendChild(document.createTextNode(title));
     newthreadmessage.appendChild(document.createTextNode(text));
-    newthread.addEventListener("click", function(){window.location = "http://natynki.net";});
+    newthread.addEventListener("click", function(){window.location = permalink;});
     newthreadimage.src = imgurl;
 
     threadsArray.push(newthread);
@@ -136,15 +136,16 @@ function getUserFrontPage()
                     },
                     success: function(data)
                     {
-                        console.log("Everything went fine and now rendering subscribed threads!");
-                        // Rendering the user info now
+                        //console.log("Everything went fine and now rendering subscribed threads!");
+                        // Get all the threads the user is subcribed to and render them one by one
                         $.each(response.responseJSON.data.children, function(index, value)
                         {
                             var thread = 
                             {
                                 title: value.data.subreddit,
                                 text: value.data.title,
-                                imgurl: value.data.thumbnail
+                                imgurl: value.data.thumbnail,
+                                permalink: value.data.permalink
                             }
                             makeNewThread(thread);    
                         })
@@ -166,7 +167,7 @@ function getUserInfo()
                     },
                     success: function(data)
                     {
-                        console.log("Everything went fine and now rendering user info!");
+                        //console.log("Everything went fine and now rendering user info!");
                         // Rendering the user info now
                         document.getElementById("name").innerHTML = response.responseJSON.name;  // Render nickname
                         document.getElementById("linkkarma").innerHTML = "Link karma: " + response.responseJSON.link_karma;  // Render link karmas
