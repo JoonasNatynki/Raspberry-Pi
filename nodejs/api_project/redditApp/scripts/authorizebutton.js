@@ -1,6 +1,13 @@
 var authorizebutton = document.getElementById("authorizebutton");
-
 authorizebutton.addEventListener("click", onButtonClick);
+
+var tokenbutton = document.getElementById("tokenbutton");
+tokenbutton.addEventListener("click", onTokenButtonClick);
+
+function onTokenButtonClick()
+{
+    getToken();
+}
 
 function onButtonClick()
 {
@@ -32,6 +39,7 @@ function getToken(codex)
     console.log(token);
 }
 
+//  Get cookie parameter and output it
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -48,6 +56,7 @@ function getCookie(cname) {
     return "";
 }
 
+// Check if there is an authorization code in the cookie
 function checkCookie() {
     var user=getCookie("code");
     if (user == "") 
@@ -60,7 +69,7 @@ function checkCookie() {
        if (user != "" && user != null)
        {
            console.log("Authorization token: " + getCookie("code"));
-           getToken(getCookie("code"));
+           //getToken(getCookie("code"));
        }
     }
 }
