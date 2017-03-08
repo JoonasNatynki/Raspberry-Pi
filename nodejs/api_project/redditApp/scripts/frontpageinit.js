@@ -117,14 +117,14 @@ function getFrontPageThreads()
     var threads = $.ajax(
         {
             type: "GET",
-            dataType: JSON,
+            dataType: "json",
             url: "https://oauth.reddit.com/api/v1/me",
             headers: 
             {
                 'Authorization': 'bearer ' + "moi"
             },
         });
-    console.log(JSON.stringify(authorizationtoken));
+    console.log(authorizationtoken);
     //console.log(threads);
 }
 
