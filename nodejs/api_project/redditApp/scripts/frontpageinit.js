@@ -129,8 +129,8 @@ function getUserFrontPage()
                         // Rendering the user info now
                         var thread = 
                         {
-                            title: response.responseJSON.data.children[20].data.title,
-                            text: "KURKKUPANEMISTA!!!!"
+                            title: response.responseJSON.data.children[20].data.subreddit,
+                            text: response.responseJSON.data.children[20].data.title
                         }
                          makeNewThread(thread);
                     }
