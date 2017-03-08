@@ -121,7 +121,6 @@ function getFrontPageThreads()
             headers: 
             {
                 'Authorization': 'bearer ' + 'authorizationtoken',
-                'User-Agent': 'oz4I-8h8nyfXcg'
             },
         });
     console.log(threads);
