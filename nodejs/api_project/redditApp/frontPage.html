@@ -8,20 +8,22 @@
   .threadfield
   {
     border-radius: 25px;
-    float: right;
+    float: top;
     padding: 20px; 
     width: 70%;
     height: 70%;
     background-color:#585858;
   }
 
-  .threadsubmitfield
+  .userfield
   {
     border-radius: 25px;
-    float: left;
+    float: top;
     padding: 20px; 
-    width: 29%;
-    background-color:#969696;
+    width: 100%;
+    background-color:#889999;
+    box-shadow: 0px 0px 20px #888888;
+
   }
 
   @keyframes example {
@@ -106,13 +108,17 @@
   </head>
   <body style = "background-color: #2E2E2E">
     
-    <div class = "threadsubmitfield" id = "threadsubmitfield">
-      <p id = "name">Nickname</p>
-      <p id = "linkkarma">Link karma: 9002</p>
-      
+    <div class = "userfield" id = "userfield">
+
+      <span id = "userinfo">
+        <div id = "name" style = "display: inline; margin-right: 20px">Nickname</div>
+        <div id = "linkkarma" style = "display: inline; margin-right: 20px">Link karma:</div>
+        <div id = "commentkarma" style = "display: inline; margin-right: 20px">Comment karma:</div>
+      </span>
+
       <form>
         <div class="input-group">
-          <span class="input-group-addon">Comment</span>
+          <span class="input-group-addon">Search topic</span>
           <input id="inputmessage" type="text" class="form-control" name="inputmessage" placeholder="...">
         </div>
       </form>

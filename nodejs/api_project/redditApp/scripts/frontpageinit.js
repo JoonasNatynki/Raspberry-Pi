@@ -112,12 +112,14 @@ function getCoords(elem)
     return { top: Math.round(top), left: Math.round(left) };
 }
 
-function renderFirstTime(json)
+function renderUserInfo(json)
 {
     var name = document.getElementById("name");
     var linkkarma = document.getElementById("linkkarma");
+    var commentkarma = document.getElementById("commentkarma");
     name.innerHTML = json.name;
     linkkarma.innerHTML = "Link karma: " + json.link_karma;
+    commentkarma.innerHTML = "Comment karma: " + json.comment_karma;
 }
 
 function getFrontPageThreads()
@@ -135,12 +137,10 @@ function getFrontPageThreads()
                     success: function(data)
                     {
                         console.log("Everything went fine and now rendering page!");
-                        renderFirstTime(response.responseJSON);
+                        renderUserInfo(response.responseJSON);
                     }
                 });
-        console.log(response);
-
-    
+        console.log(response);    
 }
 
 // The loopty loop for the thread arranger (USE THIS TO REARRANGE THE THREADS!!!!!!!)
