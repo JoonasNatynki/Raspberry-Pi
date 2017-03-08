@@ -149,8 +149,8 @@ function getUserInfo()
                         console.log("Everything went fine and now rendering user info!");
                         // Rendering the user info now
                         document.getElementById("name").innerHTML = json.name;  // Render nickname
-                        document.getElementById("linkkarma").innerHTML = "Link karma: " + json.link_karma;  // Render link karmas
-                        document.getElementById("commentkarma").innerHTML = "Comment karma: " + json.comment_karma; // Render comment karmas
+                        document.getElementById("linkkarma").innerHTML = "Link karma: " + response.responseJSON.link_karma;  // Render link karmas
+                        document.getElementById("commentkarma").innerHTML = "Comment karma: " + response.responseJSON.comment_karma; // Render comment karmas
                     }
                 });
     //console.log(response);    
