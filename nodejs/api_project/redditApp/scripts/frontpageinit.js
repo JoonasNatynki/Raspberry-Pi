@@ -112,36 +112,48 @@ function getCoords(elem)
     return { top: Math.round(top), left: Math.round(left) };
 }
 
-function renderUserInfo(json)
+function getUserSubscriptions()
 {
-    var name = document.getElementById("name");
-    var linkkarma = document.getElementById("linkkarma");
-    var commentkarma = document.getElementById("commentkarma");
-    name.innerHTML = json.name;
-    linkkarma.innerHTML = "Link karma: " + json.link_karma;
-    commentkarma.innerHTML = "Comment karma: " + json.comment_karma;
+    var response = $.ajax(
+                {
+                    type: "GET",
+                    dataType: "json",
+                    url: "https://oauth.reddit.com/subreddits/mine/subscriber",
+                    headers: 
+                    {
+                        'Authorization': 'bearer ' + getCookie("access_token")                    
+                    },
+                    success: function(data)
+                    {
+                        console.log("Everything went fine and now rendering subscribed threads!");
+                        // Rendering the user info now
+                        
+                    }
+                });
+    console.log(response);    
 }
 
 function getUserInfo()
 {
-    var token = getCookie("access_token");
-
-        var response = $.ajax(
+    var response = $.ajax(
                 {
                     type: "GET",
                     dataType: "json",
                     url: "https://oauth.reddit.com/api/v1/me",
                     headers: 
                     {
-                        'Authorization': 'bearer ' + token                    
+                        'Authorization': 'bearer ' + getCookie("access_token")                    
                     },
                     success: function(data)
                     {
-                        console.log("Everything went fine and now rendering page!");
-                        renderUserInfo(response.responseJSON);
+                        console.log("Everything went fine and now rendering user info!");
+                        // Rendering the user info now
+                        document.getElementById("name").innerHTML = json.name;  // Render nickname
+                        document.getElementById("linkkarma").innerHTML = "Link karma: " + json.link_karma;  // Render link karmas
+                        document.getElementById("commentkarma").innerHTML = "Comment karma: " + json.comment_karma; // Render comment karmas
                     }
                 });
-        console.log(response);    
+    //console.log(response);    
 }
 
 // The loopty loop for the thread arranger (USE THIS TO REARRANGE THE THREADS!!!!!!!)
@@ -161,5 +173,6 @@ function rearrangeThreadsInit()
 function initPage()
 {
     getUserInfo();
+    getUserSubscriptions();
     rearrangeThreadsInit();
 }
