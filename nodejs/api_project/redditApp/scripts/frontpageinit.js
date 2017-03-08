@@ -21,8 +21,9 @@ function rearrangeThreads(element, index)
         var rect = document.getElementById("threadghost " + index).getBoundingClientRect(); // Current position of said element
         var bodyRect = document.body.getBoundingClientRect();
         var threadfield = document.getElementById("threadfield").getBoundingClientRect();
+        var userfield = document.getElementById("userfield").getBoundingClientRect();
         var coordx = rect.left - bodyRect.left - threadfield.left;
-        var coordy = offsetcoords.top;
+        var coordy = offsetcoords.top - userfield.top;
 
         var trans = Morf.transition(elem, {
                 // New CSS state
