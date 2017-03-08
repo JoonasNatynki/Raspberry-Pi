@@ -23,9 +23,9 @@ function getAccessToken(codex)
         data: tokendata,
         success: function(data)
         {
-            accesstoken = authorizationtoken.responseJSON;
+            accesstoken = authorizationtoken.responseJSON.access_token;
             console.log(accesstoken.access_token);
-            document.cookie = "access_token=" + authorizationtoken.responseJSON.access_token;
+            document.cookie = "access_token=" + accesstoken;
 
             initPage();
         }
@@ -51,19 +51,20 @@ function getCookie(cname) {
 
 // Check if there is an authorization code in the cookie
 function checkCookie(name) {
-    authorizationcode = getCookie(name);
-    if (authorizationcode == "") 
+    var test = getCookie(name);
+    if (test == "") 
     {
         return false;
     }
     else 
     {
        //user = prompt("Please enter your name:","");
-       if (authorizationcode != "" && authorizationcode != null)
+       if (test != "" && test != null)
        {
            return true;
        }
     }
 }
+authorizationcode = getCookie("code");
 
 getAccessToken(authorizationcode);
