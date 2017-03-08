@@ -36,7 +36,7 @@ function getToken(codex)
         data: tokendata
     });
 
-    console.log(token);
+    console.log(JSON.parse(token);
 }
 
 //  Get cookie parameter and output it
