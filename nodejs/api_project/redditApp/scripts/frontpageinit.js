@@ -66,7 +66,7 @@ function makeNewThread(data)
     newthreadmessage.appendChild(newthreadimage);
     newthreadname.appendChild(document.createTextNode(title));
     newthreadmessage.appendChild(document.createTextNode(text));
-    newthread.addEventListener("click", function(){window.location = permalink;});
+    newthread.addEventListener("click", function(){window.replace("http://www.reddit.com/" + permalink);
     newthreadimage.src = imgurl;
 
     threadsArray.push(newthread);
