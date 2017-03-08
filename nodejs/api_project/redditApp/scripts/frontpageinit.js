@@ -118,10 +118,11 @@ function getFrontPageThreads()
         {
             type: "GET",
             url: "https://oauth.reddit.com/api/v1/me",
-            beforeSend: function (xhr) 
+            headers: 
             {
-                xhr.setRequestHeader ("Authorization", "bearer " + authorizationtoken, "User-Agent", "oz4I-8h8nyfXcg");
-            }
+                'Authorization': 'bearer ' + 'authorizationtoken',
+                '"User-Agent': 'oz4I-8h8nyfXcg'
+            },
         });
     console.log(threads);
 }
