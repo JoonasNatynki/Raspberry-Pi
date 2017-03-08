@@ -120,7 +120,7 @@ function getFrontPageThreads()
             url: "https://oauth.reddit.com/api/v1/me",
             beforeSend: function (xhr) 
             {
-                xhr.setRequestHeader ("Authorization", "bearer " + btoa(authorizationcode), "User-Agent", "Reddit-Project/0.1 by AnalEnthusiastic");
+                xhr.setRequestHeader ("Authorization", "bearer " + authorizationcode);
             }
         });
     console.log(threads);
