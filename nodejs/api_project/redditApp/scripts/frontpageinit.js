@@ -121,10 +121,10 @@ function getFrontPageThreads()
             url: "https://oauth.reddit.com/api/v1/me",
             headers: 
             {
-                'Authorization': 'bearer ' + t.access_token
+                'Authorization': 'bearer ' + "moi"
             },
         });
-    console.log(authorizationtoken);
+    console.log(authorizationtoken.responseText);
     console.log(threads);
 }
 
