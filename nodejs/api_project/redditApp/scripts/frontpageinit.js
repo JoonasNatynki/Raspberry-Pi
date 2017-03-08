@@ -124,7 +124,7 @@ function renderUserInfo(json)
 
 function getUserInfo()
 {
-    var token = accesstoken.access_token;
+    var token = getCookie("access_token");
 
         var response = $.ajax(
                 {
@@ -133,7 +133,7 @@ function getUserInfo()
                     url: "https://oauth.reddit.com/api/v1/me",
                     headers: 
                     {
-                        'Authorization': 'bearer ' + getCookie("access_token")                    
+                        'Authorization': 'bearer ' + token                    
                     },
                     success: function(data)
                     {
