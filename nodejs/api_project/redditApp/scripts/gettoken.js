@@ -24,7 +24,10 @@ function getAccessToken(codex)
         success: function(data)
         {
             accesstoken = authorizationtoken.responseJSON;
-            document.cookie = "access_token=" + authorizationtoken.responseJSON.access_token;
+            if(!checkCookie("access_token"))
+            {
+                document.cookie = "access_token=" + authorizationtoken.responseJSON.access_token;
+            }
             initPage();
         }
     });
@@ -48,21 +51,20 @@ function getCookie(cname) {
 }
 
 // Check if there is an authorization code in the cookie
-function checkCookie() {
-    authorizationcode = getCookie("code");
+function checkCookie(name) {
+    authorizationcode = getCookie(name);
     if (authorizationcode == "") 
     {
-        console.log("no code");
+        return false;
     }
     else 
     {
        //user = prompt("Please enter your name:","");
        if (authorizationcode != "" && authorizationcode != null)
        {
-           //console.log("Authorization token: " + getCookie("code"));
-           getAccessToken(authorizationcode);
+           return true;
        }
     }
 }
 
-checkCookie();
+getAccessToken(authorizationcode);
