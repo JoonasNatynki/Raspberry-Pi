@@ -123,7 +123,6 @@ function getFrontPageThreads()
                 xhr.setRequestHeader ("Authorization", "bearer " + btoa(authorizationcode));
             }
         });
-    console.log(authorizationcode);
     console.log(threads);
 }
 

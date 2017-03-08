@@ -1,4 +1,5 @@
 var authorizationcode;
+var authorizationtoken;
 
 function getToken(codex)
 {    
@@ -9,7 +10,7 @@ function getToken(codex)
         redirect_uri: "http://88.112.159.13:999/authorize_callback"	
     }
 
-    var token = $.ajax(
+    authorizationtoken = $.ajax(
     {
         type: "POST",
         url: "https://www.reddit.com/api/v1/access_token",
