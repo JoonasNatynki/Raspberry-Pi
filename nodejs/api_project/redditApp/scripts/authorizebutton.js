@@ -1,20 +1,12 @@
 var authorizebutton = document.getElementById("authorizebutton");
 authorizebutton.addEventListener("click", onButtonClick);
 
-var tokenbutton = document.getElementById("tokenbutton");
-tokenbutton.addEventListener("click", onTokenButtonClick);
-
-var authorizationcode;
-
-function onTokenButtonClick()
-{
-    getToken(authorizationcode);
-}
+var authorizationcode;  // The authorization code you get when giving this app permission to use your reddit account
 
 function onButtonClick()
 {
     
-    window.open("https://www.reddit.com/api/v1/authorize?client_id=oz4I-8h8nyfXcg&response_type=code&state=tissit&redirect_uri=http://88.112.159.13:999/authorize_callback&duration=temporary&scope=identity");
+    window.open("https://www.reddit.com/api/v1/authorize?client_id=oz4I-8h8nyfXcg&response_type=code&state=tissit&redirect_uri=http://natynki.net/authorize_callback&duration=temporary&scope=identity");
         
 }
 
@@ -24,7 +16,7 @@ function getToken(codex)
     {
         grant_type: "authorization_code",
         code: codex,
-        redirect_uri: "http://88.112.159.13:999/authorize_callback"	
+        redirect_uri: "http://natynki.net/authorize_callback"	
     }
 
     var token = $.ajax(
@@ -72,7 +64,7 @@ function checkCookie() {
        {
            console.log("Authorization token: " + getCookie("code"));
            authorizationcode = user;
-           //getToken(getCookie("code"));
+           getToken(getCookie(authorizationcode));
        }
     }
 }
