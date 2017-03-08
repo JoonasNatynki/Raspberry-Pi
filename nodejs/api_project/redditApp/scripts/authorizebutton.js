@@ -1,7 +1,15 @@
 var authorizebutton = document.getElementById("authorizebutton");
 authorizebutton.addEventListener("click", onButtonClick);
 
-var authorizationcode;  // The authorization code you get when giving this app permission to use your reddit account
+var tokenbutton = document.getElementById("tokenbutton");
+tokenbutton.addEventListener("click", onTokenButtonClick);
+
+var authorizationcode;
+
+function onTokenButtonClick()
+{
+    getToken(authorizationcode);
+}
 
 function onButtonClick()
 {
@@ -64,7 +72,7 @@ function checkCookie() {
        {
            console.log("Authorization token: " + getCookie("code"));
            authorizationcode = user;
-           getToken(getCookie(authorizationcode));
+           //getToken(getCookie("code"));
        }
     }
 }
