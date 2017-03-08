@@ -114,17 +114,17 @@ function getCoords(elem)
 
 function getFrontPageThreads()
 {
-    var t = JSON.parse(authorizationtoken.responseJSON);
+    var t = JSON.parse(authorizationtoken);
     var threads = $.ajax(
         {
             type: "GET",
             url: "https://oauth.reddit.com/api/v1/me",
             headers: 
             {
-                'Authorization': 'bearer ' + t.access_token,
+                'Authorization': 'bearer ' + t.responseJSON.access_token,
             },
         });
-    console.log(t);
+    console.log(t.responseJSON.access_token);
     console.log(threads);
 }
 
