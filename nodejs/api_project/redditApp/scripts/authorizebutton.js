@@ -60,7 +60,7 @@ function getCookie(cname) {
 
 // Check if there is an authorization code in the cookie
 function checkCookie() {
-    var user=getCookie("code");
+    var user = getCookie("code");
     if (user == "") 
     {
         console.log("no code");
@@ -70,9 +70,9 @@ function checkCookie() {
        //user = prompt("Please enter your name:","");
        if (user != "" && user != null)
        {
-           console.log("Authorization token: " + getCookie("code"));
+           //console.log("Authorization token: " + getCookie("code"));
            authorizationcode = user;
-           //getToken(getCookie("code"));
+           getToken(authorizationcode);
        }
     }
 }

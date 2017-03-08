@@ -19,14 +19,20 @@ console.log("Server running at natynki.net.");
 // Default front page
 app.get("/", function(request, response)
 	{
-	    response.sendFile(__dirname + "/frontPage.html");
+	    response.sendFile(__dirname + "/login.html");
+	});
+
+	// Default front page
+app.get("/frontpage", function(request, response)
+	{
+	    response.sendFile(__dirname + "/frontpage.html");
 	});
 
 app.get("/authorize_callback*", function(request, response)
 	{
 		console.log("Authorization token: " + request.query.code);
 		response.cookie("code", request.query.code);
-		response.redirect("/");
+		response.redirect("/frontpage");
 	});
 
 app.get("/*", function(request, response)
