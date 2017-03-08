@@ -21,9 +21,6 @@ function getAccessToken(codex)
         },
         data: tokendata
     });
-
-    test = authorizationtoken[15];
-    //console.log(authorizationtoken);
 }
 
 //  Get cookie parameter and output it

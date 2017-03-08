@@ -114,7 +114,6 @@ function getCoords(elem)
 
 function getFrontPageThreads()
 {
-    var t = authorizationtoken.responseJSON;
     var threads = $.ajax(
         {
             type: "GET",
@@ -124,7 +123,7 @@ function getFrontPageThreads()
                 'Authorization': 'bearer ' + "moi"
             },
         });
-    console.log(test);
+    console.log("This is the object: " + authorizationtoken);
     console.log(threads);
 }
 
