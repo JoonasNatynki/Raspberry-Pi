@@ -133,7 +133,7 @@ function getUserInfo()
                     url: "https://oauth.reddit.com/api/v1/me",
                     headers: 
                     {
-                        'Authorization': 'bearer ' + token                    
+                        'Authorization': 'bearer ' + getCookie("access_token")                    
                     },
                     success: function(data)
                     {
