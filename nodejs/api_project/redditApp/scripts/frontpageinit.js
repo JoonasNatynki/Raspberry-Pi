@@ -125,7 +125,7 @@ function getFrontPageThreads()
                         'Authorization': 'bearer ' + test.access_token                    
                     }
                 });
-        //console.log(threads);
+        console.log(threads);
 
     
 }
