@@ -130,6 +130,7 @@ function getUserFrontPage()
                         
                     }
                 });
+    makeNewThread(response.responseJSON.children[20].data.title);
     console.log(response);    
 }
 
