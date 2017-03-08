@@ -23,7 +23,7 @@ function rearrangeThreads(element, index)
         var threadfield = document.getElementById("threadfield").getBoundingClientRect();
         var userfield = document.getElementById("userfield").getBoundingClientRect();
         var coordx = rect.left - bodyRect.left - threadfield.left;
-        var coordy = offsetcoords.top - userfield.top;
+        var coordy = offsetcoords.top - bodyRect.top;
 
         var trans = Morf.transition(elem, {
                 // New CSS state
