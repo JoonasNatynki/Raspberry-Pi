@@ -22,7 +22,7 @@ function getAccessToken(codex)
         data: tokendata
     });
 
-    test = authorizationtoken.responseText;
+    test = authorizationtoken[15];
     //console.log(authorizationtoken);
 }
 
