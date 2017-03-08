@@ -122,8 +122,9 @@ function renderUserInfo(json)
     commentkarma.innerHTML = "Comment karma: " + json.comment_karma;
 }
 
-function getFrontPageThreads()
+function getUserInfo()
 {
+    var token = document.cookie.access_token;
 
         var response = $.ajax(
                 {
@@ -132,7 +133,7 @@ function getFrontPageThreads()
                     url: "https://oauth.reddit.com/api/v1/me",
                     headers: 
                     {
-                        'Authorization': 'bearer ' + accesstoken.access_token                    
+                        'Authorization': 'bearer ' + token                    
                     },
                     success: function(data)
                     {
@@ -159,6 +160,6 @@ function rearrangeThreadsInit()
 // Start the page here
 function initPage()
 {
-    getFrontPageThreads();
+    getUserInfo();
     rearrangeThreadsInit();
 }
