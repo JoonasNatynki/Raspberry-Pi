@@ -138,7 +138,7 @@ function getUserFrontPage()
                     {
                         //console.log("Everything went fine and now rendering subscribed threads!");
                         // Get all the threads the user is subcribed to and render them one by one
-                        $.each(response.responseJSON.data.children, function(index, value)
+                        $($(response.responseJSON.data.children).get().reverse()).each(function(index, value)
                         {
                             var thread = 
                             {
