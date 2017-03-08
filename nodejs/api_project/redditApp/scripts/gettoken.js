@@ -1,3 +1,5 @@
+var authorizationcode;
+
 function getToken(codex)
 {    
     var tokendata = 
