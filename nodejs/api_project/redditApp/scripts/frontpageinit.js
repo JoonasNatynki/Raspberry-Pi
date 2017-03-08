@@ -114,7 +114,6 @@ function getCoords(elem)
 
 function getFrontPageThreads()
 {
-    var t = JSON.parse(authorizationtoken);
     var threads = $.ajax(
         {
             type: "GET",
@@ -126,7 +125,7 @@ function getFrontPageThreads()
         });
     console.log(authorizationtoken);
     console.log(Object.getOwnPropertyNames(authorizationtoken).sort());
-    console.log(threads);
+    //console.log(threads);
 }
 
 // The loopty loop for the thread arranger (USE THIS TO REARRANGE THE THREADS!!!!!!!)
