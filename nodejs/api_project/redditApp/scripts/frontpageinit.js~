@@ -50,6 +50,7 @@ function makeNewThread(data)
     var newthread = document.createElement("div");
     var newthreadname = document.createElement("div");
     var newthreadmessage = document.createElement("div");
+    var newthreadtext = document.createElement("p");
     var newthreadimage = document.createElement("img");
 
     var threadfield = document.getElementById("threadfield");
@@ -58,14 +59,16 @@ function makeNewThread(data)
     newthreadname.className = "threadname";
     newthreadmessage.className = "threadmessage";
     newthreadimage.className = "threadthumbnail";
+    newthreadtext.className = "threadtext";
 
     newthread.id = "thread " + threadsArray.length;
     
     newthread.appendChild(newthreadname);
     newthread.appendChild(newthreadmessage);
     newthreadmessage.appendChild(newthreadimage);
+    newthreadmessage.appendChild(newthreadtext);
     newthreadname.appendChild(document.createTextNode(title));
-    newthreadmessage.appendChild(document.createTextNode(text));
+    newthreadtext.innerHTML = text;
     newthread.addEventListener("click", function(){location.replace("http://www.reddit.com/" + permalink)});
     newthreadimage.src = imgurl;
 
@@ -78,18 +81,21 @@ function makeNewThread(data)
     var newthreadnameghost = document.createElement("div");
     var newthreadmessageghost = document.createElement("div");
     var newthreadimageghost = document.createElement("img");
+    var newthreadtextghost = document.createElement("p");
 
     newthreadghost.className = "threadghost";
     newthreadnameghost.className = "threadnameghost";
     newthreadmessageghost.className = "threadmessageghost";
     newthreadimageghost.className = "threadthumbnail";
+    newthreadtextghost.className = "threadtext";
 
     newthreadghost.id = "threadghost " + threadghostsArray.length;
 
     newthreadghost.appendChild(newthreadmessageghost);
     newthreadghost.appendChild(newthreadnameghost);
     newthreadmessageghost.appendChild(newthreadimageghost);
-    newthreadmessageghost.appendChild(document.createTextNode(text));
+    newthreadmessageghost.appendChild(newthreadtextghost);
+    newthreadtextghost.innerHTML = text;
     newthreadnameghost.appendChild(document.createTextNode(title));
     newthreadimageghost.src = imgurl;
 
@@ -144,7 +150,7 @@ function getUserFrontPage()
                             {
                                 title: value.data.subreddit,
                                 text: value.data.title,
-                                imgurl: value.data.preview.images[0].resolutions[3].url,
+                                imgurl: value.data.thumbnail,
                                 permalink: value.data.permalink
                             }
                             makeNewThread(thread);    
