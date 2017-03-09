@@ -34,21 +34,18 @@
   {
     max-width: 47%;
     position: absolute;
-    padding: 5px;
+    margin: 2px;
+    padding: 2px;
     visibility: show;
+    background-color:#666666;
     box-shadow: 10px 10px 30px #424242;
-  background-color:#616161;
   }
-  .thread:hover
-  {
-  background-color: #858585;
-  }
-
-  .threadghost
+  
+    .threadghost
   {
     border-radius: 5px;
     border: 2px solid #2E2E2E;
-    max-width: 900px;
+    max-width: 47%;
     position: relative;
     margin: 2px;
     padding: 2px;
@@ -57,19 +54,36 @@
     background-color:#A4A4A4;
     box-shadow: 10px 10px 30px #424242;
   }
+  
+  .thread:hover
+  {
+  background-color: #858585;
+  z-index: 111;
+  max-width: 100%;
+  transform:scale(1.1,1.1);
+  }
+  .thread:hover .threadthumbnail
+  {
+  }
+  .thread:hover .threadmessage
+  {
+  transform:scale(1.23,1.23);
+  }
 
   .threadthumbnail
   {
   position:relative;
-    margin: 4px;
-    max-width: 80px;
-  max-height: 80px;
+  margin: 4px;
+  height: 90px;
+  transition: all 0.2s ease;
+  display: inline-block;
+  vertical-align: top;
   }
-  .threadthumbnail:hover
+  
+  .threadtext
   {
-    width: 200px;
-  max-width: 500px;
-  max-height: 500px;
+  display:inline-block;
+  max-width: 300px;
   }
 
   .threadnameghost
@@ -82,14 +96,27 @@
     max-width: 300px;
     background-color: #c9c9c9;
   }
-
-  .threadmessageghost
+  
+  .threadmessage
   {
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
       padding: 10px; 
       float: right;
       max-width: 600px;
+  background-color:#e5e5e5;
+  transition: all 0.3s;
+  text-align: justify;
+  }
+  
+  .threadmessageghost
+  {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      padding: 10px; 
+      float: right;
+  max-width: 280px;
+  max-height:90px;
       background-color:#e5e5e5;
   }
 
@@ -102,16 +129,6 @@
     float: left;
     max-width: 300px;
     background-color: #c9c9c9;
-  }
-
-  .threadmessage
-  {
-      border-top-right-radius: 15px;
-      border-bottom-right-radius: 15px;
-      padding: 10px; 
-      float: right;
-      max-width: 600px;
-      background-color:#e5e5e5;
   }
 
   .inputmessage
