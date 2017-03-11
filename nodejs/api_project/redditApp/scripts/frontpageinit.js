@@ -4,7 +4,7 @@ var iterationTime = 85;
 
 //##############################################################
 // When new comment is submitted and you press ENTER
-$("#searchtopicinput").keypress(function(event)
+$("#inputmessage").keypress(function(event)
 {
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == "13")
