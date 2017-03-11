@@ -5,6 +5,8 @@ var app = express();
 var portnumber = 8000;
 var cp = require("child_process");
 var cookieparser = require("cookie-parser");
+var datum = require('datumbox').factory("oz4I-8h8nyfXcg");	// IS THAT THE "API KEY"??
+var http = require('http');
 
 console.log("Initialization done.");
 
@@ -30,7 +32,7 @@ app.get("/frontpage", function(request, response)
 
 app.get("/authorize_callback*", function(request, response)
 	{
-		response.cookie("code", request.query.code);
+		response.cookie("code", request.query.code);	// Throw the code into the client's cookie and then redirect the client to the front page where the cookie is used to get the access_token
 		response.redirect("/frontpage");
 	});
 
@@ -46,3 +48,26 @@ app.get("/*", function(request, response)
 			response.sendFile(__dirname + request.url);
 	    }
 	});
+
+app.post("/topic_search", function(request, response)
+	{
+		var topic = request.body.topic;	// The topic the user searched
+		var text = request.body.text;	// The text to find the topic to
+		datum.topicClassification(text, function(err, data) 
+		{
+			if ( err )
+				return console.log(err);
+
+			console.log(data);  // Remarks here.
+		});
+		//response.redirect("/frontpage");
+	});
+
+
+
+
+
+function getTopic(data)
+{
+	// TODO
+}

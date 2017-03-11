@@ -2,7 +2,29 @@ var threadghostsArray = [];
 var threadsArray = [];
 var iterationTime = 85;
 
+//##############################################################
+// When new comment is submitted and you press ENTER
+$("#searchtopicinput").keypress(function(event)
+{
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == "13")
+    {
+        event.preventDefault();
 
+        // DO STUFF HERE
+        var topic = $("#inputmessage").val();
+        var text = "Meanwhile, taxonomy and classification became the focus of natural historians. Carl Linnaeus published a basic taxonomy for the natural world in 1735 (variations of which have been in use ever since), and in the 1750s introduced scientific names for all his species.";
+
+        var textToTopicJSONObject = '{"topic":"' + topic + '", "text":"' + text + '"}';
+        $.get
+
+        var response = $.post( "http://www.natynki.net/topic_search", textToTopicJSONObject);
+        console.log(response);    
+        
+        $("#inputmessage").val("");
+    }
+});
+//##############################################################
 // Updates thread positions (DON'T USE THIS FUNCTION!!!!!!!)
 function rearrangeThreads(element, index)
 {
@@ -150,7 +172,7 @@ function getUserFrontPage()
                             {
                                 title: value.data.subreddit,
                                 text: value.data.title,
-                                imgurl: value.data.thumbnail,
+                                imgurl: value.data.preview.images[0].resolutions[3].url,
                                 permalink: value.data.permalink
                             }
                             makeNewThread(thread);    
