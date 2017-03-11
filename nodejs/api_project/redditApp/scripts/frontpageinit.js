@@ -26,6 +26,7 @@ $("#searchtopicinput").keypress(function(event)
 });
 //##############################################################
 // Updates thread positions (DON'T USE THIS FUNCTION!!!!!!!)
+
 function rearrangeThreads(element, index)
 {
     var threadlen = threadsArray.length;
@@ -179,7 +180,7 @@ function getUserFrontPage()
                         })
                     }
                 });
-    console.log(response);    
+    //console.log(response);    
 }
 
 function getUserInfo()
