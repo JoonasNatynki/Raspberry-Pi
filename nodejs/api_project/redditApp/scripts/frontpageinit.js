@@ -172,7 +172,7 @@ function getUserFrontPage()
                             {
                                 title: value.data.subreddit,
                                 text: value.data.title,
-                                imgurl: value.data.preview.images[0].resolutions[3].url,
+                                imgurl: value.data.thumbnail,
                                 permalink: value.data.permalink
                             }
                             makeNewThread(thread);    
