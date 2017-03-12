@@ -18,7 +18,7 @@ $("#inputmessage").keypress(function(event)
         var textToTopicJSONObject = '{"topic":"' + topic + '", "text":"' + text + '"}';
 	textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
 
-        var response = $.post( "http://88.112.159.13:999/topic_search", textToTopicJSONObject);
+        var response = $.post( "/topic_search", { Topic: topic, Text: text } );
 	console.log(textToTopicJSONObject);
         console.log(response);    
         
