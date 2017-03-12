@@ -134,7 +134,7 @@ function getCoords(elem)
     var clientTop = docEl.clientTop || body.clientTop || 0;
     var clientLeft = docEl.clientLeft || body.clientLeft || 0;
 
-    var top  = box.top +  scrollTop - clientTop;
+    var top  = box.top + scrollTop - clientTop - document.getElementById('userfield').clientHeight;
     var left = box.left + scrollLeft - clientLeft;
 
     return { top: Math.round(top), left: Math.round(left) };
