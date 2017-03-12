@@ -5,22 +5,15 @@ var count = 0;
 
 //##############################################################
 // When new comment is submitted and you press ENTER
-$("#inputmessage").keypress(function(event)
+function topicButton()
 {
-    var keycode = (event.keyCode ? event.keyCode : event.which);
-    if(keycode == "13")
-    {
-        event.preventDefault();
-        $("#inputmessage").val("");
-
-        getTopic();
-        count++;
-        getTopic();        
-        count++;
-        getTopic();        
-        count++;
-    }
-});
+    getTopic();
+    count++;
+    getTopic();        
+    count++;
+    getTopic();        
+    count++;
+}
 
 function getTopic()
 {
@@ -245,6 +238,7 @@ function initPage()
     getUserInfo();
     getUserFrontPage();
     rearrangeThreadsInit();
+    document.getElementById("topicbutton").addEventListener("click", topicButton);
 }
 
 var test = 
