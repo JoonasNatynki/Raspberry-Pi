@@ -15,7 +15,7 @@ $("#inputmessage").keypress(function(event)
         $.each(threadsArray, function(index, value)
         {
             var txt = value.getElementsByClassName("threadtext")[0].innerHTML;
-            var stripped = text.replace(/[^A-Za-z]/g, '');
+            var stripped = txt.replace(/[^A-Za-z0-9]/g, '');
             
             
 
