@@ -64,10 +64,9 @@ app.get("/*", function(request, response)
 // POST ###################################################################################################
 app.post("/topic_search", function(request, response)
 	 {
-		var text = request.body;	// The text to find the topic to
-		
-		//console.log(request.body);		
-		
+		var wantedtopic = request.body.topic;	// The topic the user searched
+		var text = request.body.text;	// The text to find the topic to
+				
 		var topic = datum.topicClassification(text, function(err, data)
 		{
 			if ( err )
