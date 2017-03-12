@@ -15,13 +15,10 @@ $("#inputmessage").keypress(function(event)
         $("#inputmessage").val("");
         $.each(threadsArray, function(index, value)
         {
-            var txt = "Fishery";
+            var txt = "John McCain, Arizona senator, predicts ‘there’s a lot more shoes to drop’ on Trump-Russia connection";
 
             count++;            
 
-            var textToTopicJSONObject = {topic: "JOO", text: txt};
-
-            if(count > 5){return}//textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
             $.ajax(
                 {
                     dataType: "text",
