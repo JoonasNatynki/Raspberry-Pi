@@ -16,6 +16,18 @@ $("#inputmessage").keypress(function(event)
         $("#inputmessage").val("");
 
         getTopic();
+        count++;
+        getTopic();
+        count++;
+        getTopic();
+        count++;
+        getTopic();
+        count++;
+        getTopic();
+        count++;
+        getTopic();
+        count++;
+        
     }
 });
 
