@@ -16,7 +16,7 @@ $("#inputmessage").keypress(function(event)
         {
             var text = value.getElementsByClassName("threadtext")[0].innerHTML;
             var textToTopicJSONObject = '{"topic":"Find topic", "text":"' + text + '"}';
-            //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
+            textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
 
             $.ajax
             ({
@@ -28,8 +28,10 @@ $("#inputmessage").keypress(function(event)
                 success: function(response)
                     {
                         console.log(response);
+                        value.getElementsByClassName("threadname")[0].innerHTML = response;
                     }
-            });
+            }); 
+
         });
     }
 });
