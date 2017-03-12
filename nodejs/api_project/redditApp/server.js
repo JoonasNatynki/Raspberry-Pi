@@ -73,8 +73,6 @@ app.post("/topic_search", function(request, response)
 			{
 				return console.log(err);
 			}
-			
-			console.log(data);
 			response.send(JSON.parse('{"topic":"' + data + '"}'));
 		});;
 	    //response.redirect("/frontpage");
