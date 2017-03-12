@@ -17,12 +17,6 @@ $("#inputmessage").keypress(function(event)
         $("#inputmessage").val("");
 
         getTopic();
-        count++;
-        getTopic();
-        count++;
-        getTopic();
-        count++;
-        
     }
 });
 
@@ -41,10 +35,11 @@ function getTopic()
                     data: txt,
                     success: function(data)
                     {
+                        threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;
                         count++;
                         datumcount--;
                         console.log(data);
-                        if(count < threadsArray.length && datumcount < 3)
+                        if(count < threadsArray.length)
                         {
                             getTopic();
                         }                        
