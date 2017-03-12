@@ -19,6 +19,7 @@ $("#inputmessage").keypress(function(event)
             var textToTopicJSONObject = '{"topic":"Find topic", "text":"' + text + '"}';
             //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
 
+            console.log(textToTopicJSONObject);
             $.ajax
             ({
                 type: "POST",
