@@ -14,26 +14,20 @@ $("#inputmessage").keypress(function(event)
         $("#inputmessage").val("");
         $.each(threadsArray, function(index, value)
         {
-            var text = value.getElementsByClassName("threadtext")[0].innerHTML;
-            text = text.replace("'", "\'");
-            text = text.replace('"', '\"');
-            text = text.replace('‘', '\"');
-            text = text.replace('’', '\"');
+            var txt = value.getElementsByClassName("threadtext")[0].innerHTML;
+            txt = txt.replace("'", "\'");
+            txt = txt.replace('"', '\"');
+            txt = txt.replace('‘', '\"');
+            txt = txt.replace('’', '\"');
             
             
 
-            var textToTopicJSONObject = '{"topic":"Find topic", "text":"' + text + '"}';
+            var textToTopicJSONObject = {topic: "JOO", text: txt};
 
             //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
 
             console.log(textToTopicJSONObject);
-            $.ajax
-            ({
-                type: "POST",
-                url: "/topic_search",
-                data: textToTopicJSONObject,
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
+            $.post("topic_search", textToTopicJSONObject);
                 success: function(response)
                     {
                         console.log(response);
