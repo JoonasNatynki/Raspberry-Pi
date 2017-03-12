@@ -22,6 +22,10 @@ $("#inputmessage").keypress(function(event)
         count++;
         getTopic();        
         count++;
+        getTopic();        
+        count++;
+        getTopic();        
+        count++;
 
     }
 });
@@ -39,12 +43,12 @@ function getTopic()
 
             $.post("/topic_search", txt).done(function(data)
                     {
-                        threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;
-                        count++;
-                        datumcount--;
-                        console.log(data);
                         if(count < threadsArray.length)
-                        {
+                            {
+                            threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;
+                            count++;
+                            datumcount--;
+                            console.log(data);                            
                             getTopic();
                         }                        
                     });          
