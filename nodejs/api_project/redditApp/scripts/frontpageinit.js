@@ -21,12 +21,18 @@ $("#inputmessage").keypress(function(event)
             var textToTopicJSONObject = {topic: "JOO", text: txt};
 
             //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
-
-            console.log(value);
-            $.post("topic_search", textToTopicJSONObject).done(function(data)
-            {
-                console.log(data);
-            });
+            $.ajax(
+                {
+                    dataType: "text",
+                    type: "POST",
+                    url: "/topic_search",
+                    data: txt,
+                    success: function(data)
+                    {
+                        console.log(data);
+                    }
+                }
+            );
         });
     }
 });
