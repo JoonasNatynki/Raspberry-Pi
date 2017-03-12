@@ -180,8 +180,8 @@ function initPage()
         {
             event.preventDefault();
             var msg = {};
-            msg.app_id = getCookie("Username");
-            console.log(getCookie("Username"));
+            msg.app_id = appid;
+            msg.name = getCookie("Username");
             msg.text = $("#inputmessage").val();
             socket.json.emit("message", msg);   // Send message to all connected clients
             $("#inputmessage").val("");

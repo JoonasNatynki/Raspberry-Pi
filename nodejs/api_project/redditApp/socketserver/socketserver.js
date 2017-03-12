@@ -64,9 +64,8 @@ function initSockets() {
         });
 
         socket.on('message', function(jsonMsg) {
-            console.log('msg : '+jsonMsg.text);
+            console.log(jsonMsg.name + ": " + jsonMsg.text);
             //console.log('room: '+jsonMsg.app_id);
-            jsonMsg.socketid = socketid; // pad client id to response
             io.sockets.in(jsonMsg.app_id).emit('message', jsonMsg);
 
             // Write into message log
