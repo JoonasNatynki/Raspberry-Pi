@@ -30,7 +30,7 @@ function getTopic()
 {
     datumcount++;
             var txt = threadsArray[count].getElementsByClassName("threadtext")[0].innerHTML;
-            txt = txt.replace((/[^a-z A-Z]+/g, ''););
+            txt = txt.replace(/[^a-z A-Z]+/g, '');
 
             txt = '{"text":"' + txt + '"}';
             txt = JSON.parse(txt);
