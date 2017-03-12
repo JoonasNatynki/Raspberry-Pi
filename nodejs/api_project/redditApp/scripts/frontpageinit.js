@@ -2,7 +2,6 @@ var threadghostsArray = [];
 var threadsArray = [];
 var iterationTime = 85;
 var count = 0;
-var datumcount = 0;
 
 //##############################################################
 // When new comment is submitted and you press ENTER
@@ -12,8 +11,6 @@ $("#inputmessage").keypress(function(event)
     if(keycode == "13")
     {
         event.preventDefault();
-        var count = 0;
-
         $("#inputmessage").val("");
 
         getTopic();
@@ -22,17 +19,11 @@ $("#inputmessage").keypress(function(event)
         count++;
         getTopic();        
         count++;
-        //getTopic();        
-        //count++;
-        //getTopic();        
-        //count++;
-
     }
 });
 
 function getTopic()
 {
-    datumcount++;
             var txt = threadsArray[count].getElementsByClassName("threadtext")[0].innerHTML;
             txt = txt.replace(/[^a-zA-Z\s]+/g, '');
 
@@ -47,7 +38,6 @@ function getTopic()
                             {
                             threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;
                             count++;
-                            datumcount--;
                             console.log(data);                            
                             getTopic();
                         }                        
