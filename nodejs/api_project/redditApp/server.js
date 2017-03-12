@@ -24,6 +24,8 @@ var CLIENTSECRET = "Nzf6R_2jbnHd59fS8-v4V1UDrNc";	// client secret
 
 console.log("Server running at natynki.net.");
 
+
+// GET ###################################################################################################
 // Default front page
 app.get("/", function(request, response)
 	{
@@ -54,22 +56,20 @@ app.get("/*", function(request, response)
 			response.sendFile(__dirname + request.url);
 	    }
 	});
+// /GET ###################################################################################################
 
+
+
+
+// POST ###################################################################################################
 app.post("/topic_search", function(request, response)
 	 {
-	var topic = request.body.topic;	// The topic the user searched
-	var text = request.body.text;	// The text to find the topic to
-	   
-	   var realtopic = datum.topicClassification(text, function(err, data) 
-		{
-			if ( err )
-				return console.log(err);
+		var wantedtopic = request.body.topic;	// The topic the user searched
+		var topic = getTopic(request.body.text);	// The text to find the topic to
 
-			console.log(data);  // Remarks here.
-		});
-	    //response.redirect("/frontpage");
-	     response.send(realtopic);
+		response.send(JSON.parse('{"topic":"' + topic + '"}'));	// Makes found topic into an JSON object
 	});
+// /POST ###################################################################################################
 
 
 
@@ -77,5 +77,11 @@ app.post("/topic_search", function(request, response)
 
 function getTopic(data)
 {
-	// TODO
+	var topic = datum.topicClassification(data, function(err, data) 
+		{
+			if ( err )
+				return console.log(err);
+		});
+	    //response.redirect("/frontpage");
+	return topic;
 }
