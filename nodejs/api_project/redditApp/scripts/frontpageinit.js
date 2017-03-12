@@ -30,7 +30,7 @@ function getTopic()
             txt = '{"text":"' + txt + '"}';
             txt = JSON.parse(txt);
 
-            console.log(txt);
+            //console.log(txt);
 
             $.post("/topic_search", txt).done(function(data)
                     {
@@ -38,10 +38,9 @@ function getTopic()
                         threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;
                         count++;
                         console.log(data); 
-                        if(count < threadsArray.length)
-                        {                           
-                            getTopic();
-                        }                        
+                          
+                        getTopic();
+                    
                     });          
 
 }
