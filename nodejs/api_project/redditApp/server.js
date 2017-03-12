@@ -10,9 +10,9 @@ var http = require('http');
 var bodyParser = require('body-parser')
 
 // parse application/x-www-form-urlencoded
-//app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
-//app.use(bodyParser.json())
+app.use(bodyParser.json())
 
 console.log("Initialization done.");
 
@@ -64,14 +64,14 @@ app.get("/*", function(request, response)
 // POST ###################################################################################################
 app.post("/topic_search", function(request, response)
 	 {
-		console.log(request);
-		if(request)
+		console.log(request.body.text);
+		if(request.body.text)
 		{
-			var topic = datum.topicClassification(request, function(err, data)
+			var topic = datum.topicClassification(request.body.text, function(err, data)
 			{
 				if ( err )
 				{
-					return console.log(request);
+					return console.log(request.body.text);
 				}
 				response.send(data);
 			});;
