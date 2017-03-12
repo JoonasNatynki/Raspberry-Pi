@@ -21,7 +21,7 @@ $("#inputmessage").keypress(function(event)
 
             var textToTopicJSONObject = {topic: "JOO", text: txt};
 
-            if(count > 5){break}//textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
+            if(count > 5){return}//textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
             $.ajax(
                 {
                     dataType: "text",
