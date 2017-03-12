@@ -66,10 +66,10 @@ app.post("/topic_search", function(request, response)
 	 {
 		var wantedtopic = request.body.topic;	// The topic the user searched
 		var text = request.body.text;	// The text to find the topic to
-		console.log(request.body);
-		if(text)
+		console.log(request);
+		if(request)
 		{
-			var topic = datum.topicClassification(text, function(err, data)
+			var topic = datum.topicClassification(request, function(err, data)
 			{
 				if ( err )
 				{
