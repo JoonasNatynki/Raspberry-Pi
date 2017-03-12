@@ -28,10 +28,8 @@ $("#inputmessage").keypress(function(event)
                 success: function(response)
                     {
                         console.log(response);
-                        value.getElementsByClassName("threadname")[0].innerHTML = response;
                     }
-            }); 
-
+            });
         });
     }
 });
