@@ -17,6 +17,12 @@ $("#inputmessage").keypress(function(event)
         $("#inputmessage").val("");
 
         getTopic();
+        count++;
+        getTopic();        
+        count++;
+        getTopic();        
+        count++;
+
     }
 });
 
@@ -24,6 +30,7 @@ function getTopic()
 {
     datumcount++;
             var txt = threadsArray[count].getElementsByClassName("threadtext")[0].innerHTML;
+            txt = txt.replace((/[^a-z A-Z]+/g, ''););
 
             txt = '{"text":"' + txt + '"}';
             txt = JSON.parse(txt);
