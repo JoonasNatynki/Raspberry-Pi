@@ -22,7 +22,7 @@ $("#inputmessage").keypress(function(event)
 
             //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
 
-            console.log(textToTopicJSONObject);
+            //console.log(textToTopicJSONObject);
             $.post("topic_search", textToTopicJSONObject).done(function(data)
             {
                 console.log(data);
