@@ -11,27 +11,28 @@ $("#inputmessage").keypress(function(event)
     {
         event.preventDefault();
 
-        // DO STUFF HERE
-        var topic = $("#inputmessage").val();
-        var text = "Simple bedside tables";
-
-        var textToTopicJSONObject = '{"topic":"' + topic + '", "text":"' + text + '"}';
-	    //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
-
-        $.ajax
-		({
-			type: "POST",
-			url: "/topic_search",
-			data: textToTopicJSONObject,
-			contentType: "application/json; charset=utf-8",
-			dataType: "json",
-			success: function(response)
-				{
-					console.log(response);
-				}
-		}); 
         $("#inputmessage").val("");
-        console.log(threadsArray[1].getElementsByClassName("threadtext")[0].innerHTML);
+        $.each(threadsArray, function(index, value)
+        {
+            var text = value.getElementsByClassName("threadtext")[0].innerHTML;
+
+            var textToTopicJSONObject = '{"topic":"' + topic + '", "text":"' + text + '"}';
+            //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
+
+            $.ajax
+            ({
+                type: "POST",
+                url: "/topic_search",
+                data: textToTopicJSONObject,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(response)
+                    {
+                        console.log(response);
+                    }
+            }); 
+
+        });
     }
 });
 //##############################################################
