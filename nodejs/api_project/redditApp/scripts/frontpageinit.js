@@ -34,11 +34,12 @@ function getTopic()
 
             $.post("/topic_search", txt).done(function(data)
                     {
+
+                        threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;
+                        count++;
+                        console.log(data); 
                         if(count < threadsArray.length)
-                            {
-                            threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;
-                            count++;
-                            console.log(data);                            
+                        {                           
                             getTopic();
                         }                        
                     });          
