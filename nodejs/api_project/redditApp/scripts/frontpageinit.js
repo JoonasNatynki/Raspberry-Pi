@@ -15,8 +15,11 @@ $("#inputmessage").keypress(function(event)
         $.each(threadsArray, function(index, value)
         {
             var text = value.getElementsByClassName("threadtext")[0].innerHTML;
+            text = text.replace("'", "\'");
+            text = text.replace('"', '\"');
 
             var textToTopicJSONObject = '{"topic":"Find topic", "text":"' + text + '"}';
+
             //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
 
             console.log(textToTopicJSONObject);
