@@ -64,8 +64,8 @@ app.get("/*", function(request, response)
 // POST ###################################################################################################
 app.post("/topic_search", function(request, response)
 	 {
-		console.log(request.body);
-		if(request.body)
+		console.log(request);
+		if(request)
 		{
 			var topic = datum.topicClassification(request.body, function(err, data)
 			{
