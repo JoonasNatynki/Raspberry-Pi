@@ -1,6 +1,7 @@
 var threadghostsArray = [];
 var threadsArray = [];
 var iterationTime = 85;
+var count = 0;
 
 //##############################################################
 // When new comment is submitted and you press ENTER
@@ -13,11 +14,17 @@ $("#inputmessage").keypress(function(event)
         var count = 0;
 
         $("#inputmessage").val("");
-        $.each(threadsArray, function(index, value)
-        {
-            var txt = "John McCain, Arizona senator, predicts ‘there’s a lot more shoes to drop’ on Trump-Russia connection";
 
-            count++;            
+        getTopic();
+    }
+});
+
+function getTopic()
+{
+
+            var txt = threadsArray[count].getElementsByClassName("threadtext")[0].innerHTML;
+
+            
 
             $.ajax(
                 {
@@ -27,13 +34,13 @@ $("#inputmessage").keypress(function(event)
                     data: txt,
                     success: function(data)
                     {
+                        count++;
                         console.log(data);
+                        if(count < threadsArray.length){getTopic();}                        
                     }
                 }
             );
-        });
-    }
-});
+}
 //##############################################################
 // Updates thread positions (DON'T USE THIS FUNCTION!!!!!!!)
 
