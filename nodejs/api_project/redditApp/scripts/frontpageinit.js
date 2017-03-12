@@ -17,12 +17,14 @@ $("#inputmessage").keypress(function(event)
             var text = value.getElementsByClassName("threadtext")[0].innerHTML;
             text = text.replace("'", "\'");
             text = text.replace('"', '\"');
+            text = text.replace('‘', '\"');
+            
 
             var textToTopicJSONObject = '{"topic":"Find topic", "text":"' + text + '"}';
 
             //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
 
-            console.log(textToTopicJSONObject);
+            //console.log(textToTopicJSONObject);
             $.ajax
             ({
                 type: "POST",
@@ -33,6 +35,7 @@ $("#inputmessage").keypress(function(event)
                 success: function(response)
                     {
                         console.log(response);
+                        value.getElementsByClassName("threadtext")[0].innerHTML = response;
                     }
             }); 
 
