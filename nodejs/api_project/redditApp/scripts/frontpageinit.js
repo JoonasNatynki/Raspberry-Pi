@@ -15,16 +15,16 @@ $("#inputmessage").keypress(function(event)
         $.each(threadsArray, function(index, value)
         {
             var text = value.getElementsByClassName("threadtext")[0].innerHTML;
-            var textToTopicJSONObject = '{"topic":"Find topic", "text":"' + text + '"}';
-            textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
+            //var textToTopicJSONObject = '{"topic":"Find topic", "text":"' + text + '"}';
+            //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
 
             $.ajax
             ({
                 type: "POST",
                 url: "/topic_search",
                 data: textToTopicJSONObject,
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
+                contentType: "charset=utf-8",
+                dataType: "text",
                 success: function(response)
                     {
                         console.log(response);
