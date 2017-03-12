@@ -72,6 +72,7 @@ function makeNewThread(data)
     
     // ###################################################################
     var text = data.text;
+    var name = data.app_id;
 
     var newthread = document.createElement("div");
     var newthreadname = document.createElement("div");
@@ -87,7 +88,7 @@ function makeNewThread(data)
     
     newthread.appendChild(newthreadname);
     newthread.appendChild(newthreadmessage);
-    newthreadname.appendChild(document.createTextNode(data.socketid));
+    newthreadname.appendChild(document.createTextNode(name));
     newthreadmessage.appendChild(document.createTextNode(text));
 
     threadsArray.push(newthread);
