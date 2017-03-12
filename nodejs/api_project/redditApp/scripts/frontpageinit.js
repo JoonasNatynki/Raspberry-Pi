@@ -16,7 +16,7 @@ $("#inputmessage").keypress(function(event)
         {
             var text = value.getElementsByClassName("threadtext")[0].innerHTML;
 
-            var textToTopicJSONObject = '{"topic":"' + topic + '", "text":"' + text + '"}';
+            var textToTopicJSONObject = '{"topic":"Find topic", "text":"' + text + '"}';
             //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
 
             $.ajax
