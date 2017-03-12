@@ -27,11 +27,9 @@ function getTopic()
 
             txt = '{"text":' + txt + '"}';
 
-            txt = JSON.parse(txt);            
-
             $.ajax(
                 {
-                    dataType: "text",
+                    dataType: "json",
                     type: "POST",
                     url: "/topic_search",
                     data: txt,
