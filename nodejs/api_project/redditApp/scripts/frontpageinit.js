@@ -22,7 +22,7 @@ $("#inputmessage").keypress(function(event)
             ({
                 type: "POST",
                 url: "/topic_search",
-                data: textToTopicJSONObject,
+                data: text,
                 contentType: "charset=utf-8",
                 dataType: "text",
                 success: function(response)
