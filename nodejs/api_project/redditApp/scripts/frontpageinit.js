@@ -14,7 +14,7 @@ $("#inputmessage").keypress(function(event)
         $("#inputmessage").val("");
         $.each(threadsArray, function(index, value)
         {
-            var txt = "'123abcABC-_*(!@#$%^&*()_-={}[]:\"<>,.?/~`'";
+            var txt = "Fishery";
             
             
 
