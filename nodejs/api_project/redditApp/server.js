@@ -64,17 +64,22 @@ app.get("/*", function(request, response)
 // POST ###################################################################################################
 app.post("/topic_search", function(request, response)
 	 {
-	var topic = request.body.topic;	// The topic the user searched
-	var text = request.body.text;	// The text to find the topic to
-	   
-	   var realtopic = datum.topicClassification(text, function(err, data) 
-		{
-			if ( err )
-				return console.log(err);
-
-			console.log(data);  // Remarks here.
-		});
+		var wantedtopic = request.body.topic;	// The topic the user searched
+		var text = request.body.text;	// The text to find the topic to
+		
+		var topic = getTopic(text);
 	    //response.redirect("/frontpage");
-	     response.send(realtopic);
+	     response.send(topic);
 	});
 // /POST ###################################################################################################
+
+function getTopic (text)
+{
+	var topic = datum.topicClassification(text, function(err, data)
+	{
+		if ( err )
+			return console.log(err);
+
+		//console.log(data);  // Remarks here.
+	});
+}
