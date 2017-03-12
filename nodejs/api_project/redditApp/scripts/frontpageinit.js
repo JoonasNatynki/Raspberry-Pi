@@ -15,7 +15,7 @@ $("#inputmessage").keypress(function(event)
         $.each(threadsArray, function(index, value)
         {
             var txt = value.getElementsByClassName("threadtext")[0].innerHTML;
-            var stripped = txt.replace(/[^A-Za-z0-9]/g, '');
+            txt = txt.replace(/[^A-Za-z0-9]/g, '');
             
             
 
@@ -23,12 +23,11 @@ $("#inputmessage").keypress(function(event)
 
             //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
 
-            console.log(txt);
-            /*$.post("topic_search", textToTopicJSONObject).done(function(data)
+            console.log(textToTopicJSONObject);
+            $.post("topic_search", textToTopicJSONObject).done(function(data)
             {
                 console.log(data);
             });
-            */
         });
     }
 });
