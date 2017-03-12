@@ -31,7 +31,7 @@ $("#inputmessage").keypress(function(event)
 				}
 		}); 
         $("#inputmessage").val("");
-        console.log(threadsArray[1].childNodes.getElementByClassName("threadtext").innerHTML);
+        console.log(threadsArray[1].childNodes.getElementsByClassName("threadtext")[0].innerHTML);
     }
 });
 //##############################################################
