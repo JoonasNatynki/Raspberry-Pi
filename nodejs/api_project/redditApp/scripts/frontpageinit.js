@@ -22,10 +22,6 @@ $("#inputmessage").keypress(function(event)
         count++;
         getTopic();
         count++;
-        getTopic();
-        count++;
-        getTopic();
-        count++;
         
     }
 });
@@ -48,7 +44,7 @@ function getTopic()
                         count++;
                         datumcount--;
                         console.log(data);
-                        if(count < threadsArray.length && datumcount < 5)
+                        if(count < threadsArray.length && datumcount < 3)
                         {
                             getTopic();
                         }                        
