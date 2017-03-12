@@ -27,6 +27,8 @@ function getTopic()
 
             txt = '{"text":' + txt + '"}';
 
+            console.log(txt);
+
             $.post("/topic_search", txt).done(function(data)
                     {
                         threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;
