@@ -10,17 +10,18 @@ $("#inputmessage").keypress(function(event)
     if(keycode == "13")
     {
         event.preventDefault();
+        var count = 0;
 
         $("#inputmessage").val("");
         $.each(threadsArray, function(index, value)
         {
             var txt = "Fishery";
-            
-            
+
+            count++;            
 
             var textToTopicJSONObject = {topic: "JOO", text: txt};
 
-            //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
+            if(count > 5){break}//textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
             $.ajax(
                 {
                     dataType: "text",
