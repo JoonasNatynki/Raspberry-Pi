@@ -18,6 +18,8 @@ $("#inputmessage").keypress(function(event)
             text = text.replace("'", "\'");
             text = text.replace('"', '\"');
             text = text.replace('‘', '\"');
+            text = text.replace('’', '\"');
+            
             
 
             var textToTopicJSONObject = '{"topic":"Find topic", "text":"' + text + '"}';
