@@ -173,11 +173,11 @@ function initPage()
     // When new comment is submitted and you press ENTER
     $("#inputmessage").keypress(function(event)
     {
+        event.preventDefault();
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if(keycode == "13")
         {
             event.preventDefault();
-            //makeNewThread(message);
             var msg = {};
             msg.app_id = appid;
             msg.text = $("#inputmessage").val();
