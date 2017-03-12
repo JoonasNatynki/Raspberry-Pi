@@ -50,17 +50,21 @@ app.get("/*", function(request, response)
 	});
 
 app.post("/topic_search", function(request, response)
-	{
-		var topic = request.body.topic;	// The topic the user searched
-		var text = request.body.text;	// The text to find the topic to
-		datum.topicClassification(text, function(err, data) 
-		{
-			if ( err )
-				return console.log(err);
-
-			console.log(data);  // Remarks here.
-		});
-		//response.redirect("/frontpage");
+	 {
+	     console.log(request.body);
+		//var topic = request.body.topic;	// The topic the user searched
+		//var text = request.body.text;	// The text to find the topic to
+	    //console.log(topic + " and " + text);
+	   
+	   // datum.topicClassification(text, function(err, data) 
+	//	{
+	//		if ( err )
+	//			return console.log(err);
+//
+	//		console.log(data);  // Remarks here.
+	//	});
+	     //response.redirect("/frontpage");
+	     response.send(request.body);
 	});
 
 

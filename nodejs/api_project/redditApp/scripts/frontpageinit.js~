@@ -4,7 +4,7 @@ var iterationTime = 85;
 
 //##############################################################
 // When new comment is submitted and you press ENTER
-$("#searchtopicinput").keypress(function(event)
+$("#inputmessage").keypress(function(event)
 {
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == "13")
@@ -18,7 +18,8 @@ $("#searchtopicinput").keypress(function(event)
         var textToTopicJSONObject = '{"topic":"' + topic + '", "text":"' + text + '"}';
         $.get
 
-        var response = $.post( "http://www.natynki.net/topic_search", textToTopicJSONObject);
+        var response = $.post( "http://88.112.159.13:999/topic_search", textToTopicJSONObject);
+	console.log(textToTopicJSONObject);
         console.log(response);    
         
         $("#inputmessage").val("");
@@ -26,6 +27,7 @@ $("#searchtopicinput").keypress(function(event)
 });
 //##############################################################
 // Updates thread positions (DON'T USE THIS FUNCTION!!!!!!!)
+
 function rearrangeThreads(element, index)
 {
     var threadlen = threadsArray.length;
@@ -172,14 +174,14 @@ function getUserFrontPage()
                             {
                                 title: value.data.subreddit,
                                 text: value.data.title,
-                                imgurl: value.data.preview.images[0].resolutions[3].url,
+                                imgurl: value.data.thumbnail,
                                 permalink: value.data.permalink
                             }
                             makeNewThread(thread);    
                         })
                     }
                 });
-    console.log(response);    
+    //console.log(response);    
 }
 
 function getUserInfo()
