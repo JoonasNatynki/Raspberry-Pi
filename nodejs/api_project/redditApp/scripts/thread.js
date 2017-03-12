@@ -171,7 +171,7 @@ function initPage()
 {
     //##############################################################
     // When new comment is submitted and you press ENTER
-    $("#threadsubmitfield").keypress(function(event)
+    $("#inputmessage").keypress(function(event)
     {
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if(keycode == "13")
