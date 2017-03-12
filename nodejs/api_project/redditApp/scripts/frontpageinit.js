@@ -15,10 +15,7 @@ $("#inputmessage").keypress(function(event)
         $.each(threadsArray, function(index, value)
         {
             var txt = value.getElementsByClassName("threadtext")[0].innerHTML;
-            txt = txt.replace("'", "\'");
-            txt = txt.replace('"', '\"');
-            txt = txt.replace('‘', '\"');
-            txt = txt.replace('’', '\"');
+            var stripped = text.replace(/[^A-Za-z]/g, '');
             
             
 
