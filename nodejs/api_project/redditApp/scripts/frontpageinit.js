@@ -27,13 +27,7 @@ function getTopic()
 
             txt = '{"text":' + txt + '"}';
 
-            $.ajax(
-                {
-                    dataType: "json",
-                    type: "POST",
-                    url: "/topic_search",
-                    data: txt,
-                    success: function(data)
+            $.post("/topic_search", txt).done(function(data)
                     {
                         threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;
                         count++;
@@ -43,9 +37,8 @@ function getTopic()
                         {
                             getTopic();
                         }                        
-                    }
-                }
-            );
+                    });          
+
 }
 //##############################################################
 // Updates thread positions (DON'T USE THIS FUNCTION!!!!!!!)
