@@ -14,8 +14,7 @@ $("#inputmessage").keypress(function(event)
         $("#inputmessage").val("");
         $.each(threadsArray, function(index, value)
         {
-            var txt = value.getElementsByClassName("threadtext")[0].innerHTML;
-            txt = txt.replace(/[^A-Za-z0-9]/g, '');
+            var txt = "'123abcABC-_*(!@#$%^&*()_-={}[]:\"<>,.?/~`'";
             
             
 
