@@ -13,15 +13,23 @@ $("#inputmessage").keypress(function(event)
 
         // DO STUFF HERE
         var topic = $("#inputmessage").val();
-        var text = "Meanwhile, taxonomy and classification became the focus of natural historians. Carl Linnaeus published a basic taxonomy for the natural world in 1735 (variations of which have been in use ever since), and in the 1750s introduced scientific names for all his species.";
+        var text = "Simple bedside tables";
 
         var textToTopicJSONObject = '{"topic":"' + topic + '", "text":"' + text + '"}';
-	    textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
+	    //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
 
-        var response = $.post( "/topic_search", textToTopicJSONObject );
-	    //console.log(textToTopicJSONObject);
-        console.log(response);    
-        
+        $.ajax
+		({
+			type: "POST",
+			url: "/topic_search",
+			data: textToTopicJSONObject,
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function(response)
+				{
+					console.log(response);
+				}
+		}); 
         $("#inputmessage").val("");
     }
 });

@@ -70,9 +70,12 @@ app.post("/topic_search", function(request, response)
 		var topic = datum.topicClassification(text, function(err, data)
 		{
 			if ( err )
+			{
 				return console.log(err);
+			}
 			
-			response.send(JSON.parse('{"topic","' + topic + '"}'));
+			console.log(data);
+			response.send(JSON.parse('{"topic":"' + data + '"}'));
 		});;
 	    //response.redirect("/frontpage");
 	});
