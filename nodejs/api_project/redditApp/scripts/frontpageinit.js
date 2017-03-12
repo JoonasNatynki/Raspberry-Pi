@@ -28,8 +28,7 @@ $("#inputmessage").keypress(function(event)
                 dataType: "json",
                 success: function(response)
                     {
-                        // WHEN ACTUAL TOPIC FINALLY COMES, UPDATE THE THREAD NAMES!!
-                        value.getElementsByClassName("threadname")[0].innerHTML = response;
+                        console.log(response);
                     }
             }); 
 
