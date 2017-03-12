@@ -83,5 +83,6 @@ function getTopic(data)
 				return console.log(err);
 		});
 	    //response.redirect("/frontpage");
+		console.log(topic);
 	return topic;
 }
