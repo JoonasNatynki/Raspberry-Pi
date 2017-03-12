@@ -31,6 +31,7 @@ $("#inputmessage").keypress(function(event)
 				}
 		}); 
         $("#inputmessage").val("");
+        console.log(threadsArray[1]);
     }
 });
 //##############################################################
