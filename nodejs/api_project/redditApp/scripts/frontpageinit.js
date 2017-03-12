@@ -18,8 +18,8 @@ $("#inputmessage").keypress(function(event)
         var textToTopicJSONObject = '{"topic":"' + topic + '", "text":"' + text + '"}';
 	textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
 
-        var response = $.post( "/topic_search", { Topic: topic, Text: text } );
-	console.log(textToTopicJSONObject);
+        var response = $.post( "/topic_search", textToTopicJSONObject );
+	//console.log(textToTopicJSONObject);
         console.log(response);    
         
         $("#inputmessage").val("");

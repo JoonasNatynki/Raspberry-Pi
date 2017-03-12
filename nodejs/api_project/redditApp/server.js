@@ -5,8 +5,14 @@ var app = express();
 var portnumber = 8000;
 var cp = require("child_process");
 var cookieparser = require("cookie-parser");
-var datum = require('datumbox').factory("oz4I-8h8nyfXcg");	// IS THAT THE "API KEY"??
+var datum = require('datumbox').factory("a8f5694b80ee745eafb318f3b02aef40");	// IS THAT THE "API KEY"??
 var http = require('http');
+var bodyParser = require('body-parser')
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+// parse application/json
+app.use(bodyParser.json())
 
 console.log("Initialization done.");
 
@@ -51,20 +57,18 @@ app.get("/*", function(request, response)
 
 app.post("/topic_search", function(request, response)
 	 {
-	     console.log(request.body);
-		//var topic = request.body.topic;	// The topic the user searched
-		//var text = request.body.text;	// The text to find the topic to
-	    //console.log(topic + " and " + text);
+	var topic = request.body.topic;	// The topic the user searched
+	var text = request.body.text;	// The text to find the topic to
 	   
-	   // datum.topicClassification(text, function(err, data) 
-	//	{
-	//		if ( err )
-	//			return console.log(err);
-//
-	//		console.log(data);  // Remarks here.
-	//	});
-	     //response.redirect("/frontpage");
-	     response.send(request.body);
+	   var realtopic = datum.topicClassification(text, function(err, data) 
+		{
+			if ( err )
+				return console.log(err);
+
+			console.log(data);  // Remarks here.
+		});
+	    //response.redirect("/frontpage");
+	     response.send(realtopic);
 	});
 
 
