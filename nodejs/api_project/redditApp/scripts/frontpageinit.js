@@ -27,14 +27,10 @@ $("#inputmessage").keypress(function(event)
             //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
 
             console.log(textToTopicJSONObject);
-            $.post("topic_search", textToTopicJSONObject);
-                success: function(response)
-                    {
-                        console.log(response);
-                        value.getElementsByClassName("threadtext")[0].innerHTML = response;
-                    }
-            }); 
-
+            $.post("topic_search", textToTopicJSONObject).done(function(data)
+            {
+                console.log(data);
+            });
         });
     }
 });
