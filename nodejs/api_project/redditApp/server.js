@@ -66,16 +66,19 @@ app.post("/topic_search", function(request, response)
 	 {
 		var wantedtopic = request.body.topic;	// The topic the user searched
 		var text = request.body.text;	// The text to find the topic to
-		console.log(request.body);		
-		var topic = datum.topicClassification(text, function(err, data)
+		console.log(request.body);
+		if(text)
 		{
-			if ( err )
+			var topic = datum.topicClassification(text, function(err, data)
 			{
-				return console.log(err);
-			}
-			response.send(data);
-		});;
-	    //response.redirect("/frontpage");
+				if ( err )
+				{
+					return console.log(err);
+				}
+				response.send(data);
+			});;
+			//response.redirect("/frontpage");
+		}
 	});
 // /POST ###################################################################################################
 
