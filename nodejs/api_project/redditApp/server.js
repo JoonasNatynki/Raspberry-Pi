@@ -64,25 +64,17 @@ app.get("/*", function(request, response)
 // POST ###################################################################################################
 app.post("/topic_search", function(request, response)
 	 {
-		var wantedtopic = request.body.topic;	// The topic the user searched
-		var topic = getTopic(request.body.text);	// The text to find the topic to
-
-		response.send(JSON.parse('{"topic":"' + topic + '"}'));	// Makes found topic into an JSON object
-	});
-// /POST ###################################################################################################
-
-
-
-
-
-function getTopic(data)
-{
-	var topic = datum.topicClassification(data, function(err, data) 
+	var topic = request.body.topic;	// The topic the user searched
+	var text = request.body.text;	// The text to find the topic to
+	   
+	   var realtopic = datum.topicClassification(text, function(err, data) 
 		{
 			if ( err )
 				return console.log(err);
+
+			console.log(data);  // Remarks here.
 		});
 	    //response.redirect("/frontpage");
-		console.log(topic);
-	return topic;
-}
+	     response.send(realtopic);
+	});
+// /POST ###################################################################################################
