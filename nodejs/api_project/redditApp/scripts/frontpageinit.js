@@ -2,6 +2,7 @@ var threadghostsArray = [];
 var threadsArray = [];
 var iterationTime = 85;
 var count = 0;
+var datumcount = 0;
 
 //##############################################################
 // When new comment is submitted and you press ENTER
@@ -33,7 +34,7 @@ $("#inputmessage").keypress(function(event)
 
 function getTopic()
 {
-
+    datumcount++;
             var txt = threadsArray[count].getElementsByClassName("threadtext")[0].innerHTML;
 
             
@@ -47,8 +48,12 @@ function getTopic()
                     success: function(data)
                     {
                         count++;
+                        datumcount--;
                         console.log(data);
-                        if(count < threadsArray.length){getTopic();}                        
+                        if(count < threadsArray.length && datumcount < 6)
+                        {
+                            getTopic();
+                        }                        
                     }
                 }
             );
