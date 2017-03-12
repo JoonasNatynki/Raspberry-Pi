@@ -22,10 +22,10 @@ $("#inputmessage").keypress(function(event)
         count++;
         getTopic();        
         count++;
-        getTopic();        
-        count++;
-        getTopic();        
-        count++;
+        //getTopic();        
+        //count++;
+        //getTopic();        
+        //count++;
 
     }
 });
