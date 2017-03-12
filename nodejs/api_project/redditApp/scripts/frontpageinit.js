@@ -25,7 +25,9 @@ function getTopic()
     datumcount++;
             var txt = threadsArray[count].getElementsByClassName("threadtext")[0].innerHTML;
 
-            txt = '{"text":' + txt + '"}';            
+            txt = '{"text":' + txt + '"}';
+
+            txt = JSON.parse(txt);            
 
             $.ajax(
                 {
