@@ -24,7 +24,7 @@ $("#inputmessage").keypress(function(event)
 
             //textToTopicJSONObject = JSON.parse(textToTopicJSONObject);
 
-            //console.log(textToTopicJSONObject);
+            console.log(textToTopicJSONObject);
             $.ajax
             ({
                 type: "POST",
