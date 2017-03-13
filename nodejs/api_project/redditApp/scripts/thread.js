@@ -174,24 +174,24 @@ function initPage()
 {
     //##############################################################
     // When new comment is submitted and you press ENTER
-        $("#joonas").keydown(function(event)
-    {
-        //event.preventDefault();
-        var keycode = (event.keyCode ? event.keyCode : event.which);
-        if(keycode == 13)
+        $("#joonas").one("keydown", function(event)
         {
-            event.preventDefault();
-            event.stopPropagation();
-            console.log("tissi");
-            var msg = {};
-            msg.app_id = appid;
-            msg.name = getCookie("Username");
-            msg.text = $("#joonas").val();
-            socket.json.emit("message", msg);   // Send message to all connected clients
-            $("#joonas").val("");
-            makeNewThread(msg);
-        }
-    });
+            //event.preventDefault();
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if(keycode == 13)
+            {
+                event.preventDefault();
+                event.stopPropagation();
+                console.log("tissi");
+                var msg = {};
+                msg.app_id = appid;
+                msg.name = getCookie("Username");
+                msg.text = $("#joonas").val();
+                socket.json.emit("message", msg);   // Send message to all connected clients
+                $("#joonas").val("");
+                makeNewThread(msg);
+            }
+        });
     
     //##############################################################
 
