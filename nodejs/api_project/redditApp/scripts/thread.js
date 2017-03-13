@@ -185,7 +185,7 @@ function initPage()
     //##############################################################
     // When new comment is submitted and you press ENTER
     document.getElementById("postbutton").addEventListener("click", postMessage);
-    $("#joonas").keyup(function(event)
+    $("#joonas").keypress(function(event)
     {
         if(event.keyCode == 13)
         {
