@@ -114,6 +114,7 @@ function makeNewThread(data)
     threadsArray.push(newthread);
 
     threadfield.insertBefore(newthread, threadfield.firstChild);
+
     // ###################################################################
 
     var newthreadghost = document.createElement("div");
@@ -130,8 +131,8 @@ function makeNewThread(data)
 
     newthreadghost.id = "threadghost " + threadghostsArray.length;
 
-    newthreadghost.appendChild(newthreadmessageghost);
     newthreadghost.appendChild(newthreadnameghost);
+    newthreadghost.appendChild(newthreadmessageghost);
     newthreadmessageghost.appendChild(newthreadimageghost);
     newthreadmessageghost.appendChild(newthreadtextghost);
     newthreadtextghost.innerHTML = text;
