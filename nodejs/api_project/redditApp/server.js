@@ -44,6 +44,12 @@ app.get("/authorize_callback*", function(request, response)
 		response.redirect("/frontpage");
 	});
 
+		// Default front page
+app.get("/chat", function(request, response)
+	{
+	    response.sendFile(__dirname + "/chat.html");
+	});
+
 app.get("/*", function(request, response)
 	{
 	    console.log("Handling request to: " + request.url);
