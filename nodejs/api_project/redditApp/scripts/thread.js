@@ -175,16 +175,17 @@ function initPage()
     $("#joonas").keydown(function(event)
     {
         //event.preventDefault();
+        event.preventDefault();
+        event.stopPropagation();
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if(keycode == 13)
         {
             console.log("tissi");
-            event.preventDefault();
             var msg = {};
             msg.app_id = appid;
             msg.name = getCookie("Username");
             msg.text = $("#joonas").val();
-            //socket.json.emit("message", msg);   // Send message to all connected clients
+            socket.json.emit("message", msg);   // Send message to all connected clients
             $("#joonas").val("");
         }
     });
