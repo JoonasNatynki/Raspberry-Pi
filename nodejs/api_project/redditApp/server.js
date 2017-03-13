@@ -70,7 +70,7 @@ app.get("/*", function(request, response)
 // POST ###################################################################################################
 app.post("/topic_search", function(request, response)
 	 {
-		console.log(request.body.text);
+		//console.log(request.body.text);
 		if(request.body.text)
 		{
 			var topic = datum.topicClassification(request.body.text, function(err, data)
@@ -78,6 +78,7 @@ app.post("/topic_search", function(request, response)
 				if ( err )
 				{
 					console.log(err);
+					err.status = "error";
 					return response.send(err);
 				}
 				response.send(data);

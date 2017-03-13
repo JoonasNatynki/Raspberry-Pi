@@ -7,6 +7,7 @@ var count = 0;
 // When new comment is submitted and you press ENTER
 function topicButton()
 {
+    // We run 3 "simultaneous calls to increase speed, 4 breaks the API"
     getTopic();
     count++;
     getTopic();        
