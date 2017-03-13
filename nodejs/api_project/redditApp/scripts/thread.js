@@ -179,6 +179,30 @@ function postMessage()
     makeNewThread(msg);
 }
 
+function getUserInfo()
+{
+    var response = $.ajax(
+                {
+                    type: "GET",
+                    dataType: "json",
+                    url: "https://oauth.reddit.com/api/v1/me",
+                    headers: 
+                    {
+                        'Authorization': 'bearer ' + getCookie("access_token")                    
+                    },
+                    success: function(data)
+                    {
+                        //console.log("Everything went fine and now rendering user info!");
+                        // Rendering the user info now
+                        document.getElementById("name").innerHTML = response.responseJSON.name;  // Render nickname
+                        document.cookie = "Username=" + response.responseJSON.name
+                        document.getElementById("linkkarma").innerHTML = "Link karma: " + response.responseJSON.link_karma;  // Render link karmas
+                        document.getElementById("commentkarma").innerHTML = "Comment karma: " + response.responseJSON.comment_karma; // Render comment karmas
+                    }
+                });
+    //console.log(response);    
+}
+
 // Start the page here
 function initPage()
 {
@@ -196,6 +220,7 @@ function initPage()
     //##############################################################
 
     rearrangeThreadsInit();
+    getUserInfo();
     initSocket();
 }
 
