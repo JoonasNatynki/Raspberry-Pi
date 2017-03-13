@@ -190,7 +190,7 @@ function initPage()
         if(event.keyCode == 13)
         {
             event.preventDefault();
-            postMessage();
+            if($("#joonas").val() != "") {postMessage();}
         }
     })
     //##############################################################
