@@ -105,9 +105,9 @@ function makeNewThread(data)
     newthreadmessageghost.className = "threadmessageghost";
 
     newthreadghost.id = "threadghost " + threadghostsArray.length;
-
-    newthreadghost.appendChild(newthreadmessageghost);
+    
     newthreadghost.appendChild(newthreadnameghost);
+    newthreadghost.appendChild(newthreadmessageghost);
     newthreadmessageghost.appendChild(document.createTextNode(text));
     newthreadnameghost.appendChild(document.createTextNode(data.socketid));
 
