@@ -172,7 +172,7 @@ function initPage()
 {
     //##############################################################
     // When new comment is submitted and you press ENTER
-    $("#inputmessagebox").keypress(function(event)
+    $("#joonas").keypress(function(event)
     {
         //event.preventDefault();
         var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -183,9 +183,9 @@ function initPage()
             var msg = {};
             msg.app_id = appid;
             msg.name = getCookie("Username");
-            msg.text = $("#inputmessagebox").val();
+            msg.text = $("#joonas").val();
             socket.json.emit("message", msg);   // Send message to all connected clients
-            $("#inputmessagebox").val("");
+            $("#joonas").val("");
         }
     });
     //##############################################################
