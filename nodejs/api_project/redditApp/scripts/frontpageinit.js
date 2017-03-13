@@ -127,7 +127,7 @@ function makeNewThread(data)
     newthreadnameghost.className = "threadnameghost";
     newthreadmessageghost.className = "threadmessageghost";
     newthreadimageghost.className = "threadthumbnail";
-    newthreadtextghost.className = "threadtext";
+    newthreadtextghost.className = "threadtextghost";
 
     newthreadghost.id = "threadghost " + threadghostsArray.length;
 
@@ -135,7 +135,7 @@ function makeNewThread(data)
     newthreadghost.appendChild(newthreadmessageghost);
     newthreadmessageghost.appendChild(newthreadimageghost);
     newthreadmessageghost.appendChild(newthreadtextghost);
-    //newthreadtextghost.innerHTML = text;
+    newthreadtextghost.innerHTML = text;
     newthreadnameghost.appendChild(document.createTextNode(title));
     newthreadimageghost.src = imgurl;
 
