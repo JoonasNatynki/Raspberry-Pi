@@ -176,6 +176,7 @@ function postMessage()
     msg.text = $("#joonas").val();
     socket.json.emit("message", msg);   // Send message to all connected clients
     $("#joonas").val("");
+    makeNewThread(msg);
 }
 
 // Start the page here
