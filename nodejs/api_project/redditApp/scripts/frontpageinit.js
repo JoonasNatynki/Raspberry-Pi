@@ -30,7 +30,7 @@ function getTopic()
                     {
                         threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;
                         count++;
-                        console.log(data);
+                        console.log(data.message);
                         getTopic();                    
                     });          
 
