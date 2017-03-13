@@ -72,7 +72,7 @@ function makeNewThread(data)
     
     // ###################################################################
     var text = data.text;
-    var name = data.app_id;
+    var name = data.name;
 
     var newthread = document.createElement("div");
     var newthreadname = document.createElement("div");
