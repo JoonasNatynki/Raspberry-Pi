@@ -175,11 +175,11 @@ function initPage()
     $("#joonas").keydown(function(event)
     {
         //event.preventDefault();
-        event.preventDefault();
-        event.stopPropagation();
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if(keycode == 13)
         {
+            event.preventDefault();
+            event.stopPropagation();
             console.log("tissi");
             var msg = {};
             msg.app_id = appid;
