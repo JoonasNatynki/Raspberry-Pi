@@ -78,7 +78,6 @@ app.post("/topic_search", function(request, response)
 				if ( err )
 				{
 					console.log(err);
-					err.set("error", "error");
 					return response.send(err);
 				}
 				response.send(data);

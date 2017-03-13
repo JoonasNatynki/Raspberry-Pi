@@ -29,10 +29,14 @@ function getTopic()
             // When done, do "done"
             $.post("/topic_search", txt).done(function(data)
                     {
-                        threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;
-                        count++;
-                        console.log(data.message);
-                        getTopic();                    
+			console.log(data.message);
+
+                        if(data.code != 11)
+			{
+				threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;
+	                        count++;
+                     	        getTopic();                    
+			}
                     });          
 
 }
