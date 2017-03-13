@@ -187,7 +187,7 @@ function initPage()
     document.getElementById("postbutton").addEventListener("click", postMessage);
     $("#joonas").keypress(function(event)
     {
-        evet.preventDefault();
+        event.preventDefault();
     })
     //##############################################################
 
