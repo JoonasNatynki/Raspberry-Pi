@@ -184,7 +184,7 @@ function initPage()
 {
     //##############################################################
     // When new comment is submitted and you press ENTER
-        $("#joonas").enterKey(function(event)
+        $("#joonas").on("keydown", function(event)
     {
         //event.preventDefault();
         var keycode = (event.keyCode ? event.keyCode : event.which);
