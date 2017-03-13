@@ -183,7 +183,7 @@ function initPage()
             var msg = {};
             msg.app_id = appid;
             msg.name = getCookie("Username");
-            msg.text = $("#joonas").val();
+            //msg.text = $("#joonas").val();
             socket.json.emit("message", msg);   // Send message to all connected clients
             $("#joonas").val("");
         }
