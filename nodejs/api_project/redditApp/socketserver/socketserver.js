@@ -51,7 +51,7 @@ function initSockets() {
             var msg = {};
             var splitstr = line.split(":", 2);
             msg.text = splitstr[1];
-            msg.socketid = splitstr[0];
+            msg.name = splitstr[0];
             io.sockets.connected[socketid].emit("message", msg); // Send the messages line by line to just the connecting client
         });
         // #######################################################################
