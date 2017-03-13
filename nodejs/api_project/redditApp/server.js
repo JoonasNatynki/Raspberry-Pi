@@ -1,13 +1,12 @@
-var path = require("path");
-var express = require("express");
-//var fileSystem = require("fs");
+var path = require("path");	// Help for detecting if the client asks a javascript type file
+var express = require("express");	// Express nodejs web application framework, makes things easier somewhat.
 var app = express();
-var portnumber = 8000;
-var cp = require("child_process");
-var cookieparser = require("cookie-parser");
-var datum = require('datumbox').factory("a8f5694b80ee745eafb318f3b02aef40");	// IS THAT THE "API KEY"??
-var http = require('http');
-var bodyParser = require('body-parser')
+var portnumber = 8000;	// The port number the server is listening on LAN
+//var cp = require("child_process");	
+var cookieparser = require("cookie-parser");	// For accessing and doing stuff with cookies on the client side
+var datum = require('datumbox').factory("a8f5694b80ee745eafb318f3b02aef40");	// The machine learning API and the APP ID for the service
+//var http = require('http');	
+var bodyParser = require('body-parser');	//Parses the incoming request to a JSON object. used in app.post("/topic_search"... as request.body.text i.e
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -16,8 +15,8 @@ app.use(bodyParser.json())
 
 console.log("Initialization done.");
 
-app.listen(portnumber);
-app.use(cookieparser());
+app.listen(portnumber);	// Listen to port number ####
+app.use(cookieparser());	// Use the cookieparser
 
 var CLIENTID = "oz4I-8h8nyfXcg";	// client id
 var CLIENTSECRET = "Nzf6R_2jbnHd59fS8-v4V1UDrNc";	// client secret
@@ -50,12 +49,13 @@ app.get("/chat", function(request, response)
 	    response.sendFile(__dirname + "/chat.html");
 	});
 
-app.get("/*", function(request, response)
+//	For handling all javascript requests
+app.get("/scripts/*", function(request, response)
 	{
-	    console.log("Handling request to: " + request.url);
 	    if(path.extname(request.url) == ".js")
 	    {
-			response.sendFile(__dirname + request.url);
+			console.log("Handling .js request to: " + request.url);
+	    	response.sendFile(__dirname + request.url);
 	    }
 		else
 	    {
