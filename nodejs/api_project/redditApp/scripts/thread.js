@@ -175,11 +175,10 @@ function initPage()
     $("#inputmessage").keypress(function(event)
     {
         //event.preventDefault();
-
+        var keycode = (event.keyCode ? event.keyCode : event.which);
         if(keycode == "13")
         {
             console.log("tissi");
-            var keycode = (event.keyCode ? event.keyCode : event.which);
             event.preventDefault();
             var msg = {};
             msg.app_id = appid;
