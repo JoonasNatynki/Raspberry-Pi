@@ -172,23 +172,20 @@ function initPage()
 {
     //##############################################################
     // When new comment is submitted and you press ENTER
-    $('inputmessage').bind("enterKey",function(e)
+    $("#inputmessage").keypress(function(event)
     {
-        console.log("tissi");
-        event.preventDefault();
-        var msg = {};
-        msg.app_id = appid;
-        msg.name = getCookie("Username");
-        msg.text = $("#inputmessage").val();
-        socket.json.emit("message", msg);   // Send message to all connected clients
-        $("#inputmessage").val("");
-    });
-    
-    $("#inputmessage").keyup(function(e)
-    {
-        if(e.keyCode == 13)
+        //event.preventDefault();
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == 13)
         {
-            $(this).trigger("enterKey");
+            console.log("tissi");
+            event.preventDefault();
+            var msg = {};
+            msg.app_id = appid;
+            msg.name = getCookie("Username");
+            msg.text = $("#inputmessage").val();
+            socket.json.emit("message", msg);   // Send message to all connected clients
+            $("#inputmessage").val("");
         }
     });
     //##############################################################
