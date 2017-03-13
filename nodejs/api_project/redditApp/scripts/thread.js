@@ -172,20 +172,23 @@ function initPage()
 {
     //##############################################################
     // When new comment is submitted and you press ENTER
-    $("#inputmessage").keyup(function(event)
+    $('inputmessage').bind("enterKey",function(e)
     {
-        //event.preventDefault();
-        var keycode = (event.keyCode ? event.keyCode : event.which);
-        if(keycode == "13")
+        console.log("tissi");
+        event.preventDefault();
+        var msg = {};
+        msg.app_id = appid;
+        msg.name = getCookie("Username");
+        msg.text = $("#inputmessage").val();
+        socket.json.emit("message", msg);   // Send message to all connected clients
+        $("#inputmessage").val("");
+    });
+    
+    $("#inputmessage").keyup(function(e)
+    {
+        if(e.keyCode == 13)
         {
-            console.log("tissi");
-            event.preventDefault();
-            var msg = {};
-            msg.app_id = appid;
-            msg.name = getCookie("Username");
-            msg.text = $("#inputmessage").val();
-            socket.json.emit("message", msg);   // Send message to all connected clients
-            $("#inputmessage").val("");
+            $(this).trigger("enterKey");
         }
     });
     //##############################################################
