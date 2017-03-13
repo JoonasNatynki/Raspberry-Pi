@@ -18,27 +18,25 @@ function topicButton()
 function getTopic()
 {
             var txt = threadsArray[count].getElementsByClassName("threadtext")[0].innerHTML;
-            txt = txt.replace(/[^a-zA-Z\s]+/g, '');
+            txt = txt.replace(/[^a-zA-Z\s]+/g, ''); // Get only letters and spaces
 
             txt = '{"text":"' + txt + '"}';
             txt = JSON.parse(txt);
 
             //console.log(txt);
 
+            // When done, do "done"
             $.post("/topic_search", txt).done(function(data)
                     {
-
                         threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;
                         count++;
-                        console.log(data); 
-                          
-                        getTopic();
-                    
+                        console.log(data);
+                        getTopic();                    
                     });          
 
 }
 //##############################################################
-// Updates thread positions (DON'T USE THIS FUNCTION!!!!!!!)
+// Updates thread positions (DON'T USE THIS FUNCTION ANYWHERE ELSE!!!!!!!)
 
 function rearrangeThreads(element, index)
 {

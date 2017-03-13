@@ -77,7 +77,8 @@ app.post("/topic_search", function(request, response)
 			{
 				if ( err )
 				{
-					return console.log(err);
+					console.log(err);
+					return response.send(err);
 				}
 				response.send(data);
 			});;
