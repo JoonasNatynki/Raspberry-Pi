@@ -66,7 +66,7 @@ function initSockets() {
         socket.on('message', function(jsonMsg) {
             console.log(jsonMsg.name + ": " + jsonMsg.text);
             //console.log('room: '+jsonMsg.app_id);
-            io.sockets.in(jsonMsg.app_id).broadcast.emit('message', jsonMsg);
+            socket.broadcast.to(jsonMsg.app_id).emit('message', jsonMsg);
 
             // Write into message log
             fs.appendFile('messages.txt', jsonMsg.name + ": " + jsonMsg.text + "\n", function (err)
