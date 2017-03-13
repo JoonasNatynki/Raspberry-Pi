@@ -183,7 +183,7 @@ function initPage()
 {
     //##############################################################
     // When new comment is submitted and you press ENTER
-    document.getElementById("postbutton").addEventListener("click", postMessage);
+    //document.getElementById("postbutton").addEventListener("click", postMessage);
     
     //##############################################################
 
