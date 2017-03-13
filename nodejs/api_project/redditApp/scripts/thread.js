@@ -187,7 +187,10 @@ function initPage()
     document.getElementById("postbutton").addEventListener("click", postMessage);
     $("#joonas").keypress(function(event)
     {
-        event.preventDefault();
+        if(event.keyCode == 13)
+        {
+            event.preventDefault();
+        }
     })
     //##############################################################
 
