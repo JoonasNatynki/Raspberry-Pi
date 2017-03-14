@@ -237,7 +237,7 @@ function rearrangeThreadsInit()
     }
 }
 
-// Start the page here
+// Start making the page here
 function initPage()
 {
     getUserInfo();
