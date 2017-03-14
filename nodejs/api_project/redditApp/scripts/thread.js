@@ -163,7 +163,7 @@ function initSocket()
     });
     */
     console.log("Joining chat room: " + appid);
-    socket.emit('app_id', appid);
+    //socket.emit('app_id', appid);
     
     socket.on("message", function(data)
     {
