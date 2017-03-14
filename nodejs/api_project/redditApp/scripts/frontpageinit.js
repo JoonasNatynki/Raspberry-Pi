@@ -248,9 +248,3 @@ function initPage()
     rearrangeThreadsInit();
     document.getElementById("topicbutton").addEventListener("click", topicButton);
 }
-
-var test = 
-{
-    title: "joo",
-    text: "niimpä"
-}
