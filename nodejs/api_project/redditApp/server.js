@@ -46,6 +46,7 @@ app.get("/authorize_callback*", function(request, response)
 		// Default front page
 app.get("/chat", function(request, response)
 	{
+		console.log("A user is joining the chat room...");
 	    response.sendFile(__dirname + "/chat.html");
 	});
 
@@ -86,8 +87,3 @@ app.post("/topic_search", function(request, response)
 		}
 	});
 // /POST ###################################################################################################
-
-function getTopic (text)
-{
-	
-}
