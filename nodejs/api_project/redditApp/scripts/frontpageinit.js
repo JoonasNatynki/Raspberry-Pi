@@ -30,18 +30,17 @@ function getTopic()
             $.post("/topic_search", txt).done(function(data)
             {
                 // If no errors, do this
-                if(data.code != 11)
+                if(data.code != 13)
                 {
-                    threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;   // Change the thread topic to the processed topic
-                    count++;    // Iterate how manyth thread we've processed
-                    getTopic();                    
+                    console.log("You reached your daily limit: 1000 API calls");                                    
                 }
                 else
                 {
-                    console.log(data.message);
+                    threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;   // Change the thread topic to the processed topic
+                    count++;    // Iterate how manyth thread we've processed
+                    getTopic();    
                 }
-            });          
-
+            });
 }
 //##############################################################
 // Updates thread positions (DON'T USE THIS FUNCTION ANYWHERE ELSE!!!!!!!)
