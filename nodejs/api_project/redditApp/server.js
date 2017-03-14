@@ -58,10 +58,6 @@ app.get("/scripts/*", function(request, response)
 			console.log("Handling .js request to: " + request.url);
 	    	response.sendFile(__dirname + request.url);
 	    }
-		else
-	    {
-			response.sendFile(__dirname + request.url);
-	    }
 	});
 // /GET ###################################################################################################
 

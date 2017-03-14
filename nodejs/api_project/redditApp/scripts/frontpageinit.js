@@ -28,16 +28,19 @@ function getTopic()
 
             // When done, do "done"
             $.post("/topic_search", txt).done(function(data)
-                    {
-			console.log(data.message);
-
-                        if(data.code != 11)
-			{
-				threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;
-	                        count++;
-                     	        getTopic();                    
-			}
-                    });          
+            {
+                // If no errors, do this
+                if(data.code != 11)
+                {
+                    threadsArray[count].getElementsByClassName("threadname")[0].innerHTML = data;   // Change the thread topic to the processed topic
+                    count++;    // Iterate how manyth thread we've processed
+                    getTopic();                    
+                }
+                else
+                {
+                    console.log(data.message);
+                }
+            });          
 
 }
 //##############################################################
