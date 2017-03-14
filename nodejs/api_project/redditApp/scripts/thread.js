@@ -156,10 +156,15 @@ function rearrangeThreadsInit()
 
 function initSocket()
 {
+    /*
     socket.on('connect', function() 
     {
         socket.emit('app_id', appid);
     });
+    */
+    console.log("Joining chat room: " + appid);
+    socket.emit('app_id', appid);
+    
     socket.on("message", function(data)
     {
         // When someone makes a new thread, do this on your client
@@ -169,7 +174,6 @@ function initSocket()
 
 function postMessage()
 {
-    console.log("tissi");
     var msg = {};
     msg.app_id = appid;
     msg.name = getCookie("Username");
