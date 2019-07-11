@@ -1,10 +1,10 @@
 CXX=g++
 CXXFLAGS=-std=c++11 -c -Wall
 
-all: SetPin InitializePins UninitializePins
+all: InitializePins UninitializePins PulseLight
 
-SetPin: setPin.o
-	$(CXX) setPin.o -o SetPin
+#SetPin: setPin.o
+#	$(CXX) setPin.o -o SetPin
 
 InitializePins: initializePins.o
 	$(CXX) initializePins.o -o InitializePins
@@ -12,9 +12,12 @@ InitializePins: initializePins.o
 UninitializePins: uninitializePins.o
 	$(CXX) uninitializePins.o -o UninitializePins
 
+PulseLight: pulseLight.o
+	$(CXX) pulseLight.o -o PulseLight
 
-setPin: setPin.cpp
-	$(CXX) $(CXXFLAGS) setPin.cpp
+
+#setPin: setPin.cpp
+#	$(CXX) $(CXXFLAGS) setPin.cpp
 
 initializePins: initializePins.cpp
 	$(CXX) $(CXXFLAGS) initializePins.cpp
@@ -22,5 +25,8 @@ initializePins: initializePins.cpp
 uninitializePins: uninitializePins.cpp
 	$(CXX) $(CXXFLAGS) uninitializePins.cpp
 
+pulseLight: pulseLight.cpp
+	$(CXX) $(CXXFLAGS) pulseLight.cpp
+
 clean:
-	rm -rf *o SetGPIOPinToValue InitializePins UninitializePins
+	rm -rf *o InitializePins UninitializePins PulseLight
