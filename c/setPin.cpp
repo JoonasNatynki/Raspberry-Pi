@@ -13,9 +13,14 @@ int main(int argc, char* argv[])
 
   std::cout << "Setting the GPIO pin number (" << pinNumber << ") to value (" << pinValue << ")\n";
 
-  PinController::SetPinValue(std::atoi(pinNumber), ((*pinValue == '1')?(EState::High):(EState::Low)));
-
-  std::cout << "Pin value set successfully!\n";
+  if(PinController::SetPinValue(std::atoi(pinNumber), ((*pinValue == '1')?(EState::High):(EState::Low))))
+  {
+    std::cout << "Pin value set successfully!\n";
+  }
+  else
+  {
+    std::cout << "\n";
+  }
   
   return 0;
 }
