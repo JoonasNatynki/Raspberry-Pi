@@ -1,32 +1,31 @@
-CXX=g++
-CXXFLAGS=-std=c++11 -c -Wall
+CXX = g++ -std=c++11 -c
 
-all: InitializePins UninitializePins PulseLight
+CXXFLAGS = -std=c++11 -Wall
 
-#SetPin: setPin.o
-#	$(CXX) setPin.o -o SetPin
+all: PulseLight InitializePins SetPin
+
+PulseLight: pulseLight.o PinController.o
+	g++ $(CXXFLAGS) pulseLight.o PinController.o -o PulseLight
 
 InitializePins: initializePins.o
-	$(CXX) initializePins.o -o InitializePins
+	g++ $(CXXFLAGS) initializePins.o -o InitializePins
 
-UninitializePins: uninitializePins.o
-	$(CXX) uninitializePins.o -o UninitializePins
-
-PulseLight: pulseLight.o
-	$(CXX) pulseLight.o -o PulseLight
+SetPin: SetPin.o
+	g++ $(CXXFLAGS) setPin.o PinController.o -o SetPin
 
 
-#setPin: setPin.cpp
-#	$(CXX) $(CXXFLAGS) setPin.cpp
+pulseLight.o: pulseLight.cpp
+	$(CXX) pulseLight.cpp
 
-initializePins: initializePins.cpp
-	$(CXX) $(CXXFLAGS) initializePins.cpp
+PinController.o: PinController.cpp
+	$(CXX) PinController.cpp
 
-uninitializePins: uninitializePins.cpp
-	$(CXX) $(CXXFLAGS) uninitializePins.cpp
+initializePins.o: initializePins.cpp
+	$(CXX) initializePins.cpp
 
-pulseLight: pulseLight.cpp
-	$(CXX) $(CXXFLAGS) pulseLight.cpp
+SetPin.o: setPin.cpp
+	$(CXX) setPin.cpp
+
 
 clean:
-	rm -rf *o InitializePins UninitializePins PulseLight
+	rm *.o PulseLight InitializePins SetPin
