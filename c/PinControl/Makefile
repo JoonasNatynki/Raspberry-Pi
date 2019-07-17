@@ -1,41 +1,41 @@
-CXX = g++ -std=c++11 -c
+CXX = sudo g++ -std=c++11 -I include/ -c
 
 CXXFLAGS = -std=c++11 -Wall
 
 all: PulseLight InitializePins SetPin UninitializePins
 
 PulseLight: pulseLight.o libPinController.so
-	g++ $(CXXFLAGS) pulseLight.o /usr/local/lib/libPinController.so -o PulseLight
+	g++ $(CXXFLAGS) bin/pulseLight.o /usr/local/lib/libPinController.so -o build/PulseLight
 
 InitializePins: initializePins.o
-	g++ $(CXXFLAGS) initializePins.o -o InitializePins
+	g++ $(CXXFLAGS) bin/initializePins.o -o build/InitializePins
 
 SetPin: SetPin.o
-	g++ $(CXXFLAGS) setPin.o /usr/local/lib/libPinController.so -o SetPin
+	g++ $(CXXFLAGS) bin/SetPin.o /usr/local/lib/libPinController.so -o build/SetPin
 
 UninitializePins: uninitializePins.o
-	g++ $(CXXFLAGS) uninitializePins.o -o UninitializePins
+	sudo g++ $(CXXFLAGS) bin/uninitializePins.o -o build/UninitializePins
 
 
 libPinController.so: PinController.o
-	g++ -shared -o /usr/local/lib/libPinController.so PinController.o
+	sudo g++ -shared -o /usr/local/lib/libPinController.so bin/PinController.o
 
 
-pulseLight.o: pulseLight.cpp
-	$(CXX) pulseLight.cpp
+pulseLight.o: src/pulseLight.cpp
+	$(CXX) src/pulseLight.cpp -o bin/pulseLight.o
 
-PinController.o: PinController.cpp
-	$(CXX) PinController.cpp
+PinController.o: src/PinController.cpp
+	$(CXX) src/PinController.cpp -o bin/PinController.o
 
-initializePins.o: initializePins.cpp
-	$(CXX) initializePins.cpp
+initializePins.o: src/initializePins.cpp
+	$(CXX) src/initializePins.cpp -o bin/initializePins.o
 
-SetPin.o: setPin.cpp
-	$(CXX) setPin.cpp
+SetPin.o: src/setPin.cpp
+	$(CXX) src/setPin.cpp -o bin/SetPin.o
 
-uninitializePins.o: uninitializePins.cpp
-	$(CXX) uninitializePins.cpp
+uninitializePins.o: src/uninitializePins.cpp
+	$(CXX) src/uninitializePins.cpp -o bin/uninitializePins.o
 
 
 clean:
-	rm *.o PulseLight InitializePins SetPin UninitializePins /usr/local/lib/libPinController.so
+	sudo rm bin/*.o build/PulseLight build/InitializePins build/SetPin build/UninitializePins /usr/local/lib/libPinController.so
