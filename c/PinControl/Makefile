@@ -4,17 +4,21 @@ CXXFLAGS = -std=c++11 -Wall
 
 all: PulseLight InitializePins SetPin UninitializePins
 
-PulseLight: pulseLight.o PinController.o
-	g++ $(CXXFLAGS) pulseLight.o PinController.o -o PulseLight
+PulseLight: pulseLight.o libPinController.so
+	g++ $(CXXFLAGS) pulseLight.o /usr/local/lib/libPinController.so -o PulseLight
 
 InitializePins: initializePins.o
 	g++ $(CXXFLAGS) initializePins.o -o InitializePins
 
 SetPin: SetPin.o
-	g++ $(CXXFLAGS) setPin.o PinController.o -o SetPin
+	g++ $(CXXFLAGS) setPin.o /usr/local/lib/libPinController.so -o SetPin
 
 UninitializePins: uninitializePins.o
 	g++ $(CXXFLAGS) uninitializePins.o -o UninitializePins
+
+
+libPinController.so: PinController.o
+	g++ -shared -o /usr/local/lib/libPinController.so PinController.o
 
 
 pulseLight.o: pulseLight.cpp
@@ -34,4 +38,4 @@ uninitializePins.o: uninitializePins.cpp
 
 
 clean:
-	rm *.o PulseLight InitializePins SetPin UninitializePins
+	rm *.o PulseLight InitializePins SetPin UninitializePins /usr/local/lib/libPinController.so
