@@ -20,6 +20,8 @@ bool PinController::SetPinValue(int pinNumber, EState pinState)
 		myFile.open(gpioFilePath);
 		myFile << ((pinState == EState::High)?("1"):("0"));
 		myFile.close();
+		const char value = *((pinState == EState::High)?("1"):("0"));
+		std::cout << "Pin (" << pinNumber << ") value set to (" << value << ").\n";
 		return true;
 	}
 	else

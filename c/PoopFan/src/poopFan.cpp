@@ -37,6 +37,7 @@ void Tick(bool& bCurrentPinValue, bool& bFanIsRunning, bool& bIsPooping, TimePoi
 		FanStartTime = std::chrono::system_clock::now();
 		//	ACTIVATE FAN!!
 		std::cout << "FanStartTime set.\n";
+		PinController::SetPinValue(5, EState::High);
 		bFanIsRunning = true;
 	}
 
@@ -56,6 +57,7 @@ void Tick(bool& bCurrentPinValue, bool& bFanIsRunning, bool& bIsPooping, TimePoi
 		FanEndTime = std::chrono::system_clock::now();
 		std::cout << "Fan was active for (" << FanOnTimeLength.count() << ") seconds.\n";
 		bFanIsRunning = false;
+		PinController::SetPinValue(5, EState::Low);
 	}
 }
 
